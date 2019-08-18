@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* to be optimized */
+Route::get('/programmes/business', 'ProgrammeController@business')->name('programme.business');
+Route::get('/programmes/it', 'ProgrammeController@it')->name('programme.it');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -256,7 +260,7 @@ Route::prefix('emails')->group(function () {
   // Welcome Email
   Route::get('/welcome', function () {
       $user = App\User::find(1);
-      $password = "ABCXYZ";
+      $password = "secret";
       return new App\Mail\SendWelcomeEmailToUser($user, $password);
   });
 });

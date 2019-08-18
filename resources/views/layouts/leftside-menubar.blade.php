@@ -24,12 +24,12 @@
   }
 </style>
 {{--@if(Auth::user()->role != 'master')
-<ul class="nav flex-column">
+<!-- <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link" href="{{url('user/'.Auth::user()->student_code)}}"><i class="material-icons">face</i> <span
-        class="nav-link-text">@lang('Profile')</span></a>
+    <a class="nav-link" href="{{url('user/'.Auth::user()->student_code)}}">
+      <i class="material-icons">face</i><span class="nav-link-text">@lang('Profile')</span></a>
   </li>
-</ul>
+</ul> -->
 @endif--}}
 <ul class="nav flex-column">
   <li class="nav-item active">
@@ -53,20 +53,40 @@
     </ul>
   </li> -->
   <li class="nav-item">
-    <a class="nav-link" href="{{ url('school/sections?course=1') }}"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Classes &amp; Sections')</span></a>
+    <a class="nav-link" href="{{ url('school/sections?course=1') }}"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Programmes &amp; Courses')</span></a>
   </li>
   @endif
+
+  <li class="nav-item dropdown">
+    <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Programmes &amp; Courses')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
+    <ul class="dropdown-menu" style="width: 100%;">
+      <!-- Dropdown menu links -->
+      <li>
+        <a class="dropdown-item" href="{{ url('programmes/business') }}"><i class="material-icons">business</i> <span class="nav-link-text">@lang('Business')</span></a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="{{ url('programmes/it') }}"><i class="material-icons">computer</i> <span class="nav-link-text">@lang('Information Technology')</span></a>
+      </li>
+      <!-- <li>
+        <a class="dropdown-item" href="{{ url('programmes/english') }}"><i class="material-icons">language</i> <span class="nav-link-text">@lang('English Language')</span></a>
+      </li> 
+      <li>
+        <a class="dropdown-item" href="{{ url('classes/radio') }}"><i class="material-icons">radio</i> <span class="nav-link-text">@lang('Radio')</span></a>
+      </li> -->
+    </ul>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{url('users/'.Auth::user()->school->code.'/0/1')}}"><i class="material-icons">contacts</i>
+      <span class="nav-link-text">@lang('Teachers')</span></a>
+  </li>
   @if(Auth::user()->role != 'student')
   <li class="nav-item">
     <a class="nav-link" href="{{url('users/'.Auth::user()->school->code.'/1/0')}}"><i class="material-icons">contacts</i>
       <span class="nav-link-text">@lang('Students')</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{url('users/'.Auth::user()->school->code.'/0/1')}}"><i class="material-icons">contacts</i>
-      <span class="nav-link-text">@lang('Teachers')</span></a>
-  </li>
   @endif
-  @if(Auth::user()->role == 'admin')
+ 
   <!-- <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">line_style</i> <span class="nav-link-text">@lang('Exams')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
@@ -84,10 +104,13 @@
       </li>
     </ul>
   </li> -->
+  @if(Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
   <li class="nav-item">
     <a class="nav-link" href="{{ url('grades/all-exams-grade') }}"><i class="material-icons">assignment</i> <span class="nav-link-text">@lang('Grades')</span></a>
   </li>
+  @endif
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li>
+
   <!-- <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/routine') }}"><i class="material-icons">calendar_today</i> <span class="nav-link-text">@lang('Class Routine')</span></a>
   </li>
@@ -101,15 +124,17 @@
     <a class="nav-link" href="{{ url('academic/event') }}"><i class="material-icons">event</i> <span class="nav-link-text">@lang('Event')</span></a>
   </li>
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li> -->
+  @if(Auth::user()->role == 'admin')
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('settings.index') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Academic Settings')</span></a>
+    <a class="nav-link" href="{{ route('settings.index') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Settings')</span></a>
   </li>
-  <li class="nav-item dropdown">
+  @endif
+  <!-- <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">chrome_reader_mode</i> <span class="nav-link-text">@lang('Manage GPA')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
-    <ul class="dropdown-menu" style="width: 100%;">
+    <ul class="dropdown-menu" style="width: 100%;"> -->
       <!-- Dropdown menu links -->
-      <li>
+      <!-- <li>
         <a class="dropdown-item" href="{{ url('gpa/all-gpa') }}"><i class="material-icons">developer_board</i> <span
             class="nav-link-text">@lang('All GPA')</span></a>
       </li>
@@ -117,8 +142,8 @@
         <a class="dropdown-item" href="{{ url('gpa/create-gpa') }}"><i class="material-icons">note_add</i> <span class="nav-link-text">@lang('Add New GPA')</span></a>
       </li>
     </ul>
-  </li>
-  @endif
+  </li> -->
+  
   @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accountant')
   <!-- <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
@@ -167,29 +192,12 @@
     </ul>
   </li> -->
   @endif
-  @if(Auth::user()->role == 'student')
   <!-- <li class="nav-item">
     <a class="nav-link active" href="{{ url('attendances/0/'.Auth::user()->id.'/0') }}"><i class="material-icons">date_range</i>
       <span class="nav-link-text">@lang('My Attendance')</span></a>
   </li> -->
-  <li class="nav-item dropdown">
-    <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Classes')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
-    <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
-      <li>
-        <a class="dropdown-item" href="{{ url('classes/business') }}"><i class="material-icons">business</i> <span class="nav-link-text">@lang('Business')</span></a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="{{ url('classes/it') }}"><i class="material-icons">computer</i> <span class="nav-link-text">@lang('Information Technology')</span></a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="{{ url('classes/language') }}"><i class="material-icons">language</i> <span class="nav-link-text">@lang('English Language')</span></a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="{{ url('classes/radio') }}"><i class="material-icons">radio</i> <span class="nav-link-text">@lang('Radio')</span></a>
-      </li>
-    </ul>
-  </li>
+
+  @if(Auth::user()->role == 'student')
   <li class="nav-item">
     <a class="nav-link" href="{{ url('courses/0/'.Auth::user()->section_id) }}"><i class="material-icons">subject</i>
       <span class="nav-link-text">@lang('My Courses')</span></a>
