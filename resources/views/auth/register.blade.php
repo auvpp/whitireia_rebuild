@@ -175,7 +175,7 @@
                             </div>
                         </div>
                         @endif
-                        <div class="form-group{{ $errors->has('blood_group') ? ' has-error' : '' }}">
+                        <!-- <div class="form-group{{ $errors->has('blood_group') ? ' has-error' : '' }}">
                             <label for="blood_group" class="col-md-4 control-label">@lang('Blood Group')</label>
 
                             <div class="col-md-6">
@@ -196,9 +196,9 @@
                                 </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="form-group{{ $errors->has('nationality') ? ' has-error' : '' }}">
+                        <!-- <div class="form-group{{ $errors->has('nationality') ? ' has-error' : '' }}">
                             <label for="nationality" class="col-md-4 control-label">* @lang('Nationality')</label>
 
                             <div class="col-md-6">
@@ -211,7 +211,7 @@
                                 </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                             <label for="gender" class="col-md-4 control-label">@lang('Gender')</label>
@@ -234,11 +234,11 @@
                             <label for="version" class="col-md-4 control-label">* @lang('Version')</label>
 
                             <div class="col-md-6">
-                                <select id="version" class="form-control" name="version">
+                                <!-- <select id="version" class="form-control" name="version">
                                     <option selected="selected">@lang('Bangla')</option>
                                     <option>@lang('English')</option>
 									<option>@lang('Spanish')</option>
-                                </select>
+                                </select> -->
 
                                 @if ($errors->has('version'))
                                 <span class="help-block">
@@ -277,7 +277,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('religion') ? ' has-error' : '' }}">
+                        <!-- <div class="form-group{{ $errors->has('religion') ? ' has-error' : '' }}">
                             <label for="religion" class="col-md-4 control-label">@lang('Religion')</label>
 
                             <div class="col-md-6">
@@ -296,7 +296,7 @@
                                 </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">* @lang('address')</label>
@@ -508,14 +508,14 @@
                         </div>
                         @endif
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-md-4 control-label">@lang('Upload Profile Picture')</label>
                             <div class="col-md-6">
                                 <input type="hidden" id="picPath" name="pic_path">
                                 @component('components.file-uploader',['upload_type'=>'profile'])
                                 @endcomponent
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

@@ -83,8 +83,8 @@
             <tr>
               <td>@lang('Gender'):</td>
               <td>{{$user->gender}}</td>
-              <td>@lang('Blood Group'):</td>
-              <td>{{$user->blood_group}}</td>
+              <!-- <td>@lang('Blood Group'):</td>
+              <td>{{$user->blood_group}}</td> -->
             </tr>
             <tr>
               <td>@lang('Nationality'):</td>

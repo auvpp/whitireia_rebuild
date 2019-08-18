@@ -138,7 +138,7 @@ a:focus {
 }
 
 .navbar-default {
-    background-color: #ffffff;
+    background-color: #3a4f5a;
 }
 
 .navbar-default .navbar-nav>li>a,
@@ -147,7 +147,7 @@ a:focus {
 .navbar-default .navbar-nav>li>a:active,
 .navbar>.container .navbar-brand,
 .navbar>.container-fluid .navbar-brand {
-    color: #000 !important;
+    color: #ffffff !important;
 }
 
 #side-navbar {
@@ -174,7 +174,7 @@ a:focus {
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
     color: #000;
-    background-color: #f9fafa;
+    background-color: #3a4f5a;
 }
 
 .dropdown-menu>li>a:hover,
@@ -186,7 +186,7 @@ a:focus {
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    background-color: #f9fafa;
+    background-color: #3a4f5a;
 }
 
 .page-panel-title {

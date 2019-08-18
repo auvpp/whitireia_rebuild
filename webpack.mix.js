@@ -7,7 +7,7 @@ mix.scripts([
     'resources/assets/theme/vendors/js/dataTables-1.10.16.bootstrap.min.js',
     'resources/assets/theme/vendors/js/chosen.jquery.min.js',
     'resources/assets/theme/vendors/js/bootstrap-datepicker.min.js',
-], 'public/js/vendors.js')
+], 'public/js/vendors.js').version();
 
 mix.styles([
     'resources/assets/theme/vendors/css/bootstrap.min.css',

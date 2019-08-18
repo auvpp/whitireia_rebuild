@@ -29,18 +29,18 @@
                 <li><a href="{{ route('login') }}" style="color: #000;">@lang('Login')</a></li>
                 @else
                 @if(\Auth::user()->role == 'student')
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{url('user/'.\Auth::user()->id.'/notifications')}}" class="nav-link nav-link-align-btn"
                         role="button">
                         <i class="material-icons text-muted">@lang('email')</i>
                         <?php
-                            $mc = \App\Notification::where('student_id',\Auth::user()->id)->where('active',1)->count();
+                            //$mc = \App\Notification::where('student_id',\Auth::user()->id)->where('active',1)->count();
                         ?>
-                        @if($mc > 0)
-                        <span class="label label-danger" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">{{$mc}}</span>
-                        @endif
+                        @//if($mc > 0)
+                        <span class="label label-danger" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">{{--$mc--}}</span>
+                        @//endif
                     </a>
-                </li>
+                </li> -->
                 @endif
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle nav-link-align-btn" data-toggle="dropdown" role="button"

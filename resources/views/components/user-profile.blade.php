@@ -101,24 +101,24 @@
                 <tr>
                   <td>@lang('Gender'):</td>
                   <td>{{$user->gender}}</td>
-                  <td>@lang('Blood Group'):</td>
-                  <td>{{$user->blood_group}}</td>
+                  <!-- <td>@lang('Blood Group'):</td>
+                  <td>{{$user->blood_group}}</td> -->
                 </tr>
                 <tr>
-                  <td>@lang('Nationality'):</td>
-                  <td>{{$user->nationality}}</td>
+                  <!-- <td>@lang('Nationality'):</td>
+                  <td>{{$user->nationality}}</td> -->
                   <td>@lang('Birthday'):</td>
                   <td>{{Carbon\Carbon::parse($user->birthday)->format('d/m/Y')}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td>@lang('Religion'):</td>
                   <td>{{$user->studentInfo['religion']}}</td>
                   <td>@lang('Father Name'):</td>
                   <td>{{$user->studentInfo['father_name']}}</td>
-                </tr>
+                </tr> -->
                 <tr>
-                  <td>@lang('Mother Name'):</td>
-                  <td>{{$user->studentInfo['mother_name']}}</td>
+                  <!-- <td>@lang('Mother Name'):</td>
+                  <td>{{$user->studentInfo['mother_name']}}</td> -->
                   <td>@lang('Address'):</td>
                   <td>{{$user->address}}</td>
                 </tr>

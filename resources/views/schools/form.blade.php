@@ -1,4 +1,4 @@
-<button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#schoolModal" dusk="create-school-button">
+<button class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#schoolModal" dusk="create-school-button">
     + @lang('Create School')
 </button>
 
@@ -27,7 +27,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('medium') ? ' has-error' : '' }}">
+                    <!-- <div class="form-group{{ $errors->has('medium') ? ' has-error' : '' }}">
                         <label for="medium" class="col-md-4 control-label">@lang('School Medium')</label>
 
                         <div class="col-md-6">
@@ -46,7 +46,7 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group{{ $errors->has('established') ? ' has-error' : '' }}">
                         <label for="established" class="col-md-4 control-label">@lang('School Established')</label>

@@ -18,10 +18,10 @@
             <h2>@lang('Courses Related to Section')</h2>
             <div class="panel panel-default">
               @if(count($courses) > 0)
-                @foreach ($courses as $course)
+                <!-- @foreach ($courses as $course)
                     <div class="page-panel-title"><b>@lang('Section')</b> -   {{$course->section->section_number}} &nbsp;<b>@lang('Class')</b> -  {{$course->section->class->class_number}}</div>
                     @break($loop->first)
-                @endforeach
+                @endforeach -->
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">

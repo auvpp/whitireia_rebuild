@@ -79,7 +79,7 @@
                 <div class="title m-b-md">
                     {{config('app.name')}}
                 </div>
-                <p style="font-size: 25px;">@lang('Makes managing schools an amazing experience')</p>
+                <p style="font-size: 25px;">@lang('Course Management System')</p>
                 <div class="links">
                     @if (Route::has('login'))
                         @auth
@@ -88,10 +88,6 @@
                             <a href="{{ route('login') }}">@lang('Login')</a>
                         @endauth
                     @endif
-                    <a href="https://github.com/changeweb/Unifiedtransform">
-                        <i class="fa fa-github"></i>
-                        @lang('GitHub')
-                    </a>
                 </div>
             </div>
         </div>
