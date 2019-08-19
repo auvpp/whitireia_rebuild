@@ -12,5 +12,4 @@ yarn-error.log
 .env
 .php_cs.cache
 .rnd
-/database/database.*
 .env.dusk.local
