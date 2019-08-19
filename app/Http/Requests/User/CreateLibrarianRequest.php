@@ -32,7 +32,7 @@ class CreateLibrarianRequest extends FormRequest
             'email' => 'sometimes|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'gender' => 'required',
-            'blood_group' => 'required',
+            // 'blood_group' => 'required',
             'phone_number' => 'required|unique:users',
         ];
     }

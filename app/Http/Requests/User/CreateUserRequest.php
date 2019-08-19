@@ -33,16 +33,16 @@ class CreateUserRequest extends FormRequest
             'password' => 'required|string|min:6|confirmed',
             'section' => 'required|numeric',
             'gender' => 'required|string',
-            'blood_group' => 'required|string',
-            'nationality' => 'required|string',
-            'father_name' => 'required|string',
-            'mother_name' => 'required|string',
+            // 'blood_group' => 'required|string',
+            // 'nationality' => 'required|string',
+            // 'father_name' => 'required|string',
+            // 'mother_name' => 'required|string',
             'phone_number' => 'required|string|unique:users',
             'address' => 'required|string',
             'session' => 'required',
             'version' => 'required',
-            'birthday' => 'required',
-            'religion' => 'required|string',
+            // 'birthday' => 'required',
+            // 'religion' => 'required|string',
         ];
     }
 }

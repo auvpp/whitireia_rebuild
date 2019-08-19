@@ -46,8 +46,8 @@ class FirstStudentSheetImport implements OnEachRow, WithHeadingRow
             'phone_number'   => $row[__('phone_number')],
             'verified'       => 1,
             'section_id'     => $this->getSectionId(),
-            'blood_group'    => $row[__('blood_group')],
-            'nationality'    => $row[__('nationality')],
+            // 'blood_group'    => $row[__('blood_group')],
+            // 'nationality'    => $row[__('nationality')],
             'gender'         => $row[__('gender')],
         ];
 

@@ -46,7 +46,7 @@ class TeachersExport implements FromQuery,ShouldAutoSize,WithHeadings
 
     public function query(){
         return User::query()
-                    ->select('name','email','gender','student_code','blood_group','phone_number','address')
+                    ->select('name','email','gender','student_code',/* 'blood_group',*/ 'phone_number','address')
                     ->bySchool(auth()->user()->school_id)
                     ->where('role','teacher')
                     ->orderBy('name');

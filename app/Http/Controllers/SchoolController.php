@@ -35,7 +35,7 @@ class SchoolController extends Controller
             'name'        => $request->name,
             'established' => $request->established,
             'about'       => $request->about,
-            'medium'      => $request->medium,
+            // 'medium'      => $request->medium,
             'code'        => date("y").substr(number_format(time() * mt_rand(), 0, '', ''), 0, 6),
             'theme'       => 'flatly'
         ]);

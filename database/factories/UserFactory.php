@@ -52,8 +52,8 @@ $factory->define(User::class, function (Faker $faker) {
             return $faker->randomElement(Department::pluck('id')->toArray());
           else return factory(Department::class)->create()->id;
         },
-        'blood_group'    => $faker->randomElement(['a+', 'b+', 'ab', 'o+']),
-        'nationality'    => 'Bangladeshi',
+        //'blood_group'    => $faker->randomElement(['a+', 'b+', 'ab', 'o+']),
+        //'nationality'    => 'New Zealand',
         'gender'         => $faker->randomElement(['male', 'female']),
     ];
 });

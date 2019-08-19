@@ -40,7 +40,7 @@ class StudentsExport implements FromQuery,ShouldAutoSize,WithHeadings
     
     public function query()
     {
-        return User::query()->select('users.name','users.email','users.phone_number','users.gender','users.student_code','users.blood_group','sections.section_number','classes.class_number','users.address')
+        return User::query()->select('users.name','users.email','users.phone_number','users.gender','users.student_code',/* 'users.blood_group',*/'sections.section_number','classes.class_number','users.address')
                     ->where('users.school_id', auth()->user()->school_id)
                     ->where('users.role','student')
                     ->whereYear('users.created_at', $this->year)

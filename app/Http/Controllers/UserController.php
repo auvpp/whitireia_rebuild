@@ -337,7 +337,7 @@ class UserController extends Controller
             $tb = $this->user->find($request->user_id);
             $tb->name = $request->name;
             $tb->email = (!empty($request->email)) ? $request->email : '';
-            $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+            // $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
             $tb->phone_number = $request->phone_number;
             $tb->address = (!empty($request->address)) ? $request->address : '';
             $tb->about = (!empty($request->about)) ? $request->about : '';

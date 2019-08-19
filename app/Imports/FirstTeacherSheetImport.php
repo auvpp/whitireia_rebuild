@@ -41,8 +41,8 @@ class FirstTeacherSheetImport implements ToModel, WithHeadingRow, WithBatchInser
                 'phone_number'   => $row[__('phone_number')],
                 'verified'       => 1,
                 'section_id'     => $this->getSectionId(),// For assigning as class teacher
-                'blood_group'    => $row[__('blood_group')] ?? '',
-                'nationality'    => $row[__('nationality')] ?? '',
+                //'blood_group'    => $row[__('blood_group')] ?? '',
+                //'nationality'    => $row[__('nationality')] ?? '',
                 'gender'         => $row[__('gender')],
                 'department_id'  => $this->getDepartmentId(),
         ]);

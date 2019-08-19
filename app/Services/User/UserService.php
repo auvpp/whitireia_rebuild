@@ -206,8 +206,8 @@ class UserService {
         $tb->code = session('register_school_code');
         $tb->student_code = session('register_school_id').date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = $request->gender;
-        $tb->blood_group = $request->blood_group;
-        $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+        //$tb->blood_group = $request->blood_group;
+        //$tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
         $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
         $tb->verified = 1;
@@ -226,8 +226,8 @@ class UserService {
         $tb->code = auth()->user()->code;// School Code
         $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = $request->gender;
-        $tb->blood_group = $request->blood_group;
-        $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+        //$tb->blood_group = $request->blood_group;
+        //$tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
         $tb->address = (!empty($request->address)) ? $request->address : '';
         $tb->about = (!empty($request->about)) ? $request->about : '';
@@ -249,8 +249,8 @@ class UserService {
         $tb->code = auth()->user()->code;
         $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = $request->gender;
-        $tb->blood_group = $request->blood_group;
-        $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+        //$tb->blood_group = $request->blood_group;
+        //$tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
         $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
         $tb->verified = 1;

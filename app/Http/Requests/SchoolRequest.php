@@ -25,7 +25,7 @@ class SchoolRequest extends FormRequest
     {
         return [
             'name'        => 'required|string|max:255',
-            'medium'      => 'required',
+            // 'medium'      => 'required',
             'about'       => 'required',
             'established' => 'required',
         ];

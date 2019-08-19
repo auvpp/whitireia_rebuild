@@ -87,30 +87,30 @@
               <td>{{$user->blood_group}}</td> -->
             </tr>
             <tr>
-              <td>@lang('Nationality'):</td>
-              <td>{{$user->nationality}}</td>
+              <!-- <td>@lang('Nationality'):</td>
+              <td>{{$user->nationality}}</td> -->
               <td>@lang('Birthday'):</td>
               <td>{{Carbon\Carbon::parse($user->birthday)->format('d/m/Y')}}</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td>@lang('Religion'):</td>
               <td>{{$user->religion}}</td>
               <td>@lang('Father Name'):</td>
               <td>{{$user->father_name}}</td>
-            </tr>
+            </tr> -->
             <tr>
-              <td>@lang('Mother Name'):</td>
-              <td>{{$user->mother_name}}</td>
+              <!-- <td>@lang('Mother Name'):</td>
+              <td>{{$user->mother_name}}</td> -->
               <td>@lang('Address'):</td>
               <td>{{$user->address}}</td>
             </tr>
             <tr>
               <td>@lang('Phone Number'):</td>
               <td>{{$user->phone_number}}</td>
-              <td>@lang('Father's Phone Number'):</td>
-              <td>{{$user->father_phone_number}}</td>
+              <!-- <td>@lang('Father's Phone Number'):</td>
+              <td>{{$user->father_phone_number}}</td> -->
             </tr>
-            <tr>
+            <!-- <tr>
               <td>@lang('Father's National ID'):</td>
               <td>{{$user->father_national_id}}</td>
               <td>@lang('Father's Occupation'):</td>
@@ -133,10 +133,10 @@
               <td>{{$user->mother_occupation}}</td>
               <td>@lang('Mother's Designation'):</td>
               <td>{{$user->mother_designation}}</td>
-            </tr>
+            </tr> -->
             <tr>
-              <td>@lang('Mother's Annual Income'):</td>
-              <td>{{$user->mother_annual_income}}</td>
+              <!-- <td>@lang('Mother's Annual Income'):</td>
+              <td>{{$user->mother_annual_income}}</td> -->
               <td>@lang('About'):</td>
               <td>{{$user->about}}</td>
             </tr>

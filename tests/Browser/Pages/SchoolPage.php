@@ -39,10 +39,10 @@ class SchoolPage extends Page
     {
         $browser->assertSee('Create School')
             ->type('name', $name)
-            ->select('medium', 'Bangla')
+            // ->select('medium', 'English')
             ->type('established', 'established')
             ->type('about', 'about')
-            ->assertSelected('medium', 'Bangla')
+            // ->assertSelected('medium', 'English')
             ->press('Save changes');
     }
 
