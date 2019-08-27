@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 /* to be optimized */
 Route::get('/programmes/business', 'ProgrammeController@business')->name('programme.business');
 Route::get('/programmes/it', 'ProgrammeController@it')->name('programme.it');
-
+Route::get('/programmes/it/bit', 'ProgrammeController@bit')->name('programme.bit');
 
 Route::get('/', function () {
     return view('welcome');

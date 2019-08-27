@@ -19,7 +19,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">LEVEL 7</h3>
                         </div>
-                        <a href="#">
+                        <a href="{{ url('programmes/it/bit') }}">
                             <div class="panel-body">
                                 <h4><b>Bachelor of IT</b></h4>
                             </div>
