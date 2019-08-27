@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function (){
   //   }
   // });
   Route::get('attendances/students/{teacher_id}/{course_id}/{exam_id}/{section_id}', 'AttendanceController@addStudentsToCourseBeforeAtt')->middleware(['teacher']);
-  Route::get('attendances/{section_id}/{student_id}/{exam_id}', 'AttendanceController@index');
+  Route::get('}attendances/{section_id/{student_id}/{exam_id}', 'AttendanceController@index');
   Route::get('attendances/{section_id}', 'AttendanceController@sectionIndex')->middleware(['teacher']);
   Route::post('attendance/take-attendance','AttendanceController@store')->middleware(['teacher']);
   Route::get('attendance/adjust/{student_id}','AttendanceController@adjust')->middleware(['teacher']);
