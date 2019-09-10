@@ -91,7 +91,7 @@
 
                             <div class="col-md-6">
                                 <input id="phone_number" type="text" class="form-control" name="phone_number"
-                                    value="{{ $user->phone_number }}">
+                                    value="{{ $user->phone_number }}" required>
 
                                 @if ($errors->has('phone_number'))
                                 <span class="help-block">
@@ -102,7 +102,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('programme') ? ' has-error' : '' }}">
-                            <label for="programme" class="col-md-4 control-label">@lang('Programme')</label>
+                            <label for="programme" class="col-md-4 control-label">* @lang('Programme')</label>
                             <div class="col-md-6">
                                 <select id="programme" class="form-control" name="programme_id">
                                     @if (count($programmes)) > 0)
@@ -164,7 +164,7 @@
                             <label for="enrolled_date" class="col-md-4 control-label">@lang('Enrolled Date')</label>
 
                             <div class="col-md-6">
-                                <input id="enrolled_date" type="text" class="form-control" name="enrolled_date" required>
+                                <input id="enrolled_date" type="text" class="form-control" name="enrolled_date">
 
                                 @if ($errors->has('enrolled_date'))
                                 <span class="help-block">

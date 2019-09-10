@@ -39,6 +39,7 @@
                                                         </button>
                                                         <h4 class="modal-title" id="departmentModalLabel">@lang('Create Department')</h4>
                                                     </div>
+                                                    
                                                     <div class="modal-body">
                                                         <form class="form-horizontal" action="{{url('school/add-department')}}" method="post">
                                                             {{csrf_field()}}

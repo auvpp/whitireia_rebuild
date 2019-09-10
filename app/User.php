@@ -27,7 +27,7 @@ class User extends Model implements
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'role', /* school code*/'code', 'active', 'verified', 'school_id', 'code', 'address', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'major_id', 'programme_id', 'term_id', 'year', 'about' ];
+        'first_name', 'last_name', 'email', 'password', 'role', /* school code*/'code', 'active', 'verified', 'school_id', 'code', 'address', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'major_id', 'programme_id', 'qualification_id', 'term_id', 'year', 'about' ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -70,6 +70,14 @@ class User extends Model implements
     public function major()
     {
         return $this->belongsTo('App\Major');
+    }
+
+    /**
+     * One user belongs to only one qualification.
+     */
+    public function qualification()
+    {
+        return $this->belongsTo('App\Qualification');
     }
 
     /**

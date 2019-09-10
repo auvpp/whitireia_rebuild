@@ -17,6 +17,7 @@
       <th scope="col">@lang('Email')</th>
       <th scope="col">@lang('Programme')</th>
       @if(Auth::user()->role != 'student')
+        <th scope="col">@lang('Qualification')</th>
         <th scope="col">@lang('Major')</th>
         <th scope="col">@lang('Phone')</th>
         <th scope="col">@lang('Address')</th>
@@ -103,7 +104,8 @@
           <td><small>{{$user->email}}</small></td>
           <td><small>{{ucfirst($user->programme->name)}}</small></td>          
         @if(Auth::user()->role != 'student')
-          <td><small>{{ucfirst($user->major->name)}}</small></td>
+          <td><small>@if (ucfirst($user->qualification) != null) {{ucfirst($user->qualification->name)}} @endif</small></td>
+          <td><small>@if (ucfirst($user->major)) {{ucfirst($user->major->name)}} @endif</small></td>
           <td><small>{{$user->phone_number}}</small></td>
           <td><small>{{$user->address}}</small></td>
           <td><small>{{Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y')}}</small></td>

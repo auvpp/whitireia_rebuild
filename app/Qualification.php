@@ -33,6 +33,14 @@ class Qualification extends Model
     }
 
     /**
+     * One qualification has many users.
+     */
+    public function users()
+    {
+      return $this->hasMany('App\User');
+    }
+
+    /**
      * One qualification belongs to only one programme.
      */
     public function programme()

@@ -7,6 +7,7 @@ use App\Major;
 use App\Term;
 use App\Section;
 use App\Department;
+use App\Qualification;
 use Faker\Generator as Faker;
 
 /*
@@ -54,6 +55,11 @@ $factory->define(User::class, function (Faker $faker) {
           if (Major::count())
             return $faker->randomElement(Major::pluck('id')->toArray());
           else return factory(Major::class)->create()->id;
+        },
+        'qualification_id' => function () use ($faker) {
+          if (Qualification::count())
+            return $faker->randomElement(Qualification::pluck('id')->toArray());
+          else return factory(Qualification::class)->create()->id;
         },
         // 'term_id' => function () use ($faker) {
         //   if (Term::count())

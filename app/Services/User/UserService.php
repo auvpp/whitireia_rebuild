@@ -118,7 +118,7 @@ class UserService {
     }
 
     public function getStudents($school_id){
-        return $this->user->with(['school', 'programme', 'major', 'myClasses'])
+        return $this->user->with(['school', 'programme', 'major', 'myClasses', 'qualification'])
                 //->where('code', auth()->user()->school->code)
                 //->student()
                 //->where('active', 1)
@@ -129,7 +129,7 @@ class UserService {
     }
 
     public function getTeachers($school_id){
-        return $this->user->with(['school', 'programme'])
+        return $this->user->with(['school', 'programme', 'major', 'myClasses', 'qualification'])
                 //->where('code', auth()->user()->school->code)
                 ->where('school_id', $school_id)
                 ->where('role', 'teacher')

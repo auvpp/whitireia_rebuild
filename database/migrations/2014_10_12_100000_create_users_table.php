@@ -33,6 +33,7 @@ class CreateUsersTable extends Migration
             $table->string('pic_path')->default('');
             $table->tinyInteger('verified');
             $table->integer('major_id')->nullable();
+            $table->integer('qualification_id')->nullable();
             $table->integer('programme_id')->nullable();
             $table->string('enrolled_date')->nullable();
             $table->string('about')->default('');

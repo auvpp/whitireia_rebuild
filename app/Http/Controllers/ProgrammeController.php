@@ -15,12 +15,12 @@ class ProgrammeController extends Controller
         $this->programmeService = $programmeService;
     }
     
-    public function business(){
+    public function showBusiness(){
         $qualifications = $this->programmeService->getQualificationsByBusiness();
         return view('programmes.business', compact('qualifications'));
     }
 
-    public function it(){
+    public function showIT(){
         $qualifications = $this->programmeService->getQualificationsByIT();
         return view('programmes.it', compact('qualifications'));
     }

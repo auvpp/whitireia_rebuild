@@ -87,8 +87,8 @@ Route::middleware(['auth'])->group(function (){
   Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
 
   /* the Route for clicking "programmes"，which needs to be optimized later */
-  Route::get('/programmes/business', 'ProgrammeController@business')->name('programme.business');
-  Route::get('/programmes/it', 'ProgrammeController@it')->name('programme.it');
+  Route::get('/programmes/business', 'ProgrammeController@showBusiness')->name('programme.business');
+  Route::get('/programmes/it', 'ProgrammeController@ShowIT')->name('programme.it');
 
   Route::get('/programmes/business/{id}', 'CourseController@course');
   Route::get('/programmes/it/{id}', 'CourseController@course');
@@ -132,6 +132,8 @@ Route::middleware(['auth','admin'])->group(function (){
     Route::post('accountant',  'UserController@storeAccountant');
     Route::post('librarian',  'UserController@storeLibrarian');
   });
+
+  // the Route for editing courses
   Route::get('edit/course/{id}','CourseController@edit');
   Route::post('edit/course/{id}','CourseController@updateNameAndTime');
 
