@@ -19,7 +19,7 @@
         <td>{{($loop->index + 1)}}</td>
         <td><a href="{{url($file->file_path)}}" target="_blank">{{$file->title}}</a></td>
         @if($upload_type == 'syllabus' && $parent == 'class')
-          <td>{{$file->myclass->class_number}}</td>
+          <td>{{$file->MyClass->class_number}}</td>
         @elseif($upload_type == 'routine' && $parent == 'section')
           <td>{{$file->section->section_number}}</td>
         @endif

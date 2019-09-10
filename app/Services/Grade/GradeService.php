@@ -6,7 +6,7 @@ use App\Gradesystem;
 use App\Exam;
 use App\Course;
 use App\Section;
-use App\Myclass;
+use App\MyClass;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
@@ -159,7 +159,7 @@ class GradeService {
   }
 
   public function getClassesBySchoolId(){
-    return Myclass::where('school_id',auth()->user()->school->id)->get();
+    return MyClass::where('school_id',auth()->user()->school->id)->get();
   }
 
   public function getSectionsByClassIds($classIds){

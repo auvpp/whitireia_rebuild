@@ -4,7 +4,7 @@ namespace Tests\Feature\Library;
 
 use App\Book;
 use App\User;
-use App\Myclass;
+use App\MyClass;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

@@ -3,7 +3,7 @@
 namespace Tests\Feature\Manage;
 
 use App\User;
-use App\Myclass;
+use App\MyClass;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -34,7 +34,7 @@ class ClassModuleTest extends TestCase
 
     /** @test */
     public function admin_can_create_class() {
-        $class = factory(Myclass::class)->make();
+        $class = factory(MyClass::class)->make();
         $this->followingRedirects()
             ->post('school/add-class', $class->toArray())
             ->assertStatus(200);

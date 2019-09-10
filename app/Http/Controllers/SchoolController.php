@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\School;
-use App\Myclass;
+use App\MyClass;
 use App\Section;
 use App\Department;
 use Illuminate\Http\Request;

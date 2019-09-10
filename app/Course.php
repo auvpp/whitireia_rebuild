@@ -6,32 +6,60 @@ use App\Model;
 
 class Course extends Model
 {
+
     /**
-     * Get the class record associated with the user.
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'code', 'name', 'credit_id', 'major_id', 'level', 'compulsory', 'credit', 'active', 'current_offered', 'current_offered_year', 'next_offered', 'next_offered_year', 'prerequisite', 'description', 'teacher_id',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+       
+    ];
+
+    /**
+     * One course belongs to only one major.
     */
-    public function class()
+    public function major()
     {
-        return $this->belongsTo('App\Myclass');
+        return $this->belongsTo('App\Major');
     }
     /**
-     * Get the section record associated with the user.
+     * One course has many classDetails.
     */
-    public function section()
+    public function classDetails()
     {
-        return $this->belongsTo('App\Section');
+        return $this->hasMany('App\ClassDetail');
     }
+
     /**
-     * Get the teacher record associated with the user.
+     * One course belongs to only one credit.
     */
-    public function teacher()
+    public function creit()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Credit');
     }
-     /**
-     * Get the exam record associated with the course.
-    */
-    public function exam()
-    {
-        return $this->belongsTo('App\Exam');
-    }
+
+    // /**
+    //  * Get the teacher record associated with the user.
+    // */
+    // public function teacher()
+    // {
+    //     return $this->belongsTo('App\User');
+    // }
+    //  /**
+    //  * Get the exam record associated with the course.
+    // */
+    // public function exam()
+    // {
+    //     return $this->belongsTo('App\Exam');
+    // }
 }

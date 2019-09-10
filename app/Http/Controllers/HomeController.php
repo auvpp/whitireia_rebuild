@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,11 +26,13 @@ class HomeController extends Controller
     {
         $minutes = 1440;// 24 hours = 1440 minutes
         $school_id = \Auth::user()->school->id;
-        $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Myclass::bySchool($school_id)
-                            ->pluck('id')
-                            ->toArray();
-        });
+        $totalCourses = DB::table('courses')->count();
+
+        // $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\MyClass::bySchool($school_id)
+        //                     ->pluck('id')
+        //                     ->toArray();
+        // });
         $totalStudents = \Cache::remember('totalStudents-'.$school_id, $minutes, function () use($school_id) {
           return \App\User::bySchool($school_id)
                           ->where('role','student')
@@ -45,12 +48,12 @@ class HomeController extends Controller
         $totalBooks = \Cache::remember('totalBooks-'.$school_id, $minutes, function () use($school_id) {
           return \App\Book::bySchool($school_id)->count();
         });
-        $totalClasses = \Cache::remember('totalClasses-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Myclass::bySchool($school_id)->count();
-        });
-        $totalSections = \Cache::remember('totalSections-'.$school_id, $minutes, function () use ($classes) {
-          return \App\Section::whereIn('class_id', $classes)->count();
-        });
+        // $totalClasses = \Cache::remember('totalClasses-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\MyClass::bySchool($school_id)->count();
+        // });
+        // $totalSections = \Cache::remember('totalSections-'.$school_id, $minutes, function () use ($classes) {
+        //   return \App\Section::whereIn('class_id', $classes)->count();
+        // });
         $notices = \Cache::remember('notices-'.$school_id, $minutes, function () use($school_id) {
           return \App\Notice::bySchool($school_id)
                             ->where('active',1)
@@ -83,9 +86,10 @@ class HomeController extends Controller
         return view('home',[
           'totalStudents'=>$totalStudents,
           'totalTeachers'=>$totalTeachers,
+          'totalCourses'=>$totalCourses,
           'totalBooks'=>$totalBooks,
-          'totalClasses'=>$totalClasses,
-          'totalSections'=>$totalSections,
+          // 'totalClasses'=>$totalClasses,
+          // 'totalSections'=>$totalSections,
           'notices'=>$notices,
           'events'=>$events,
           'routines'=>$routines,

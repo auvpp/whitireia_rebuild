@@ -3,19 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\Major;
 use App\Http\Resources\CourseResource;
 use Illuminate\Http\Request;
 use App\Http\Requests\Course\SaveConfigurationRequest;
 use App\Http\Traits\GradeTrait;
+use App\Qualification;
 use App\Services\Course\CourseService;
 
 class CourseController extends Controller
 {
     use GradeTrait;
     protected $courseService;
+    protected $qualification;
+    protected $majors;
+    protected $courses;
 
-    public function __construct(CourseService $courseService){
+    public function __construct(CourseService $courseService, Qualification $qualification){
       $this->courseService = $courseService;
+      $this->qualification = $qualification;
     }
     /**
      * Display a listing of the resource.
@@ -54,16 +60,19 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show courses by qualification_id
      *
      * @return \Illuminate\Http\Response
      */
-    public function course($teacher_id,$course_id,$exam_id,$section_id)
+    public function course($id)
     {
-      $this->addStudentsToCourse($teacher_id,$course_id,$exam_id,$section_id);
-      $students = $this->courseService->getStudentsFromGradeByCourseAndExam($course_id, $exam_id);
-
-      return view('course.students', compact('students','teacher_id','section_id'));
+      $qualification = $this->qualification->find($id);
+      $majors = Major::with(['users', 'courses', 'qualification',])
+                    ->where('qualification_id', $id)
+                    ->orderBy('name', 'asc')
+                    ->get();
+      //$courses = $this->courseService->getCoursesByMajors();
+      return view('course.admin-course', compact('qualification','majors'));
     }
 
     /**

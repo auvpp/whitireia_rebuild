@@ -5,13 +5,26 @@
     <tr>
       <th scope="col">#</th>
       @if(Auth::user()->role == 'admin')
-        @if (!Session::has('section-attendance'))
+        <!-- @if (!Session::has('section-attendance')) -->
         <th scope="col">@lang('Action')</th>
-        @endif
+        <!-- @endif -->
       @endif
-      <th scope="col">@lang('Code')</th>
       <th scope="col">@lang('Full Name')</th>
-      @foreach ($users as $user)
+      <th scope="col">@lang('Gender')</th>
+      @if(Auth::user()->role != 'student')
+        <th scope="col">@lang('Code')</th>
+      @endif
+      <th scope="col">@lang('Email')</th>
+      <th scope="col">@lang('Programme')</th>
+      @if(Auth::user()->role != 'student')
+        <th scope="col">@lang('Major')</th>
+        <th scope="col">@lang('Phone')</th>
+        <th scope="col">@lang('Address')</th>
+        <th scope="col">@lang('Enrolled Date')</th>
+        <!-- <th scope="col">@lang('Active')</th> -->
+      @endif
+
+      <!-- @foreach ($users as $user)
         @if($user->role == 'student')
           @if(Auth::user()->role == 'student' || Auth::user()->role == 'teacher' || Auth::user()->role == 'admin')
             <th scope="col">@lang('Attendance')</th>
@@ -46,7 +59,7 @@
       <th scope="col">@lang('Blood')</th>
       <th scope="col">@lang('Phone')</th>
       <th scope="col">@lang('Address')</th>
-      @endif
+      @endif -->
     </tr>
   </thead>
   <tbody>
@@ -54,28 +67,50 @@
     <tr>
       <th scope="row">{{ ($current_page-1) * $per_page + $key + 1 }}</th>
       @if(Auth::user()->role == 'admin')
-        @if (!Session::has('section-attendance'))
+        <!-- @if (!Session::has('section-attendance')) -->
         <td>
           <a class="btn btn-xs btn-danger" href="{{url('edit/user/'.$user->id)}}">@lang('Edit')</a>
         </td>
-        @endif
+        <!-- @endif -->
       @endif
-      <td><small>{{$user->student_code}}</small></td>
-      <td>
-        <small>
+      
+        <td>
+          <small>
           @if(!empty($user->pic_path))
-            <img src="{{asset('01-progress.gif')}}" data-src="{{url($user->pic_path)}}" style="border-radius: 50%;" width="25px" height="25px">
+            <img src="{{$user->pic_path}}" style="border-radius: 50%;" width="25px" height="25px">
           @else
             @if(strtolower($user->gender) == trans('male'))
-              <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/50/000000/user.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+              <img src="https://png.icons8.com/dusk/50/000000/user.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
             @else
-              <img src="{{asset('01-progress.gif')}}" data-src="https://png.icons8.com/dusk/50/000000/user-female.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+              <img src="https://png.icons8.com/dusk/50/000000/user-female.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
             @endif
           @endif
-          <a href="{{url('user/'.$user->student_code)}}">
-            {{$user->name}}</a>
-          </small></td>
-      @if($user->role == 'student')
+              
+          {{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</small>
+        </td>
+
+          <!-- @if(Auth::user()->role != 'student')
+            <a href="{{url('user/'.$user->code)}}">
+              {{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</a>
+            </small></td>
+          @else
+            {{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</small></td>
+          @endif -->
+          <td><small>{{ucfirst($user->gender)}}</small></td>
+        @if(Auth::user()->role != 'student')
+          <td><small>{{$user->code}}</small></td>
+        @endif
+          <td><small>{{$user->email}}</small></td>
+          <td><small>{{ucfirst($user->programme->name)}}</small></td>          
+        @if(Auth::user()->role != 'student')
+          <td><small>{{ucfirst($user->major->name)}}</small></td>
+          <td><small>{{$user->phone_number}}</small></td>
+          <td><small>{{$user->address}}</small></td>
+          <td><small>{{Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y')}}</small></td>
+          <!-- <td><small>{{$user->active}}</small></td> -->
+        @endif
+
+      <!-- @if($user->role == 'student')
         @if(Auth::user()->role == 'student' || Auth::user()->role == 'teacher' || Auth::user()->role == 'admin')
           <td><small><a class="btn btn-xs btn-info" role="button" href="{{url('attendances/0/'.$user->id.'/0')}}">@lang('View Attendance')</a></small></td>
           {{--@if (!Session::has('section-attendance'))
@@ -94,8 +129,8 @@
           </small>
         </td>
         <td><small>{{ucfirst($user->studentInfo['version'])}}</small></td>
-        <td><small>{{$user->section->class->class_number}} {{!empty($user->group)? '- '.$user->group:''}}</small></td>
-        <td style="white-space: nowrap;"><small>{{$user->section->section_number}}
+        <td><small>{{$user->major->name}} {{!empty($user->group)? '- '.$user->group:''}}</small></td>
+        <td style="white-space: nowrap;"><small>{{$user->programme->name}}
           {{-- @if(Auth::user()->role == 'student' || Auth::user()->role == 'teacher' || Auth::user()->role == 'admin')
             - <a class="btn btn-xs btn-primary" role="button" href="{{url('courses/0/'.$user->section->id)}}">@lang('All Courses')</a>
           @endif --}}
@@ -129,7 +164,7 @@
       <td><small>{{$user->blood_group}}</small></td>
       <td><small>{{$user->phone_number}}</small></td>
       <td><small>{{$user->address}}</small></td>
-      @endif
+      @endif -->
     </tr>
     @endforeach
   </tbody>

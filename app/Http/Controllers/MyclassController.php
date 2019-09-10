@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Myclass as Myclass;
+use App\MyClass as MyClass;
 use App\Http\Resources\ClassResource;
 use Illuminate\Http\Request;
 
-class MyclassController extends Controller
+class MyClassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class MyclassController extends Controller
      */
      public function index($school_id)
      {
-       return ($school_id > 0)? ClassResource::collection(Myclass::bySchool($school_id)->get()):response()->json([
+       return ($school_id > 0)? ClassResource::collection(MyClass::bySchool($school_id)->get()):response()->json([
          'Invalid School id: '. $school_id,
          404
        ]);
@@ -42,7 +42,7 @@ class MyclassController extends Controller
       $request->validate([
         'class_number' => 'required'
       ]);
-      $tb = new Myclass;
+      $tb = new MyClass;
       $tb->class_number = $request->class_number;
       $tb->school_id = \Auth::user()->school_id;
       $tb->group = (!empty($request->group))?$request->group:'';
@@ -58,7 +58,7 @@ class MyclassController extends Controller
      */
     public function show($id)
     {
-        return new ClassResource(Myclass::find($id));
+        return new ClassResource(MyClass::find($id));
     }
 
     /**
@@ -81,7 +81,7 @@ class MyclassController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $tb = Myclass::find($id);
+      $tb = MyClass::find($id);
       $tb->class_number = $request->class_number;
       $tb->school_id = $request->school_id;
       return ($tb->save())?response()->json([
@@ -99,7 +99,7 @@ class MyclassController extends Controller
      */
     public function destroy($id)
     {
-      return (Myclass::destroy($id))?response()->json([
+      return (MyClass::destroy($id))?response()->json([
         'status' => 'success'
       ]):response()->json([
         'status' => 'error'

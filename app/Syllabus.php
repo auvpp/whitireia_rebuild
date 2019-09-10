@@ -17,8 +17,8 @@ class Syllabus extends Model
     /**
     * Get the class record associated with the syllabus.
     */
-    public function myclass()
+    public function MyClass()
     {
-        return $this->belongsTo('App\Myclass','class_id');
+        return $this->belongsTo('App\MyClass','class_id');
     }
 }

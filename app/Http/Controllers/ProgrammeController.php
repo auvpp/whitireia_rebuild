@@ -2,33 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Qualification;
 use Illuminate\Http\Request;
-use App\Services\Exam\ExamService;
-use App\Http\Requests\Exam\CreateExamRequest;
+use App\Services\Programme\ProgrammeService;
 
 class ProgrammeController extends Controller
 {
-    protected $examService;
+    protected $programmeService;
+    protected $qualifications;
 
-    public function __construct(ExamService $examService){
-        $this->examService = $examService;
+    public function __construct(ProgrammeService $programmeService){
+        $this->programmeService = $programmeService;
     }
     
-    public function index(){
-        return view('programmes.business');
-    }
-
     public function business(){
-        return view('programmes.business');
+        $qualifications = $this->programmeService->getQualificationsByBusiness();
+        return view('programmes.business', compact('qualifications'));
     }
 
     public function it(){
-        return view('programmes.it');
+        $qualifications = $this->programmeService->getQualificationsByIT();
+        return view('programmes.it', compact('qualifications'));
     }
-
-    public function bit(){
-        $exams = $this->examService->getLatestExamsBySchoolIdWithPagination();
-        return view('programmes.list',compact('exams'));
-    }
-
 }

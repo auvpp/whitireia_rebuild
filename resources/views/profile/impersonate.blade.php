@@ -9,7 +9,8 @@
             <thead>
                 <tr>
                     <th>@lang('ID')</th>
-                    <th>@lang('Name')</th>
+                    <th>@lang('First Name')</th>
+                    <th>@lang('Last Name')</th>
                     <th>@lang('Role')</th>
                     <th></th>
                 </tr>
@@ -20,7 +21,8 @@
                     {{ csrf_field() }}
                     <tr>
                         <td>{{ $other_user->id }}</td>
-                        <td>{{ $other_user->name }}</td>
+                        <td>{{ $other_user->first_name }}</td>
+                        <td>{{ $other_user->last_name }}</td>
                         <td>{{ $other_user->role }}</td>
                         <td>
                             <input type="hidden" name="id" value="{{$other_user->id}}" />

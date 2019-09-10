@@ -117,22 +117,25 @@ class UserService {
         ]);
     }
 
-    public function getStudents(){
-        return $this->user->with(['section.class', 'school', 'studentInfo'])
-                ->where('code', auth()->user()->school->code)
-                ->student()
-                ->where('active', 1)
-                ->orderBy('name', 'asc')
-                ->paginate(50);
+    public function getStudents($school_id){
+        return $this->user->with(['school', 'programme', 'major', 'myClasses'])
+                //->where('code', auth()->user()->school->code)
+                //->student()
+                //->where('active', 1)
+                ->where('school_id', $school_id)
+                ->where('role', 'student')
+                ->orderBy('first_name', 'asc')
+                ->paginate(20);
     }
 
-    public function getTeachers(){
-        return $this->user->with(['section', 'school'])
-                ->where('code', auth()->user()->school->code)
+    public function getTeachers($school_id){
+        return $this->user->with(['school', 'programme'])
+                //->where('code', auth()->user()->school->code)
+                ->where('school_id', $school_id)
                 ->where('role', 'teacher')
-                ->where('active', 1)
-                ->orderBy('name', 'asc')
-                ->paginate(50);
+                //->where('active', 1)
+                ->orderBy('first_name', 'asc')
+                ->paginate(20);
     }
 
     public function getAccountants(){
@@ -188,9 +191,9 @@ class UserService {
                 ->get();
     }
 
-    public function getUserByUserCode($user_code){
-        return $this->user->with('section', 'studentInfo')
-              ->where('student_code', $user_code)
+    public function getUserByCode($code){
+        return $this->user->with('programme', 'major', 'school', 'myClasses')
+              ->where('code', $code)
               ->where('active', 1)
               ->first();
     }

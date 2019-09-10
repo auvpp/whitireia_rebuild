@@ -1,5 +1,7 @@
 @extends('layouts.app')
-@section('title', __('All Examinations'))
+
+@section('title', __('Course'))
+
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -7,9 +9,9 @@
             @include('layouts.leftside-menubar')
         </div>
         <div class="col-md-10" id="main-container">
+            <h3>@lang('Courses Related to ') <span class="text-danger">{{ $qualification->name }}</span></h3>
             <div class="panel panel-default">
-                <div class="page-panel-title">@lang('All Examinations')</div>
-
+              @if(count($majors) > 0)
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -17,9 +19,14 @@
                         </div>
                     @endif
 
-                    @component('components.exams-list',['exams'=>$exams])
+                    @component('components.course-table',['majors'=>$majors])
                     @endcomponent
                 </div>
+              @else
+                <div class="panel-body">
+                    @lang('No Related Data Found.')
+                </div>
+              @endif
             </div>
         </div>
     </div>

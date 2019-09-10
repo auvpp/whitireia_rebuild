@@ -3,7 +3,7 @@ namespace App\Services\Exam;
 
 use App\Exam;
 use App\Course;
-use App\Myclass;
+use App\MyClass;
 use App\ExamForClass;
 
 class ExamService {
@@ -31,7 +31,7 @@ class ExamService {
     }
 
     public function getClassesBySchoolId(){
-        return Myclass::where('school_id',auth()->user()->school->id)->get();
+        return MyClass::where('school_id',auth()->user()->school->id)->get();
     }
 
     public function getAlreadyAssignedClasses(){

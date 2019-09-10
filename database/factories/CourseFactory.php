@@ -4,18 +4,36 @@ use App\User;
 use App\Exam;
 use App\School;
 use App\Course;
-use App\Myclass;
+use App\MyClass;
+use App\Major;
 use App\Section;
 use App\Gradesystem;
 use Faker\Generator as Faker;
 
 $factory->define(Course::class, function (Faker $faker) {
     return [
+        'code'        => str_random(8),
+        'name'        => $faker->name,
+        'major_id' => function () use ($faker) {
+            if (Major::count())
+              return $faker->randomElement(Major::pluck('id')->toArray());
+            else return factory(Major::class)->create()->id;
+        },
+        'level'       => $faker->randomElement(['Level 5', 'Level 6', 'Level 7', 'Level 8', 'Level 9']),
+        'compulsory'  => $faker->randomElement([1, 0]),
+        'credit'      => $faker->randomElement([1, 2, 3, 4, 5]),
+        'active'      => 1,
+        'current_offered'   => $faker->randomElement(['Yes', 'Not offered', 'No longer offered']),
+        'current_offered_year' => date('Y'),
+        'next_offered'   => $faker->randomElement(['T2-2019', 'Not offered', 'No longer offered']),
+        'next_offered_year' => date('Y'),
+
+        /*
         'course_name' => $faker->words(3, true),
         'class_id'    => function () use ($faker) {
-            if (Myclass::count())
-                return $faker->randomElement(Myclass::pluck('id')->toArray());
-            else return factory(Myclass::class)->create()->id;
+            if (MyClass::count())
+                return $faker->randomElement(MyClass::pluck('id')->toArray());
+            else return factory(MyClass::class)->create()->id;
         },
         'course_type' => $faker->randomElement(['Core','Elective']),
         'course_time' => $faker->randomElement(['9:30AM-10:20AM','12:50PM-01:40PM']),
@@ -64,5 +82,6 @@ $factory->define(Course::class, function (Faker $faker) {
                 return $faker->randomElement(User::pluck('id')->toArray());
             else return factory(User::class)->create()->id;
         },
+        */
     ];
 });

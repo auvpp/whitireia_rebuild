@@ -3,12 +3,12 @@
 namespace Tests\Unit\App;
 
 use App\School;
-use App\Myclass;
+use App\MyClass;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class MyclassTest extends TestCase
+class MyClassTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -16,12 +16,12 @@ class MyclassTest extends TestCase
 
     public function setUp() {
         parent::setUp();
-        $this->class = create(Myclass::class);
+        $this->class = create(MyClass::class);
     }
 
     /** @test */
-    public function a_class_is_an_instance_of_Myclass() {
-        $this->assertInstanceOf('App\Myclass', $this->class);
+    public function a_class_is_an_instance_of_MyClass() {
+        $this->assertInstanceOf('App\MyClass', $this->class);
     }
 
     /** @test */
@@ -46,11 +46,11 @@ class MyclassTest extends TestCase
     /** @test */
     public function my_class_are_filter_by_school() {
         $school = create(School::class);
-        $klass  = create(Myclass::class, ['school_id' => $school->id], 2);
+        $klass  = create(MyClass::class, ['school_id' => $school->id], 2);
 
         $other_school = create(School::class);
-        $other_klass  = create(Myclass::class, ['school_id' => $other_school->id], 4);
+        $other_klass  = create(MyClass::class, ['school_id' => $other_school->id], 4);
 
-        $this->assertEquals(Myclass::bySchool($school->id)->count(), $klass->count());
+        $this->assertEquals(MyClass::bySchool($school->id)->count(), $klass->count());
     }
 }

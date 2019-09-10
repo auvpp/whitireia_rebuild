@@ -4,7 +4,7 @@ namespace App\Imports;
 
 use App\User;
 use App\StudentInfo;
-use App\Myclass;
+use App\MyClass;
 use App\Section;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Row;
@@ -80,7 +80,7 @@ class FirstStudentSheetImport implements OnEachRow, WithHeadingRow
 
     public function getSectionId(){
         if(!empty($this->class) && !empty($this->section)){
-            $class_id = Myclass::bySchool(auth()->user()->school_id)->where('class_number', $this->class)->pluck('id')->first();
+            $class_id = MyClass::bySchool(auth()->user()->school_id)->where('class_number', $this->class)->pluck('id')->first();
 
             $section = Section::where('class_id', $class_id)->where('section_number', $this->section)->pluck('id')->first();
 

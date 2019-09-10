@@ -19,6 +19,6 @@ class Section extends Model
     */
     public function class()
     {
-        return $this->belongsTo('App\Myclass');
+        return $this->belongsTo('App\MyClass');
     }
 }

@@ -304,7 +304,7 @@ From:
 ```php
 ...
 $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($school_id) {
-   return \App\Myclass::where('school_id', $school_id)
+   return \App\MyClass::where('school_id', $school_id)
                         ->pluck('id')
                         ->toArray();
 });
@@ -313,7 +313,7 @@ $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($sc
 To:
 ```php
 ...
-$classes = \App\Myclass::where('school_id', $school_id)
+$classes = \App\MyClass::where('school_id', $school_id)
                         ->pluck('id')
                         ->toArray();
 ...

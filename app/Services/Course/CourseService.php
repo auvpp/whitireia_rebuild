@@ -8,6 +8,7 @@ use App\Exam;
 use Illuminate\Support\Facades\Auth;
 
 class CourseService {
+
     public function isCourseOfTeacher($teacher_id){
         return auth()->user()->role != 'student' && $teacher_id > 0;
     }

@@ -49,7 +49,7 @@
               <table class="table">
                 <tr>
                   <td>@lang('Student ID'):</td>
-                  <td>{{$user->student_code}}</td>
+                  <td>{{$user->code}}</td>
                   <td>@lang('Student\'s Name'):</td>
                   <td>{{$user->name}}</td>
                 </tr>

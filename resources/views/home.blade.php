@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-sm-2">
                             <div class="card text-white bg-success mb-3">
-                                <div class="card-header">@lang('Teachers') - <b>{{$totalTeachers}}</b></div>
+                                <div class="card-header">@lang('Teachers') - <b>{{$totalTeachers}}</b></div>                        
                             </div>
                         </div>
                         <!-- <div class="col-sm-4">
@@ -42,12 +42,12 @@
                         </div> -->
                         <div class="col-sm-2">
                             <div class="card text-white bg-danger mb-3">
-                                <div class="card-header">@lang('Classes') - <b>{{$totalClasses}}</b></div>
+                                <div class="card-header">@lang('Courses') - <b>{{$totalCourses}}</b></div>
                             </div>
                         </div>
                         <!-- <div class="col-sm-2">
                             <div class="card text-white bg-info mb-3">
-                                <div class="card-header">@lang('Sections') - <b>{{$totalSections}}</b></div>
+                                <div class="card-header">@lang('Sections') - <b>{{--$totalSections--}}</b></div>
                             </div>
                         </div> -->
                     </div>

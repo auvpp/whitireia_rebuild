@@ -25,6 +25,6 @@ class SectionTest extends TestCase
 
     /** @test */
     public function a_section_belongs_to_class() {
-        $this->assertInstanceOf('App\Myclass', $this->section->class);
+        $this->assertInstanceOf('App\MyClass', $this->section->class);
     }
 }

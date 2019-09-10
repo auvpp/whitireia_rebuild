@@ -60,13 +60,13 @@
                             alt="Profile Picture" style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">
                         @endif
                         @endif
-                        &nbsp;&nbsp;{{ Auth::user()->name }} <span class="caret"></span>
+                        &nbsp;&nbsp;{{ ucfirst(Auth::user()->first_name).' '.ucfirst(Auth::user()->last_name) }} <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu">
                         @if(Auth::user()->role != 'master')
                         <li>
-                            <a href="{{url('user/'.Auth::user()->student_code)}}">@lang('Profile')</a>
+                            <a href="{{url('user/'.Auth::user()->code)}}">@lang('Profile')</a>
                         </li>
                         @endif
                         <li>

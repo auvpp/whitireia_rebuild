@@ -31,7 +31,7 @@ class BookTest extends TestCase
 
     /** @test */
     public function a_book_belongs_to_class() {
-        $this->assertInstanceOf('App\Myclass', $this->book->class);
+        $this->assertInstanceOf('App\MyClass', $this->book->class);
     }
 
     /** @test */

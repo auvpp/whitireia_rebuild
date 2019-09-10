@@ -2,7 +2,7 @@
 
 use App\User;
 use App\School;
-use App\Myclass;
+use App\MyClass;
 use App\Syllabus;
 use Faker\Generator as Faker;
 
@@ -18,9 +18,9 @@ $factory->define(Syllabus::class, function (Faker $faker) {
             else return factory(School::class)->create()->id;
         },
         'class_id' => function() use ($faker) {
-            if (Myclass::count())
-                return $faker->randomElement(Myclass::pluck('id')->toArray());
-            else return factory(Myclass::class)->create()->id;
+            if (MyClass::count())
+                return $faker->randomElement(MyClass::pluck('id')->toArray());
+            else return factory(MyClass::class)->create()->id;
         },
         'user_id'  => function() use ($faker) {
             if (User::count())

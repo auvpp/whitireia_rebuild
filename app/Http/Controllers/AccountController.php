@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AccountSector;
 use App\Account;
-use App\Myclass;
+use App\MyClass;
 use App\User;
 use App\Section;
 use Illuminate\Http\Request;

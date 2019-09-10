@@ -94,11 +94,11 @@ use Illuminate\Http\Request;
 // });
 
 // Route::group(['middleware' => 'auth:api'], function(){
-//   Route::get('classes/{school_id}', 'MyclassController@index');
-//   Route::post('class', 'MyclassController@store');
-//   Route::get('class/{id}', 'MyclassController@show');
-//   Route::put('class/{id}', 'MyclassController@update');
-//   //Route::delete('class/{id}', 'MyclassController@destroy')
+//   Route::get('classes/{school_id}', 'MyClassController@index');
+//   Route::post('class', 'MyClassController@store');
+//   Route::get('class/{id}', 'MyClassController@show');
+//   Route::put('class/{id}', 'MyClassController@update');
+//   //Route::delete('class/{id}', 'MyClassController@destroy')
 // });
 
 // Route::group(['middleware' => 'auth:api'], function(){

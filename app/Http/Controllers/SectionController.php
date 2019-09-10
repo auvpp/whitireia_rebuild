@@ -15,9 +15,9 @@ class SectionController extends Controller
      */
      public function index()
      {
-      $classes = \App\Myclass::bySchool(\Auth::user()->school->id)
+      $classes = \App\MyClass::bySchool(\Auth::user()->school->id)
                   ->get();
-      $classeIds = \App\Myclass::bySchool(\Auth::user()->school->id)
+      $classeIds = \App\MyClass::bySchool(\Auth::user()->school->id)
                     ->pluck('id')
                     ->toArray();
       $sections = \App\Section::whereIn('class_id',$classeIds)

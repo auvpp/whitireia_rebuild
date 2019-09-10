@@ -3,7 +3,7 @@ namespace App\Services\Account;
 
 use App\AccountSector;
 use App\Account;
-// use App\Myclass;
+// use App\MyClass;
 // use App\Section;
 // use App\User;
 
@@ -40,7 +40,7 @@ class AccountService {
     }
 
     // public function getClassIds(){
-    //     return Myclass::where('school_id', \Auth::user()->school_id)
+    //     return MyClass::where('school_id', \Auth::user()->school_id)
     //                         ->pluck('id');
     // }
 

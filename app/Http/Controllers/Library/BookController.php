@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Library;
 
 use App\Book;
-use App\Myclass;
+use App\MyClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Library\BookRequest;
@@ -31,13 +31,13 @@ class BookController extends Controller
     }
 
     public function edit(Book $book) {
-        $classes = Myclass::bySchool(auth()->user()->school_id)->get();
+        $classes = MyClass::bySchool(auth()->user()->school_id)->get();
 
         return view('library.books.edit', compact('book', 'classes'));
     }
 
     public function create() {
-        $classes = Myclass::bySchool(auth()->user()->school_id)->get();
+        $classes = MyClass::bySchool(auth()->user()->school_id)->get();
 
         return view('library.books.create', compact('classes'));
     }

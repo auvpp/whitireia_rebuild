@@ -8,6 +8,11 @@ use Faker\Generator as Faker;
 
 $factory->define(Grade::class, function (Faker $faker) {
     return [
+        //'name'   => $faker->$faker->randomElement(['A+', 'A', 'B+', 'B', 'C', 'D']),
+
+
+
+      /*
         'gpa'         => $faker->randomNumber(1, false),
         'marks'       => $faker->randomNumber(2, false),
         'attendance'  => 5,
@@ -52,5 +57,7 @@ $factory->define(Grade::class, function (Faker $faker) {
             return $faker->randomElement(User::pluck('id')->toArray());
           else return factory(User::class)->create()->id;
         },
+       */
+
     ];
 });

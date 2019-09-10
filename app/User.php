@@ -27,8 +27,7 @@ class User extends Model implements
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role', 'code',/* school code*/'student_code', 'active', 'verified', 'school_id', 'section_id', 'address', 'about', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'department_id',
-    ];
+        'first_name', 'last_name', 'email', 'password', 'role', /* school code*/'code', 'active', 'verified', 'school_id', 'code', 'address', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'major_id', 'programme_id', 'term_id', 'year', 'about' ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -49,27 +48,54 @@ class User extends Model implements
         return $this->belongsTo('App\Section');
     }
 
+    /**
+     * One user belongs to only one school.
+     */
     public function school()
     {
         return $this->belongsTo('App\School');
     }
 
-    public function department()
+    /**
+     * One user belongs to only one programme.
+     */
+    public function programme()
     {
-        return $this->belongsTo('App\Department','department_id', 'id');
+        return $this->belongsTo('App\Programme');
     }
 
-    public function studentInfo(){
-        return $this->hasOne('App\StudentInfo','student_id');
+    /**
+     * One user belongs to only one major.
+     */
+    public function major()
+    {
+        return $this->belongsTo('App\Major');
     }
 
-    public function studentBoardExam(){
-        return $this->hasMany('App\StudentBoardExam','student_id');
+    /**
+     * One user has many MyClasses.
+     */
+    public function myClasses()
+    {
+        return $this->hasMany('App\MyClass');
     }
 
-    public function notifications(){
-        return $this->hasMany('App\Notification','student_id');
-    }
+    // public function department()
+    // {
+    //     return $this->belongsTo('App\Department','department_id', 'id');
+    // }
+
+    // public function studentInfo(){
+    //     return $this->hasOne('App\StudentInfo','student_id');
+    // }
+
+    // public function studentBoardExam(){
+    //     return $this->hasMany('App\StudentBoardExam','student_id');
+    // }
+
+    // public function notifications(){
+    //     return $this->hasMany('App\Notification','student_id');
+    // }
 
     public function hasRole(string $role): bool
     {

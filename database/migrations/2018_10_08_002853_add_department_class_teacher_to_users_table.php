@@ -14,7 +14,7 @@ class AddDepartmentClassTeacherToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('department_id')->unsigned()->default(0);
+            // $table->integer('department_id')->unsigned()->default(0);
         });
     }
 
@@ -26,7 +26,7 @@ class AddDepartmentClassTeacherToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['department_id']);
+            // $table->dropColumn(['department_id']);
         });
     }
 }

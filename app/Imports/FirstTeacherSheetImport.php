@@ -3,7 +3,7 @@
 namespace App\Imports;
 
 use App\User;
-use App\Myclass;
+use App\MyClass;
 use App\Section;
 use App\Department;
 use Illuminate\Support\Facades\Hash;
@@ -50,7 +50,7 @@ class FirstTeacherSheetImport implements ToModel, WithHeadingRow, WithBatchInser
 
     public function getSectionId(){
         if(!empty($this->class) && !empty($this->section)){
-            $class_id = Myclass::bySchool(auth()->user()->school_id)->where('class_number', $this->class)->pluck('id')->first();
+            $class_id = MyClass::bySchool(auth()->user()->school_id)->where('class_number', $this->class)->pluck('id')->first();
 
             return Section::where('class_id', $class_id)->where('section_number', $this->section)->pluck('id')->first();
         } else {

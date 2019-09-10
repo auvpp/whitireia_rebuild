@@ -12,12 +12,12 @@
             <div class="panel panel-default">
               @if(count($users) > 0)
               @foreach ($users as $user)
-                @if (Session::has('section-attendance'))
+                <!-- @if (Session::has('section-attendance'))
                 <ol class="breadcrumb" style="margin-top: 3%;">
                     <li><a href="{{url('school/sections?att=1')}}" style="color:#3b80ef;">@lang('Classes &amp; Sections')</a></li>
                     <li class="active">{{ucfirst($user->role)}}s</li>
                 </ol>
-                @endif
+                @endif -->
                 <div class="page-panel-title">@lang('List of all') {{ucfirst($user->role)}}s</div>
                  @break($loop->first)
               @endforeach

@@ -16,10 +16,10 @@ class CreateSchoolsTable extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('established')->default('');
-            $table->text('about');
+            //$table->string('established')->default('');
+            //$table->text('about');
             // $table->string('medium');//bn,en
-            $table->integer('code')->unique();
+            //$table->integer('code')->unique();
             $table->string('theme');
             $table->timestamps();
         });

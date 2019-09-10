@@ -8,10 +8,10 @@ use Faker\Generator as Faker;
 
 $factory->define(Issuedbook::class, function (Faker $faker) {
     return [
-        'student_code'  => function () use ($faker) {
+        'code'  => function () use ($faker) {
             if (User::count())
-                return $faker->randomElement(User::pluck('student_code')->toArray());
-            else return factory(User::class)->create()->student_code;
+                return $faker->randomElement(User::pluck('code')->toArray());
+            else return factory(User::class)->create()->code;
         },
         'book_id'       => function () use ($faker) {
             if (Book::count())

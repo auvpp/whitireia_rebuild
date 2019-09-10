@@ -16,7 +16,7 @@ class SyllabusController extends Controller
      */
      public function index()
      {
-        $files = Syllabus::with('myclass')
+        $files = Syllabus::with('MyClass')
                           ->bySchool(\Auth::user()->school_id)
                           ->where('active',1)
                           ->get();
@@ -32,7 +32,7 @@ class SyllabusController extends Controller
     {
       try{
         if(Schema::hasColumn('syllabuses','class_id')){
-          $files = Syllabus::with('myclass')
+          $files = Syllabus::with('MyClass')
                           ->bySchool(\Auth::user()->school_id)
                           ->where('class_id', $class_id)
                           ->where('active',1)

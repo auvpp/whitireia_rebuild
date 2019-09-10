@@ -3,7 +3,7 @@
 use App\Book;
 use App\User;
 use App\School;
-use App\Myclass;
+use App\MyClass;
 use Faker\Generator as Faker;
 
 $factory->define(Book::class, function (Faker $faker) {
@@ -19,9 +19,9 @@ $factory->define(Book::class, function (Faker $faker) {
         'about'     => $faker->sentences(3, true),
         'price'     => $faker->randomNumber,
         'class_id'  => function() use ($faker) {
-                            if (Myclass::count() > 0) {
-                                return $faker->randomElement(Myclass::pluck('id')->toArray());
-                            } else return factory(Myclass::class)->create()->id;
+                            if (MyClass::count() > 0) {
+                                return $faker->randomElement(MyClass::pluck('id')->toArray());
+                            } else return factory(MyClass::class)->create()->id;
                         },
         'school_id'  => function() use ($faker) {
                             if (School::count() > 0) {

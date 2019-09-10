@@ -12,7 +12,7 @@ class School extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'about', /*'medium', */'code', 'theme',
+        'name', /*'about', 'medium', 'code',*/ 'theme',
     ];
 
   public function users()
@@ -20,13 +20,13 @@ class School extends Model
     return $this->hasMany('App\User');
   }
 
-  public function departments()
-  {
-    return $this->hasMany('App\Department');
-  }
+  // public function departments()
+  // {
+  //   return $this->hasMany('App\Department');
+  // }
 
-  public function gradesystems()
-  {
-    return $this->hasMany('App\Gradesystem');
-  }
+  // public function gradesystems()
+  // {
+  //   return $this->hasMany('App\Gradesystem');
+  // }
 }

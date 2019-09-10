@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Department;
-use App\Myclass;
+use App\MyClass;
+use App\Programme;
+use App\Major;
+use App\Term;
 use App\Section;
 use App\StudentInfo;
 use App\User;
@@ -46,15 +49,33 @@ class UserController extends Controller
      * @param $teacher_code
      * @return \Illuminate\Http\Response
      */
-    public function index($school_code, $student_code, $teacher_code){
-        session()->forget('section-attendance');
+    public function index($school_id, $student_code, $teacher_code){
+        // session()->forget('section-attendance');
         
-        if($this->userService->isListOfStudents($school_code, $student_code))
-            return $this->userService->indexView('list.student-list', $this->userService->getStudents());
-        else if($this->userService->isListOfTeachers($school_code, $teacher_code))
-            return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers());
+        if($this->userService->isListOfStudents($school_id, $student_code))
+            return $this->userService->indexView('list.student-list', $this->userService->getStudents($school_id));
+        else if($this->userService->isListOfTeachers($school_id, $teacher_code))
+            return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers($school_id));
         else
             return view('home');
+    }
+
+    /**
+     * Display a list of all teachers based on school_id.
+     * @param $school_id
+     */
+    public function indexTeacher($school_id){
+        
+        return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers($school_id));
+    }
+
+    /**
+     * Display a list of all students based on school_id.
+     * @param $school_id
+     */
+    public function indexStudent($school_id){
+        
+        return $this->userService->indexView('list.student-list', $this->userService->getStudents($school_id));
     }
 
     /**
@@ -76,7 +97,7 @@ class UserController extends Controller
      */
     public function redirectToRegisterStudent()
     {
-        $classes = Myclass::query()
+        $classes = MyClass::query()
             ->bySchool(\Auth::user()->school->id)
             ->pluck('id');
 
@@ -112,7 +133,7 @@ class UserController extends Controller
         if($this->userService->hasSectionId($section_id))
             return $this->userService->promoteSectionStudentsView(
                 $this->userService->getSectionStudentsWithStudentInfo($request, $section_id),
-                Myclass::with('sections')->bySchool(\Auth::user()->school_id)->get(),
+                MyClass::with('sections')->bySchool(\Auth::user()->school_id)->get(),
                 $section_id
             );
         else
@@ -164,7 +185,7 @@ class UserController extends Controller
         }
         else {
             return view('profile.impersonate', [
-                'other_users' => $this->user->where('id', '!=', auth()->id())->get([ 'id', 'name', 'role' ])
+                'other_users' => $this->user->where('id', '!=', auth()->id())->get([ 'id', 'first_name', 'last_name', 'role' ])
             ]);
         }
     }
@@ -287,9 +308,9 @@ class UserController extends Controller
      *
      * @return UserResource
      */
-    public function show($user_code)
+    public function show($code)
     {
-        $user = $this->userService->getUserByUserCode($user_code);
+        $user = $this->userService->getUserByCode($code);
 
         return view('profile.user', compact('user'));
     }
@@ -304,23 +325,28 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = $this->user->find($id);
-        $classes = Myclass::query()
-            ->bySchool(\Auth::user()->school_id)
-            ->pluck('id')
-            ->toArray();
 
-        $sections = Section::query()
-            ->whereIn('class_id', $classes)
-            ->get();
+        $majors = Major::query()->get();
+        $programmes = Programme::query()->get();
+        // $classes = MyClass::query()
+        //     ->bySchool(\Auth::user()->school_id)
+        //     ->pluck('id')
+        //     ->toArray();
 
-        $departments = Department::query()
-            ->bySchool(\Auth::user()->school_id)
-            ->get();
+        // $sections = Section::query()
+        //     ->whereIn('class_id', $classes)
+        //     ->get();
+
+        // $departments = Department::query()
+        //     ->bySchool(\Auth::user()->school_id)
+        //     ->get();
 
         return view('profile.edit', [
             'user' => $user,
-            'sections' => $sections,
-            'departments' => $departments,
+            // 'sections' => $sections,
+            // 'departments' => $departments,
+            'programmes' => $programmes,
+            'majors' => $majors,
         ]);
     }
 

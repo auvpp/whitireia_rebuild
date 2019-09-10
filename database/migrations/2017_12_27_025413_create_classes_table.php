@@ -15,9 +15,10 @@ class CreateClassesTable extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('class_number');
-            $table->integer('school_id')->unsigned();
-            $table->string('group');
+            $table->integer('user_id');
+            $table->integer('term_credit')->default(0);
+            $table->integer('term_id');
+            $table->integer('year')->default(2019);
             $table->timestamps();
         });
     }

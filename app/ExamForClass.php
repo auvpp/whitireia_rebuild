@@ -9,7 +9,7 @@ class ExamForClass extends Model
     public $timestamps = false;
 
     public function classes(){
-        return $this->hasMany('App\Myclass');
+        return $this->hasMany('App\MyClass');
     }
 
     public function exam(){

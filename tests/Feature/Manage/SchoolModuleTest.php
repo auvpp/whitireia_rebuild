@@ -4,7 +4,7 @@ namespace Tests\Feature\Manage;
 
 use App\User;
 use App\School;
-use App\Myclass;
+use App\MyClass;
 use App\Section;
 use App\Department;
 use Tests\TestCase;
