@@ -29,14 +29,13 @@ class CreateUsersTable extends Migration
             //$table->string('nationality')->default('');
             $table->string('phone_number')->unique()->default('');
             $table->string('address')->default('');
-            //$table->text('about')->default('');
             $table->string('pic_path')->default('');
             $table->tinyInteger('verified');
             $table->integer('major_id')->nullable();
             $table->integer('qualification_id')->nullable();
             $table->integer('programme_id')->nullable();
             $table->string('enrolled_date')->nullable();
-            $table->string('about')->default('');
+            $table->text('about')->default('');
             //$table->integer('section_id')->unsigned()->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -17,11 +17,12 @@
               @endif
               <th scope="col">@lang('Course Code')</th>
               <th scope="col">@lang('Course Name')</th>
-              <!-- <th scope="col">@lang('Teacher')</th> -->
-              <th scope="col">@lang('Compulsory / Elective')</th>
+              <th scope="col">@lang('Course Level')</th>
+              <th scope="col">@lang('Course Type')</th>
               <th scope="col">@lang('Current Offered')</th>
               <th scope="col">@lang('Next Offered')</th>
               <th scope="col">@lang('Prerequisites')</th>
+              <th scope="col">@lang('Tutor')</th>
               <th scope="col">@lang('Credits')</th>
             </tr>
           </thead>
@@ -47,75 +48,113 @@
                         <form class="form-horizontal" action="{{url('edit/course/'.$course->id)}}" method="post">
                           {{csrf_field()}}
                           <div class="row" style="margin-bottom:7px;">
-                            <div class="col-sm-4">
-                              <label for="adminCourseCode{{$course->id}}" class="control-label">@lang('Course Code :')</label>
+                            <div class="col-sm-4 ">
+                              <label for="adminCourseCode{{$course->id}}" class="pull-right control-label">@lang('Course Code :')</label>
                             </div>
-                            <div class="col-sm-8">
-                              <input type="text" name="code" class="form-control" id="adminCourseCode{{$course->id}}" value="{{$course->code}}" required>
+                            <div class="col-sm-8 ">
+                              <input style="width:100%" type="text" name="code" class="form-control" id="adminCourseCode{{$course->id}}" value="{{$course->code}}" required>
                             </div>                                  
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseName{{$course->id}}" class="control-label">@lang('Course Name :')</label>
+                              <label for="adminCourseName{{$course->id}}" class="pull-right control-label">@lang('Course Name :')</label>
                             </div>
                             <div class="col-sm-8">
-                              <input type="text" name="name" class="form-control" id="adminCourseName{{$course->id}}" value="{{$course->name}}" required>
+                              <input style="width:100%" type="text" name="name" class="form-control" id="adminCourseName{{$course->id}}" value="{{$course->name}}" required>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseCompulsory{{$course->id}}" class="control-label">@lang('Compulsory / Elective :')</label>
+                              <label for="adminCourseLevel{{$course->id}}" class="pull-right control-label">@lang('Course Level :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="compulsory" class="form-control" id="adminCourseCompulsory{{$course->id}}" value="@if ($course->compulsory == 1) Compulsory @else Elective @endif " required>
+                              <select style="width:100%" class="form-control" id="adminCourseLevel{{$course->id}}" name="level">
+                                <option value="Level 5">@lang('Level 5')</option>
+                                <option value="Level 6">@lang('Level 6')</option>
+                                <option value="Level 7">@lang('Level 7')</option>
+                                <option value="Level 8">@lang('Level 8')</option>
+                                <option value="Level 9">@lang('Level 9')</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseCredit{{$course->id}}" class="control-label">@lang('Credits :')</label>
+                              <label for="adminCourseType{{$course->id}}" class="pull-right control-label">@lang('Course Type :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="credit" class="form-control" id="adminCourseCredit{{$course->id}}" value="{{$course->credit}}" required>
+                              <select style="width:100%" class="form-control" id="adminCourseType{{$course->id}}" name="type">
+                                <option value="Compulsory">@lang('Compulsory')</option>
+                                <option value="Elective">@lang('Elective')</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCoursePrerequisite{{$course->id}}" class="control-label">@lang('Prerequisites :')</label>
+                              <label for="adminCourseCredit{{$course->id}}" class="pull-right control-label">@lang('Credits :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="prerequisite" class="form-control" id="adminCoursePrerequisite{{$course->id}}" value="{{$course->prerequisite}}">
+                                <input style="width:100%" type="text" name="credit" class="form-control" id="adminCourseCredit{{$course->id}}" value="{{$course->credit}}" required>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseTeacher{{$course->id}}" class="control-label">@lang('Tutor :')</label>
+                              <label for="adminCoursePrerequisite{{$course->id}}" class="pull-right control-label">@lang('Prerequisites :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="teacher" class="form-control" id="adminCourseTeacher{{$course->id}}" value="{{$course->teacher_id}}">
+                                <input style="width:100%" type="text" name="prerequisite" class="form-control" id="adminCoursePrerequisite{{$course->id}}" value="{{$course->prerequisite}}">
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseCurrent{{$course->id}}" class="control-label">@lang('Current Offered :')</label>
+                              <label for="adminCourseCurrentOffered{{$course->id}}" class="pull-right control-label">@lang('Current Offered :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="current_offered" class="form-control" id="adminCourseCurrent{{$course->id}}" value="{{$course->current_offered.' '.$course->current_offered_year}}">
+                              <select style="width:100%" class="form-control" id="adminCourseCurrentOffered{{$course->id}}" name="current_offered"> 
+                                <option value="{{'T1-'.date('Y')}}">{{ 'T1-'.date('Y')}}</option>
+                                <option value="{{'T2-'.date('Y')}}">{{ 'T2-'.date('Y')}}</option>
+                                <option value="{{'T1-'.(date('Y')+1)}}">{{ 'T1-'.(date('Y')+1)}}</option>
+                                <option value="{{'T2-'.(date('Y')+1)}}">{{ 'T2-'.(date('Y')+1)}}</option>
+                                <option value="Not offered">@lang('Not offered')</option>
+                                <option value="TBA">@lang('TBA')</option>
+                                <option value="No longer offered">@lang('No longer offered')</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseNext{{$course->id}}" class="control-label">@lang('Next Offered :')</label>
+                              <label for="adminCourseNextTerm{{$course->id}}" class="pull-right control-label">@lang('Next Offered :')</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" name="next_offered" class="form-control" id="adminCourseNext{{$course->id}}" value="{{$course->next_offered.' '.$course->next_offered_year}}">
+                              <select style="width:100%" class="form-control" id="adminCourseNextOffered{{$course->id}}" name="next_offered">
+                                <option value="{{'T1-'.date('Y')}}">{{ 'T1-'.date('Y')}}</option>
+                                <option value="{{'T2-'.date('Y')}}">{{ 'T2-'.date('Y')}}</option>
+                                <option value="{{'T1-'.(date('Y')+1)}}">{{ 'T1-'.(date('Y')+1)}}</option>
+                                <option value="{{'T2-'.(date('Y')+1)}}">{{ 'T2-'.(date('Y')+1)}}</option>
+                                <option value="Not offered">@lang('Not offered')</option>
+                                <option value="TBA">@lang('TBA')</option>
+                                <option value="No longer offered">@lang('No longer offered')</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row" style="margin-bottom:7px;">
                             <div class="col-sm-4">
-                              <label for="adminCourseDescription{{$course->id}}" class="control-label">@lang('Description :')</label>
+                              <label for="adminCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
                             </div>
                             <div class="col-sm-8">
-                              <textarea class="form-control" name="description" rows="2" id="adminCourseDescription{{$course->id}}" value="{{$course->description}}"></textarea>
+                              <select style="width:100%" class="form-control" id="adminCourseTeacher{{$course->id}}" name="teacher">
+                                <option value="TBA">@lang('TBA')</option>
+                                @foreach ($teachers as $t)
+                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
+                                @endforeach
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-bottom:7px;">
+                            <div class="col-sm-4">
+                              <label for="adminCourseDescription{{$course->id}}" class="pull-right control-label">@lang('Description :')</label>
+                            </div>
+                            <div class="col-sm-8">
+                              <textarea style="width:100%" class="form-control" name="description" rows="2" id="adminCourseDescription{{$course->id}}" value="{{$course->description}}"></textarea>
                             </div>
                           </div>
                           <div class="modal-footer">
@@ -127,21 +166,27 @@
                     </div>
                   </div>
                 </div>
-              </td>              
+              </td>
+
+              <script>
+                $(document).ready(function(){
+                  $("#adminCourseLevel{{$course->id}}").val('{{ucfirst($course->level)}}');
+                  $("#adminCourseType{{$course->id}}").val('{{ucfirst($course->type)}}');
+                  $("#adminCourseCurrentOffered{{$course->id}}").val('{{ucfirst($course->current_offered)}}');
+                  $("#adminCourseNextOffered{{$course->id}}").val('{{ucfirst($course->next_offered)}}');
+                  $("#adminCourseTeacher{{$course->id}}").val('{{ucfirst($course->teacher)}}');
+                });
+              </script>
+              
               @endif
               <td><small>{{$course->code}}</small></td>
               <td><small>{{$course->name}}</small></td>
-              <!-- <td><small>{{--$course->teacher_id--}}</small></td> -->
-              <td><small>
-                @if ($course->compulsory == 1)
-                  Compulsory
-                @else
-                  Elective
-                @endif
-              </small></td>
-              <td><small>{{$course->current_offered.' '.$course->current_offered_year}}</small></td>
-              <td><small>{{$course->next_offered.' '.$course->next_offered_year}}</small></td>
+              <td><small>{{ucfirst($course->level)}}</small></td>
+              <td><small>{{ucfirst($course->type)}}</small></td>
+              <td><small>{{$course->current_offered}}</small></td>
+              <td><small>{{$course->next_offered}}</small></td>
               <td><small>{{$course->prerequisite}}</small></td>
+              <td><small>{{$course->teacher}}</small></td>
               <td><small>{{$course->credit}}</small></td>      
             </tr>
             @endforeach    

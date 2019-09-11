@@ -77,7 +77,7 @@
             <tr>
               <td>@lang('Email'):</td>
               <td>{{$user->email}}</td>
-              <td>@lang('Contact Number')</td>
+              <td>@lang('Phone Number')</td>
               <td>{{$user->phone_number}}</td>
             </tr>
             <tr>

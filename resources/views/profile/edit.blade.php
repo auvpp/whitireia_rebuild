@@ -91,7 +91,7 @@
 
                             <div class="col-md-6">
                                 <input id="phone_number" type="text" class="form-control" name="phone_number"
-                                    value="{{ $user->phone_number }}" required>
+                                    value="{{ $user->phone }}" required>
 
                                 @if ($errors->has('phone_number'))
                                 <span class="help-block">

@@ -16,7 +16,7 @@ class MessageResource extends Resource
     {
         return [
             'id' => $this->id,
-            'phone_number' => $this->phone_number,
+            'phone_number' => $this->phone,
             'email' => $this->email,
             'message' => $this->message,
             'school' => new SchoolResource($this->school),

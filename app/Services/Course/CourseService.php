@@ -37,8 +37,16 @@ class CourseService {
 
     public function updateCourseInfo($id, $request){
         $tb = Course::find($id);
-        $tb->course_name = $request->course_name;
-        $tb->course_time = $request->course_time;
+        $tb->code = $request->code;
+        $tb->name = $request->name;
+        $tb->level = $request->level;
+        $tb->type = $request->type;
+        $tb->credit = $request->credit;
+        $tb->prerequisite = $request->prerequisite;
+        $tb->current_offered = $request->current_offered;
+        $tb->next_offered = $request->next_offered;
+        $tb->teacher = $request->teacher;
+        $tb->description = $request->description;
         $tb->save();
     }
 

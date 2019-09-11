@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use App\Major;
+use App\User;
+use App\Programme;
 use App\Http\Resources\CourseResource;
 use Illuminate\Http\Request;
 use App\Http\Requests\Course\SaveConfigurationRequest;
@@ -18,6 +20,7 @@ class CourseController extends Controller
     protected $qualification;
     protected $majors;
     protected $courses;
+    protected $teacher;
 
     public function __construct(CourseService $courseService, Qualification $qualification){
       $this->courseService = $courseService;
@@ -71,8 +74,15 @@ class CourseController extends Controller
                     ->where('qualification_id', $id)
                     ->orderBy('name', 'asc')
                     ->get();
+      
+      $programme_id = $qualification->programme_id;
+      $teachers = User::with('programme')
+                    ->where('programme_id', $programme_id)
+                    ->where('role', 'teacher')
+                    ->get();
+
       //$courses = $this->courseService->getCoursesByMajors();
-      return view('course.admin-course', compact('qualification','majors'));
+      return view('course.admin-course', compact('qualification', 'majors', 'teachers'));
     }
 
     /**
@@ -134,11 +144,19 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updateNameAndTime(Request $request, $id)
+    public function update(Request $request, $id)
     {
       $request->validate([
-        'course_name' => 'required|string',
-        'course_time' => 'required|string',
+        'code' => 'required|string',
+        'name' => 'required|string',
+        'level' => 'required|string',
+        'type'  => 'required|string',
+        'credit' => 'required|integer',
+        'prerequisite' =>'string',
+        'current_offered' => 'required|string',
+        'next_offered' => 'required|string',
+        'teacher' => 'required|string',
+        'description' => 'nullable|string',
       ]);
       $this->courseService->updateCourseInfo($id, $request);
       return back()->with('status', __('Saved'));

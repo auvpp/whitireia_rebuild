@@ -20,13 +20,9 @@ $factory->define(Course::class, function (Faker $faker) {
             else return factory(Major::class)->create()->id;
         },
         'level'       => $faker->randomElement(['Level 5', 'Level 6', 'Level 7', 'Level 8', 'Level 9']),
-        'compulsory'  => $faker->randomElement([1, 0]),
+        'type'  => $faker->randomElement(['Compulsory', 'Elective']),
         'credit'      => $faker->randomElement([1, 2, 3, 4, 5]),
         'active'      => 1,
-        'current_offered'   => $faker->randomElement(['Yes', 'Not offered', 'No longer offered']),
-        'current_offered_year' => date('Y'),
-        'next_offered'   => $faker->randomElement(['T2-2019', 'Not offered', 'No longer offered']),
-        'next_offered_year' => date('Y'),
 
         /*
         'course_name' => $faker->words(3, true),

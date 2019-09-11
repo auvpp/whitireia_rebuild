@@ -19,7 +19,7 @@
                         </div>
                     @endif
 
-                    @component('components.course-table',['majors'=>$majors])
+                    @component('components.course-table',['majors'=>$majors, 'teachers'=>$teachers,])
                     @endcomponent
                 </div>
               @else

@@ -90,6 +90,7 @@ Route::middleware(['auth'])->group(function (){
   Route::get('/programmes/business', 'ProgrammeController@showBusiness')->name('programme.business');
   Route::get('/programmes/it', 'ProgrammeController@ShowIT')->name('programme.it');
 
+  /* show all courses */
   Route::get('/programmes/business/{id}', 'CourseController@course');
   Route::get('/programmes/it/{id}', 'CourseController@course');
 });
@@ -135,7 +136,7 @@ Route::middleware(['auth','admin'])->group(function (){
 
   // the Route for editing courses
   Route::get('edit/course/{id}','CourseController@edit');
-  Route::post('edit/course/{id}','CourseController@updateNameAndTime');
+  Route::post('edit/course/{id}','CourseController@update');
 
   Route::get('/settings', 'SettingController@index')->name('settings.index');
   Route::get('gpa/create-gpa', 'GradesystemController@create');
