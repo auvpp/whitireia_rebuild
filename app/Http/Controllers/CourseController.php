@@ -76,10 +76,16 @@ class CourseController extends Controller
                     ->get();
       
       $programme_id = $qualification->programme_id;
+      
       $teachers = User::with('programme')
-                    ->where('programme_id', $programme_id)
                     ->where('role', 'teacher')
+                    ->orderBy('first_name', 'asc')
                     ->get();
+
+      // $teachers = User::with('programme')
+      // ->where('programme_id', $programme_id)
+      // ->where('role', 'teacher')
+      // ->get();
 
       //$courses = $this->courseService->getCoursesByMajors();
       return view('course.admin-course', compact('qualification', 'majors', 'teachers'));
@@ -159,7 +165,7 @@ class CourseController extends Controller
         'description' => 'nullable|string',
       ]);
       $this->courseService->updateCourseInfo($id, $request);
-      return back()->with('status', __('Saved'));
+      return back()->with('status', __('Course Saved'));
     }
 
     /**

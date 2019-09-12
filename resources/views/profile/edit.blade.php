@@ -29,8 +29,8 @@
             <div class="panel panel-default">
                 <div class="page-panel-title">
                     @lang('Edit') - 
-                    @if($user->role == 'student') Student - 
-                    @elseif($user->role == 'teacher') Teacher - 
+                    @if ($user->role == 'student') Student - 
+                    @elseif ($user->role == 'teacher') Teacher - 
                     @endif
                     {{$user->code}}
                 </div>

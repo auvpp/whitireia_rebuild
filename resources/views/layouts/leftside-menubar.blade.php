@@ -120,7 +120,7 @@
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li> -->
   @if(Auth::user()->role == 'admin')
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('settings.index') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Settings')</span></a>
+    <a class="nav-link" href="{{ route('settings.index') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Academic Settings')</span></a>
   </li>
   @endif
   <!-- <li class="nav-item dropdown">

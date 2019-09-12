@@ -31,7 +31,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -48,7 +48,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -65,7 +65,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -82,7 +82,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -99,7 +99,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -116,7 +116,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -133,7 +133,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -150,7 +150,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -167,7 +167,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -184,7 +184,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -201,7 +201,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -218,7 +218,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -235,7 +235,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -252,7 +252,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -269,7 +269,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -286,7 +286,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -303,7 +303,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -320,7 +320,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -337,7 +337,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jill Dawson",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -354,7 +354,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jill Dawson",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -371,7 +371,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jill Dawson",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -388,7 +388,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -405,7 +405,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -422,7 +422,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -439,7 +439,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -456,7 +456,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -473,7 +473,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -490,7 +490,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -507,7 +507,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -524,7 +524,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -541,7 +541,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -558,7 +558,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -575,7 +575,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -592,7 +592,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -609,7 +609,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -626,7 +626,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -643,7 +643,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -660,7 +660,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -677,7 +677,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -694,7 +694,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -711,7 +711,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -728,7 +728,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -745,7 +745,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -762,7 +762,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -779,7 +779,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -796,7 +796,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -813,7 +813,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -830,7 +830,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -850,7 +850,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -867,7 +867,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -884,7 +884,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -901,7 +901,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -918,7 +918,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -938,7 +938,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -955,7 +955,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -972,7 +972,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -989,7 +989,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1006,7 +1006,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1026,7 +1026,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1043,7 +1043,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1060,7 +1060,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1077,7 +1077,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1094,7 +1094,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1116,7 +1116,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1133,7 +1133,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1150,7 +1150,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1170,7 +1170,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jagath Pushpakumar",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1187,7 +1187,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jagath Pushpakumar",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1204,7 +1204,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Markus Klose",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1221,7 +1221,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    =>  "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1238,7 +1238,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jonathan Latimer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1255,7 +1255,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    =>  "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1272,7 +1272,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1289,7 +1289,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Matthew Abraham",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1306,7 +1306,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Jagath Pushpakumar",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1326,7 +1326,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1343,7 +1343,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1360,7 +1360,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1378,7 +1378,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Rohit Pande",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1395,7 +1395,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1412,7 +1412,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Daymon Heyzer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1429,7 +1429,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Rohit Pande",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1449,7 +1449,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1465,7 +1465,7 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
-            'description' => "",
+            'description' => "Markus Klose",
             'teacher'    =>  1,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
@@ -1483,7 +1483,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Daymon Heyzer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1500,7 +1500,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Markus Klose",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1517,7 +1517,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Daymon Heyzer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1534,7 +1534,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1551,7 +1551,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1568,7 +1568,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Daymon Heyzer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1585,7 +1585,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    =>  "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1602,7 +1602,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour/Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1622,7 +1622,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Markus Klose",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1639,7 +1639,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Markus Klose",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1656,7 +1656,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1673,7 +1673,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Daymon Heyzer",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1690,7 +1690,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1707,7 +1707,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Paul Gilmour/Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1730,7 +1730,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1747,7 +1747,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1764,7 +1764,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1781,7 +1781,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1798,7 +1798,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1815,7 +1815,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1827,7 +1827,7 @@ class CoursesTableSeeder extends Seeder
             'level' => "Level 8",
             'type'     => "Compulsory",
             'credit'   => 15,
-            'active' => 1,
+            'active' => "Sharan GaribSingh",
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
@@ -1849,7 +1849,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1866,7 +1866,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1883,7 +1883,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1900,7 +1900,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1917,7 +1917,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1937,7 +1937,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Matthew Abraham",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1953,7 +1953,7 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
-            'description' => "",
+            'description' => "Matthew Abraham",
             'teacher'    =>  1,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
@@ -1974,7 +1974,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1991,7 +1991,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2011,7 +2011,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Yalim Ozdinc",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2028,7 +2028,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Yalim Ozdinc",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2048,7 +2048,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2065,7 +2065,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Rohit Pande",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2088,7 +2088,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2105,7 +2105,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    =>  "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2122,7 +2122,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2139,7 +2139,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2156,7 +2156,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2173,7 +2173,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2190,7 +2190,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2207,7 +2207,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2224,7 +2224,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2241,7 +2241,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2258,7 +2258,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2275,7 +2275,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2292,7 +2292,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2309,7 +2309,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2326,7 +2326,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2343,7 +2343,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2366,7 +2366,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2383,7 +2383,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2400,7 +2400,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2417,7 +2417,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Keith Macky",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2434,7 +2434,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2451,7 +2451,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2468,7 +2468,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2485,7 +2485,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2502,7 +2502,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2519,7 +2519,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2536,7 +2536,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2553,7 +2553,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Sharan GaribSingh",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2573,7 +2573,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Matthew Abraham",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2590,7 +2590,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Matthew Abraham",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2610,7 +2610,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2627,7 +2627,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2647,7 +2647,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Yalim Ozdinc",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2664,7 +2664,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Yalim Ozdinc",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2684,7 +2684,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Ann Cameron",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2701,7 +2701,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Rohit Pande",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2724,7 +2724,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2741,7 +2741,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2758,7 +2758,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2775,7 +2775,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2792,7 +2792,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2809,7 +2809,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2826,7 +2826,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2843,7 +2843,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Suzan Sariefe",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2877,7 +2877,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2894,7 +2894,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2911,7 +2911,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2928,7 +2928,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2945,7 +2945,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2962,7 +2962,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2979,7 +2979,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2996,7 +2996,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3013,7 +3013,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3030,7 +3030,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3047,7 +3047,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3064,7 +3064,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3081,7 +3081,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3098,7 +3098,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3115,7 +3115,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3132,7 +3132,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3149,7 +3149,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3166,7 +3166,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3183,7 +3183,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 Master students must choose at least one of the BUS9501, BUS9502 and BUS9503",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3204,7 +3204,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3221,7 +3221,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3238,7 +3238,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3255,7 +3255,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3272,7 +3272,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3289,7 +3289,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3306,7 +3306,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3323,7 +3323,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3340,7 +3340,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5101 or IT5181",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3357,7 +3357,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5117 or IT5189",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3374,7 +3374,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3391,7 +3391,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5104 or IT5184",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3408,7 +3408,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5103 or IT5182",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3425,7 +3425,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3442,7 +3442,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3459,7 +3459,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5104 or IT5184 & IT5182",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Noor Al-Ani",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3476,7 +3476,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5117 or IT5187",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3493,7 +3493,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7305 or IT7125 & 300 credits",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3510,7 +3510,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3527,7 +3527,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3544,7 +3544,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6209 or IT6129",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3561,7 +3561,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5183, IT5185, IT5186, IT6111",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3578,7 +3578,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT5106 or IT5186",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3595,7 +3595,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6203 or IT6210 / IT6123 or IT6130",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3612,7 +3612,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "IT6206 or IT6126",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3629,7 +3629,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6218 or IT6119",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3646,7 +3646,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6217 or IT6187",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3663,7 +3663,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3683,7 +3683,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3700,7 +3700,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3717,7 +3717,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3734,7 +3734,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3751,7 +3751,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3768,7 +3768,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3785,7 +3785,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3802,7 +3802,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3819,7 +3819,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3836,7 +3836,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3853,7 +3853,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3870,7 +3870,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Noor Al-Ani",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3887,7 +3887,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3904,7 +3904,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7225",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3921,7 +3921,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3938,7 +3938,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3955,7 +3955,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3972,7 +3972,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3989,7 +3989,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4006,7 +4006,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    =>  "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4023,7 +4023,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4040,7 +4040,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6219",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4057,7 +4057,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6287",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4074,7 +4074,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4094,7 +4094,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4111,7 +4111,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4128,7 +4128,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4145,7 +4145,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4162,7 +4162,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4179,7 +4179,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4196,7 +4196,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4213,7 +4213,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "Knowledge / Experience in Operating System",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4230,7 +4230,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "Knowledge / Experience in Network System",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4247,7 +4247,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4264,7 +4264,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);    
@@ -4281,7 +4281,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4298,7 +4298,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4315,7 +4315,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4332,7 +4332,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4349,7 +4349,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4366,7 +4366,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4383,7 +4383,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4400,7 +4400,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4417,7 +4417,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4434,7 +4434,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7325 & IT8401",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4451,7 +4451,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4471,7 +4471,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4488,7 +4488,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT8501",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);   
@@ -4505,7 +4505,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4522,7 +4522,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4539,7 +4539,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4556,7 +4556,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Shafiq Alam",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4573,7 +4573,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4590,7 +4590,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Andrew Zaliwski",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4607,7 +4607,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4624,7 +4624,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4641,7 +4641,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4658,7 +4658,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4675,7 +4675,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4692,7 +4692,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT8501",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4709,7 +4709,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4726,7 +4726,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "135 Credits from Level 8 including IT8501 & IT8502",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4743,7 +4743,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "135 Credits from Level 8 including IT8501 & IT8502",
             'description' => "",
-            'teacher'    =>  1,
+            'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);

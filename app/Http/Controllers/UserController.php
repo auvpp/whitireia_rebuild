@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use App\Department;
 use App\MyClass;
 use App\Programme;
+use App\Qualification;
 use App\Major;
 use App\Term;
 use App\Section;
 use App\StudentInfo;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Resources\UserResource;
@@ -65,8 +68,14 @@ class UserController extends Controller
      * @param $school_id
      */
     public function indexTeacher($school_id){
-        
-        return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers($school_id));
+        $majors = Major::query()->get();
+        $programmes = Programme::query()->get();
+        $qualifications = Qualification::query()->get();
+        $users = $this->userService->getTeachers($school_id);
+        $current_page = $users->currentPage();
+        $per_page = $users->perPage();
+        return view('list.teacher-list', compact('users', 'current_page', 'per_page', 'programmes', 'qualifications', 'majors'));
+        // return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers($school_id));
     }
 
     /**
@@ -74,8 +83,14 @@ class UserController extends Controller
      * @param $school_id
      */
     public function indexStudent($school_id){
-        
-        return $this->userService->indexView('list.student-list', $this->userService->getStudents($school_id));
+        $majors = Major::query()->get();
+        $programmes = Programme::query()->get();
+        $qualifications = Qualification::query()->get();
+        $users = $this->userService->getStudents($school_id);
+        $current_page = $users->currentPage();
+        $per_page = $users->perPage();
+        return view('list.student-list', compact('users', 'current_page', 'per_page', 'programmes', 'qualifications', 'majors'));
+        // return $this->userService->indexView('list.student-list', $this->userService->getStudents($school_id));
     }
 
     /**
@@ -353,49 +368,88 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param UpdateUserRequest $request
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request)
+    public function update(Request $request)
     {
-		 
-        DB::transaction(function () use ($request) {
-            $tb = $this->user->find($request->user_id);
-            $tb->name = $request->name;
-            $tb->email = (!empty($request->email)) ? $request->email : '';
-            // $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
-            $tb->phone_number = $request->phone_number;
-            $tb->address = (!empty($request->address)) ? $request->address : '';
-            $tb->about = (!empty($request->about)) ? $request->about : '';
-			if (!empty($request->pic_path)) {
-				$tb->pic_path = $request->pic_path;
-			}
-            if ($request->user_role == 'teacher') {
-                $tb->department_id = $request->department_id;
-                $tb->section_id = $request->class_teacher_section_id;
-            }
-            if ($tb->save()) {
-                if ($request->user_role == 'student') {
-                    // $request->validate([
-                    //   'session' => 'required',
-                    //   'version' => 'required',
-                    //   'birthday' => 'required',
-                    //   'religion' => 'required',
-                    //   'father_name' => 'required',
-                    //   'mother_name' => 'required',
-                    // ]);
-                    try{
-                        // Fire event to store Student information
-                        event(new StudentInfoUpdateRequested($request,$tb->id));
-                    } catch(\Exception $ex) {
-                        Log::info('Failed to update Student information, Id: '.$tb->id. 'err:'.$ex->getMessage());
-                    }
-                }
-            }
-        });
-
-        return back()->with('status', __('Saved'));
+        $tb = User::find($request->id);
+        $request->validate([
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'code' => 'required|string',
+            'gender'  => 'required|string',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string',
+            'address' => 'nullable|string',
+            'programme_id' => 'required|integer',
+            'qualification_id' => 'nullable|integer',
+            'major_id' => 'nullable|integer',
+            'enrolled_date' => 'required|string',
+            'about' => 'nullable|string',
+        ]);
+        
+        $tb->id = $request->id;
+        $tb->first_name = $request->first_name;
+        $tb->last_name = $request->last_name;
+        $tb->code = $request->code;
+        $tb->gender = $request->gender;
+        $tb->email = $request->email;
+        $tb->phone_number = $request->phone_number;
+        $tb->address = $request->address;
+        $tb->programme_id = $request->programme_id;
+        $tb->qualification_id = $request->qualification_id;
+        $tb->major_id = $request->major_id;
+        $tb->enrolled_date = $request->enrolled_date;
+        $tb->about = $request->about;
+        if ($tb->save()) {
+            return back()->with('status', __('User Saved'));
+        }
+        else{
+            return back()->with('status', __('UPDATE FAILED!'));
+        }
     }
+
+    // public function update(UpdateUserRequest $request)
+    // {
+    //     DB::transaction(function () use ($request) {
+    //         $tb = $this->user->find($request->user_id);
+    //         $tb->first_name = $request->first_name;
+    //         $tb->email = (!empty($request->email)) ? $request->email : '';
+    //         // $tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
+    //         $tb->phone_number = $request->phone_number;
+    //         $tb->address = (!empty($request->address)) ? $request->address : '';
+    //         $tb->about = (!empty($request->about)) ? $request->about : '';
+	// 		if (!empty($request->pic_path)) {
+	// 			$tb->pic_path = $request->pic_path;
+	// 		}
+    //         if ($request->user_role == 'teacher') {
+    //             $tb->department_id = $request->department_id;
+    //             $tb->section_id = $request->class_teacher_section_id;
+    //         }
+    //         if ($tb->save()) {
+    //             if ($request->user_role == 'student') {
+    //                 // $request->validate([
+    //                 //   'session' => 'required',
+    //                 //   'version' => 'required',
+    //                 //   'birthday' => 'required',
+    //                 //   'religion' => 'required',
+    //                 //   'father_name' => 'required',
+    //                 //   'mother_name' => 'required',
+    //                 // ]);
+    //                 try{
+    //                     // Fire event to store Student information
+    //                     event(new StudentInfoUpdateRequested($request,$tb->id));
+    //                 } catch(\Exception $ex) {
+    //                     Log::info('Failed to update Student information, Id: '.$tb->id. 'err:'.$ex->getMessage());
+    //                 }
+    //             }
+    //         }
+    //     });
+
+    //     return back()->with('status', __('Saved'));
+    // }
 
     /**
      * Activate admin

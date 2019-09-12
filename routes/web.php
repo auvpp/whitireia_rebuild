@@ -97,6 +97,7 @@ Route::middleware(['auth'])->group(function (){
 
 /* the Route for administrators */
 Route::middleware(['auth','admin'])->group(function (){
+
   Route::prefix('school')->name('school.')->group(function (){
     Route::post('add-class','MyClassController@store');
     Route::post('add-section','SectionController@store');
@@ -135,7 +136,7 @@ Route::middleware(['auth','admin'])->group(function (){
   });
 
   // the Route for editing courses
-  Route::get('edit/course/{id}','CourseController@edit');
+  //Route::get('edit/course/{id}','CourseController@edit');
   Route::post('edit/course/{id}','CourseController@update');
 
   Route::get('/settings', 'SettingController@index')->name('settings.index');
@@ -268,8 +269,10 @@ Route::middleware(['auth', 'librarian'])->namespace('Library')->group(function (
 
 //use PDF;
 Route::middleware(['auth','master.admin'])->group(function (){
-  Route::get('edit/user/{id}','UserController@edit');  // edit user
-  Route::post('edit/user','UserController@update');
+
+  //Route::get('edit/user/{id}','UserController@edit');  // edit user
+  Route::post('edit/user','UserController@update'); // update a user
+
   Route::post('upload/file', 'UploadController@upload');
   Route::post('users/import/user-xlsx','UploadController@import');
   Route::get('users/export/students-xlsx', 'UploadController@export');
