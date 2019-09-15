@@ -39,15 +39,15 @@ class MyClassController extends Controller
      */
     public function store(Request $request)
     {
-      $request->validate([
-        'class_number' => 'required'
-      ]);
-      $tb = new MyClass;
-      $tb->class_number = $request->class_number;
-      $tb->school_id = \Auth::user()->school_id;
-      $tb->group = (!empty($request->group))?$request->group:'';
-      $tb->save();
-      return back()->with('status', __('Created'));
+      // $request->validate([
+      //   echo $request;
+      // ]);
+      // $tb = new MyClass;
+      // $tb->class_number = $request->class_number;
+      // $tb->school_id = \Auth::user()->school_id;
+      // $tb->group = (!empty($request->group))?$request->group:'';
+      // $tb->save();
+      return redirect('home')->with('status', __('Courses Confirmed'));
     }
 
     /**

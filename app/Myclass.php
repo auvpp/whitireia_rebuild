@@ -31,7 +31,7 @@ class MyClass extends Model
     */
     public function classDetails()
     {
-        return $this->hasMany('App\ClassDetails');
+        return $this->hasMany('App\ClassDetail', 'class_id', 'id');
     }
 
     /**

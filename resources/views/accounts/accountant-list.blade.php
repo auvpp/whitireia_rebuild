@@ -12,7 +12,7 @@
             <div class="panel panel-default">
               @if(count($users) > 0)
               @foreach ($users as $user)
-                <div class="page-panel-title">@lang('List of all '){{ucfirst($user->role)}}s</div>
+                <div class="page-panel-title"><h2>@lang('List of all '){{ucfirst($user->role)}}s<h2></div>
                  @break($loop->first)
               @endforeach
                 <div class="panel-body">

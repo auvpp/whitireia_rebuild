@@ -1,8 +1,7 @@
-{{$users->links()}}
 <div class="table-responsive">
 <table class="table table-bordered table-data-div table-condensed table-striped table-hover">
   <thead>
-    <tr>
+    <tr class="bg-primary text-white">
       <th scope="col">#</th>
       @if(Auth::user()->role == 'admin')
         <th scope="col">@lang('Action')</th>
@@ -82,7 +81,8 @@
                             @if ($user->role == 'student') Student 
                             @elseif ($user->role == 'teacher') Teacher 
                             @endif
-                            </span> - {{$user->code}}
+                            </span> - {{$user->code}} &nbsp; &nbsp; &nbsp;
+                            <a href="#" type="button" class="btn btn-warning btn-xs">@lang('Rest Password')</a>
                           </h4>
                       </div>
                       <div class="modal-body">
@@ -156,7 +156,7 @@
                             <div class="col-sm-4">
                               <select style="width:100%" class="form-control" id="adminUserQualification{{$user->id}}" name="qualification_id" required>
                               @foreach ($qualifications as $q)
-                                <option value="{{$q->id}}">{{ucfirst($q->name)}}</option>
+                                <option value="{{$q->id}}" data-qualification="{{$q->id}}">{{ucfirst($q->name)}}</option>
                               @endforeach
                               </select>
                             </div>
@@ -175,7 +175,7 @@
                             <div class="col-sm-4">
                               <select style="width:100%" class="form-control" id="adminUserMajor{{$user->id}}" name="major_id" required>
                               @foreach ($majors as $m)
-                                <option value="{{$m->id}}">{{ucfirst($m->name)}}</option>
+                                <option value="{{$m->id}}" data-major="{{$m->id}}">{{ucfirst($m->name)}}</option>
                               @endforeach
                               </select>
                             </div>
@@ -197,7 +197,7 @@
                           </div>
 
                           <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-warning btn-sm pull-left">@lang('Reset Password')</a>
+                            <a href="#" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
                             <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>
@@ -210,16 +210,11 @@
         </td>
 
         <script>
-          $(document).ready(function(){
-            $("#adminUserGender{{$user->id}}").val('{{ucfirst($user->gender)}}');
-            $("#adminUserProgramme{{$user->id}}").val('{{$user->programme->id}}');
-            @if ($user->qulification != null)
-              $("#adminUserQualification{{$user->id}}").val('{{$user->qualification->id}}');
-            @endif
-            @if ($user->major != null)
-              $("#adminUserMajor{{$user->id}}").val('{{$user->major->id}}');
-            @endif
+          var qualifications = <?php echo json_encode($qualifications)?>;
+          var majors = <?php echo json_encode($majors)?>;
 
+          $(document).ready(function(){
+            // set datepicker for enrolled_date
             $("#adminUserDate{{$user->id}}").val('{{Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y')}}');
             $(function () {
               $('#adminUserDate{{$user->id}}').datepicker({
@@ -229,9 +224,84 @@
               });
               $('#adminUserDate{{$user->id}}').datepicker('setDate', "{{ Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y') }}");
             });
-          });
-        </script>
 
+            $("#adminUserGender{{$user->id}}").val('{{ucfirst($user->gender)}}');
+            $("#adminUserProgramme{{$user->id}}").val('{{$user->programme_id}}');
+
+            // firstly, hide the options of qualification
+            // and then, show user's qualification
+            $("#adminUserQualification{{$user->id}} option").hide();
+            getQualificationsByProgrammeId{{$user->id}}({{$user->programme_id}});
+            $("#adminUserQualification{{$user->id}}").val('{{$user->qualification_id}}');
+
+            // in the same way, hide the options of major
+            // and then, show user's major
+            $("#adminUserMajor{{$user->id}} option").hide();
+            getMajorsByQualificationId{{$user->id}}({{$user->qualification_id}});
+            $("#adminUserMajor{{$user->id}}").val('{{$user->major_id}}');
+          });
+
+          // if user change the select of programme
+          $('#adminUserProgramme{{$user->id}}').change(function () {
+            // show corresponding options of the qualification
+            let selected_programme_id = $(this).val();
+            getQualificationsByProgrammeId{{$user->id}}(selected_programme_id);
+
+            // show corresponding options of the major
+            let selected_major_id = $("#adminUserQualification{{$user->id}}").val();
+            getMajorsByQualificationId{{$user->id}}(selected_major_id);
+          });
+          
+          // if user change the select of qualification
+          $('#adminUserQualification{{$user->id}}').change(function () {
+            // show corresponding options of the major
+            let selected_major_id = $("#adminUserQualification{{$user->id}}").val();
+            getMajorsByQualificationId{{$user->id}}(selected_major_id);
+          });
+
+          function getQualificationsByProgrammeId{{$user->id}}(programme_id){
+            var qualification_select = document.getElementById("adminUserQualification{{$user->id}}");
+            qualification_select.options.length = 0;  // remove all options
+            for (let i = 0; i < qualifications.length; i ++){
+              if (qualifications[i].programme_id == programme_id){
+                qualification_select.options.add(new Option(qualifications[i].name, qualifications[i].id));   
+              }
+            }
+          }
+
+          function getMajorsByQualificationId{{$user->id}}(qualification_id){
+            var major_select = document.getElementById("adminUserMajor{{$user->id}}");
+            major_select.options.length = 0;  // remove all options
+            for (let i = 0; i < majors.length; i ++){
+              if (majors[i].qualification_id == qualification_id){
+                major_select.options.add(new Option(majors[i].name, majors[i].id));           
+              }
+            }
+          }
+
+          // console.log(courses); // user console to display data
+            //$("#adminUserQualification{{$user->id}} option").hide();  // hide all options of qualification
+            //$("#adminUserMajor{{$user->id}}").attr("disabled", "disabled");
+            //$("#adminUserMajor{{$user->id}}").removeAttr("disabled"); // remove an attribute
+            //$("#adminUserQualification{{$user->id}}").find("option").first().attr("selected", true); // find the first option
+
+            // let selected_qualification_id = null;
+    
+            // for (let i = 0; i < qualifications.length; i++) {
+            //   if (qualifications[i].programme_id == selected_programme_id) {
+            //     if (null == selected_qualification_id) {
+            //       selected_qualification_id = qualifications[i].id;
+            //     }
+            //     $("#adminUserQualification{{$user->id}} option[data-qualification=" + qualifications[i].id + "]").show();
+            //   }
+            // }
+            // $('#adminUserQualification{{$user->id}}').val(selected_qualification_id);
+ 
+            // $("#adminUserMajor{{$user->id}} option").hide();  // hide all options of major
+            // for (let j = 0; j < majors.length; j++){   
+            //   $("#adminUserMajor{{$user->id}} option[data-major=" + majors[i].id + "]").show();
+            // }
+        </script>
       @endif
       
         <td><small>{{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</small></td>

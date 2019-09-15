@@ -125,7 +125,7 @@ class UserService {
                 ->where('school_id', $school_id)
                 ->where('role', 'student')
                 ->orderBy('first_name', 'asc')
-                ->paginate(20);
+                ->paginate(10);
     }
 
     public function getTeachers($school_id){
@@ -135,7 +135,7 @@ class UserService {
                 ->where('role', 'teacher')
                 //->where('active', 1)
                 ->orderBy('first_name', 'asc')
-                ->paginate(20);
+                ->paginate(10);
     }
 
     public function getAccountants(){

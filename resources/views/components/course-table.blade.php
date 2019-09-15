@@ -9,9 +9,9 @@
     </div>
     <div id="collapse{{$major->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$major->id}}">
       <div class="panel-body table-responsive">
-        <table class="table table-bordered table-striped table-data-div table-hover"> 
+        <table class="table table-bordered table-striped table-data-div table-hover table-condensed"> 
           <thead>
-            <tr>
+            <tr class="bg-success text-white">
               @if(Auth::user()->role == 'admin')
               <th scope="col">@lang('Action')</th>
               @endif
@@ -171,7 +171,7 @@
                               <label for="adminCourseDescription{{$course->id}}" class="pull-right control-label">@lang('Description :')</label>
                             </div>
                             <div class="col-sm-8">
-                              <textarea style="width:100%" class="form-control" name="description" rows="2" id="adminCourseDescription{{$course->id}}" value="{{$course->description}}"></textarea>
+                              <textarea style="width:100%" class="form-control" name="description" rows="2" id="adminCourseDescription{{$course->id}}">{{$course->description}}</textarea>
                             </div>
                           </div>
                           <div class="modal-footer">
@@ -216,7 +216,7 @@
               <td><small>{{$course->name}}</small></td>
               <td><small>{{ucfirst($course->level)}}</small></td>
               <td><small>{{ucfirst($course->type)}}</small></td>
-              <td><small>{{$course->current_offered}}</small></td>
+              <td class="@if ($course->current_offered == 'Not offered' || $course->current_offered == 'No longer offered') bg-secondary text-white @endif"><small>{{$course->current_offered}}</small></td>
               <td><small>{{$course->next_offered}}</small></td>
               <td><small>{{$course->prerequisite}}</small></td>
               <td><small>{{$course->teacher}}</small></td>

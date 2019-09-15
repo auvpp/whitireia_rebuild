@@ -57,6 +57,7 @@
   </li> -->
   @endif
 
+  @if(Auth::user()->role != 'student')
   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Programmes &amp; Courses')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
@@ -69,6 +70,11 @@
       </li>
     </ul>
   </li>
+  @else
+  <li class="nav-item">
+    <a href="{{ url('courses/selection') }}" class="nav-link"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Courses Selection')</span></a>
+  </li>
+  @endif
 
   <li class="nav-item">
     <a class="nav-link" href="{{url('users/'.Auth::user()->school_id.'/teachers')}}"><i class="material-icons">contacts</i>

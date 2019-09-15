@@ -27,6 +27,8 @@ class HomeController extends Controller
         $minutes = 1440;// 24 hours = 1440 minutes
         $school_id = \Auth::user()->school->id;
         $totalCourses = DB::table('courses')->count();
+        $current_user = \App\User::with('programme', 'qualification', 'major')->find(\Auth::user()->id);
+
 
         // $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($school_id) {
         //   return \App\MyClass::bySchool($school_id)
@@ -45,40 +47,40 @@ class HomeController extends Controller
                           ->where('active', 1)
                           ->count();
         });
-        $totalBooks = \Cache::remember('totalBooks-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Book::bySchool($school_id)->count();
-        });
+        // $totalBooks = \Cache::remember('totalBooks-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Book::bySchool($school_id)->count();
+        // });
         // $totalClasses = \Cache::remember('totalClasses-'.$school_id, $minutes, function () use($school_id) {
         //   return \App\MyClass::bySchool($school_id)->count();
         // });
         // $totalSections = \Cache::remember('totalSections-'.$school_id, $minutes, function () use ($classes) {
         //   return \App\Section::whereIn('class_id', $classes)->count();
         // });
-        $notices = \Cache::remember('notices-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Notice::bySchool($school_id)
-                            ->where('active',1)
-                            ->get();
-        });
-        $events = \Cache::remember('events-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Event::bySchool($school_id)
-                          ->where('active',1)
-                          ->get();
-        });
-        $routines = \Cache::remember('routines-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Routine::bySchool($school_id)
-                            ->where('active',1)
-                            ->get();
-        });
-        $syllabuses = \Cache::remember('syllabuses-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Syllabus::bySchool($school_id)
-                              ->where('active',1)
-                              ->get();
-        });
-        $exams = \Cache::remember('exams-'.$school_id, $minutes, function () use($school_id) {
-          return \App\Exam::bySchool($school_id)
-                          ->where('active',1)
-                          ->get();
-        });
+        // $notices = \Cache::remember('notices-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Notice::bySchool($school_id)
+        //                     ->where('active',1)
+        //                     ->get();
+        // });
+        // $events = \Cache::remember('events-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Event::bySchool($school_id)
+        //                   ->where('active',1)
+        //                   ->get();
+        // });
+        // $routines = \Cache::remember('routines-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Routine::bySchool($school_id)
+        //                     ->where('active',1)
+        //                     ->get();
+        // });
+        // $syllabuses = \Cache::remember('syllabuses-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Syllabus::bySchool($school_id)
+        //                       ->where('active',1)
+        //                       ->get();
+        // });
+        // $exams = \Cache::remember('exams-'.$school_id, $minutes, function () use($school_id) {
+        //   return \App\Exam::bySchool($school_id)
+        //                   ->where('active',1)
+        //                   ->get();
+        // });
         // if(\Auth::user()->role == 'student')
         //   $messageCount = \App\Notification::where('student_id',\Auth::user()->id)->count();
         // else
@@ -87,15 +89,7 @@ class HomeController extends Controller
           'totalStudents'=>$totalStudents,
           'totalTeachers'=>$totalTeachers,
           'totalCourses'=>$totalCourses,
-          'totalBooks'=>$totalBooks,
-          // 'totalClasses'=>$totalClasses,
-          // 'totalSections'=>$totalSections,
-          'notices'=>$notices,
-          'events'=>$events,
-          'routines'=>$routines,
-          'syllabuses'=>$syllabuses,
-          'exams'=>$exams,
-          //'messageCount'=>$messageCount,
+          'current_user'=>$current_user,
         ]);
     }
 }

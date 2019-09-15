@@ -18,7 +18,7 @@
                     <li class="active">{{ucfirst($user->role)}}s</li>
                 </ol>
                 @endif -->
-                <div class="page-panel-title">@lang('List of all') {{ucfirst($user->role)}}s</div>
+                <div class="page-panel-title"><h3>@lang('List of all') {{ucfirst($user->role)}}s</h3></div>
                  @break($loop->first)
               @endforeach
                 <div class="panel-body">

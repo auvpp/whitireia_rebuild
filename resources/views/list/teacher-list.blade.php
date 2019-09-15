@@ -12,12 +12,10 @@
             <div class="panel panel-default">
               @if(count($users) > 0)
               @foreach ($users as $user)
-                <div class="page-panel-title">@lang('List of all') {{ucfirst($user->role)}}s</div>
+                <div class="page-panel-title"><h3>@lang('List of all') {{ucfirst($user->role)}}s</h3></div>
                  @break($loop->first)
               @endforeach
                 <div class="panel-body">
-                       
-                    
                     @component('components.users-export',['type'=>'teacher'])    
                     @endcomponent
 

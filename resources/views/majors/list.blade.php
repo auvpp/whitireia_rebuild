@@ -12,7 +12,7 @@
             @if(Auth::user()->role != 'student')
             
             @endif
-            <h2>@lang('Business')</h2>
+            <h5>@lang('Business')</h5>
             
             <div class="row">
                 @if (count($majors) > 0)

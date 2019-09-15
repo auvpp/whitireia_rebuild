@@ -172,10 +172,16 @@ Route::middleware(['auth','teacher'])->prefix('grades')->group(function (){
 });
 
 /* the Route for students */
-Route::middleware(['auth','student'])->prefix('stripe')->group(function(){
+Route::middleware(['auth', 'student'])->prefix('stripe')->group(function(){
   Route::get('charge', 'CashierController@index');
   Route::post('charge','CashierController@store');
   Route::get('receipts', 'PaymentController@index');
+});
+
+Route::middleware(['auth', 'student'])->group(function(){
+  Route::get('courses/selection', 'CourseController@selectionList');
+  Route::post('courses/selection', 'MyClassController@store');
+  //Route::post('courses','CourseController@index');
 });
 
 /* the Route for attendances */

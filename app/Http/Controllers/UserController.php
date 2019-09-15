@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support;
 
 use App\Department;
 use App\MyClass;
@@ -200,7 +201,7 @@ class UserController extends Controller
         }
         else {
             return view('profile.impersonate', [
-                'other_users' => $this->user->where('id', '!=', auth()->id())->get([ 'id', 'first_name', 'last_name', 'role' ])
+                'other_users' => $this->user->with('major', 'qualification', 'programme')->where('id', '!=', auth()->id())->get()
             ]);
         }
     }

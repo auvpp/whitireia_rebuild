@@ -1,8 +1,10 @@
-{{$users->links()}}
 <div class="table-responsive">
 <table class="table table-bordered table-data-div table-condensed table-striped table-hover">
+  <!-- table-date-div is for the search textbox-->
+  <!-- table-date-div is for the search textbox-->
+
   <thead>
-    <tr>
+    <tr class="bg-primary text-white">
       <th scope="col">#</th>
       @if(Auth::user()->role == 'admin')
         <th scope="col">@lang('Action')</th>
@@ -80,8 +82,10 @@
                             @if ($user->role == 'student') Student 
                             @elseif ($user->role == 'teacher') Teacher 
                             @endif
-                            </span> - {{$user->code}}
+                            </span> - {{$user->code}} &nbsp; &nbsp; &nbsp;
+                            <a href="#" type="button" class="btn btn-warning btn-xs">@lang('Rest Password')</a>
                           </h4>
+                          
                       </div>
                       <div class="modal-body">
                         <form class="form-horizontal" action="{{url('edit/user')}}" method="post">
@@ -172,7 +176,7 @@
                           </div>
 
                           <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-warning btn-sm pull-left">@lang('Reset Password')</a>
+                            <a href="#" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
                             <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>

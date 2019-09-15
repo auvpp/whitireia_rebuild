@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support;
 
 use App\Course;
 use App\Major;
 use App\User;
+use App\MyClass;
 use App\Programme;
 use App\Http\Resources\CourseResource;
 use Illuminate\Http\Request;
@@ -89,6 +91,15 @@ class CourseController extends Controller
 
       //$courses = $this->courseService->getCoursesByMajors();
       return view('course.admin-course', compact('qualification', 'majors', 'teachers'));
+    }
+
+    public function selectionList(){
+      $user = User::with('major', 'qualification', 'programme')->find(\Auth::user()->id);
+      $myClasses = MyClass::with('classDetails')->where('user_id', $user->id)->get();
+      $courses = Course::where('major_id', $user->major_id)
+                    ->orderBy('code', 'asc')
+                    ->get();
+      return view('course.students', compact('courses', 'user', 'myClasses'));
     }
 
     /**

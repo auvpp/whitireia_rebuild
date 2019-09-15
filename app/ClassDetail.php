@@ -1,8 +1,7 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
+use App\Model;
 
 class ClassDetail extends Model
 {
@@ -31,7 +30,7 @@ class ClassDetail extends Model
     */
     public function myClass()
     {
-        return $this->belongsTo('App\MyClass');
+        return $this->belongsTo('App\MyClass', 'class_id');
     }
 
     /**

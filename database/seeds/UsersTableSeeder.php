@@ -73,7 +73,7 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
         
-        // insert a student into the users table
+        // insert a student into the users table (bachelor in IT)
         DB::table('users')->insert([
             'first_name' => "Charles",
             'last_name' => "Li",
@@ -96,6 +96,7 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
+        // insert a student into the users table (GD in IT)
         DB::table('users')->insert([
             'first_name' => "Ricky",
             'last_name' => "Zhao",
@@ -109,8 +110,8 @@ class UsersTableSeeder extends Seeder
             'school_id' => 1,
             'code'    =>  '21604341',
             'programme_id' => 2,
-            'qualification_id' => 5,
-            'major_id' => 16,
+            'qualification_id' => 6,
+            'major_id' => 17,
             'enrolled_date' => date('Y-m-d'),
             'about'  => 'I am a student',
             'remember_token' => str_random(10),
@@ -118,6 +119,7 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
+        // insert a student into the users table (PGD in IT)
         DB::table('users')->insert([
             'first_name' => "Sam",
             'last_name' => "Sheng",
@@ -131,8 +133,8 @@ class UsersTableSeeder extends Seeder
             'school_id' => 1,
             'code'    =>  '21802559',
             'programme_id' => 2,
-            'qualification_id' =>6,
-            'major_id' =>17,
+            'qualification_id' =>7,
+            'major_id' =>18,
             'enrolled_date' => date('Y-m-d'),
             'about'  => 'I am a student',
             'remember_token' => str_random(10),
@@ -140,6 +142,7 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
+        // insert a student into the users table (MASTER in IT)
         DB::table('users')->insert([
             'first_name' => "Ying",
             'last_name' => "Zhang",
@@ -153,8 +156,8 @@ class UsersTableSeeder extends Seeder
             'school_id' => 1,
             'code'    =>  '21802161',
             'programme_id' => 2,
-            'qualification_id' =>6,
-            'major_id' =>17,
+            'qualification_id' =>8,
+            'major_id' =>19,
             'enrolled_date' => date('Y-m-d'),
             'about'  => 'I am a student',
             'remember_token' => str_random(10),
@@ -162,6 +165,7 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
+        // insert a student into the users table (business analysis - bachelor in business)
         DB::table('users')->insert([
             'first_name' => "Snow",
             'last_name' => "Gu",
@@ -174,9 +178,9 @@ class UsersTableSeeder extends Seeder
             'address'   => '222 Health Road, Auckland 1010, New Zealand',
             'school_id' => 1,
             'code'    =>  '21802494',
-            'programme_id' => 2,
-            'qualification_id' =>6,
-            'major_id' =>17,
+            'programme_id' => 1,
+            'qualification_id' => 1,
+            'major_id' => 1,
             'enrolled_date' => date('Y-m-d'),
             'about'  => 'I am a student',
             'remember_token' => str_random(10),
@@ -184,6 +188,329 @@ class UsersTableSeeder extends Seeder
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
+        // insert a student into the users table (marketing - bachelor in business)
+        DB::table('users')->insert([
+            'first_name' => "James",
+            'last_name' => "Bond",
+            'email'    => 'james.bond@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '02122483245',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21701111',
+            'programme_id' => 1,
+            'qualification_id' => 1,
+            'major_id' => 2,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (supply chain - bachelor in business)
+        DB::table('users')->insert([
+            'first_name' => "Angel",
+            'last_name' => "Amelie",
+            'email'    => 'angel.amelie@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0219321142',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21702222',
+            'programme_id' => 1,
+            'qualification_id' => 1,
+            'major_id' => 3,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (finance - GD in business)
+        DB::table('users')->insert([
+            'first_name' => "Harry",
+            'last_name' => "Potter",
+            'email'    => 'harry.potter@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0234525823',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21600223',
+            'programme_id' => 1,
+            'qualification_id' => 2,
+            'major_id' => 4,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (hospitality - GD in business)
+        DB::table('users')->insert([
+            'first_name' => "Elaine",
+            'last_name' => "Robinson",
+            'email'    => 'elaine.robinson@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0202325343',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21232443',
+            'programme_id' => 1,
+            'qualification_id' => 2,
+            'major_id' => 5,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (management - GD in business)
+        DB::table('users')->insert([
+            'first_name' => "Jack",
+            'last_name' => "Sparrow",
+            'email'    => 'jack.sparrow@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '020922556',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21025656',
+            'programme_id' => 1,
+            'qualification_id' => 2,
+            'major_id' => 6,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (marketing - GD in business)
+        DB::table('users')->insert([
+            'first_name' => "Forrest",
+            'last_name' => "Gump",
+            'email'    => 'forrest.gump@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '0200433623',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21008392',
+            'programme_id' => 1,
+            'qualification_id' => 2,
+            'major_id' => 7,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (finance - PGD in business)
+        DB::table('users')->insert([
+            'first_name' => "Jerry",
+            'last_name' => "Mouse",
+            'email'    => 'jerry.mouse@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0205402903',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21240384',
+            'programme_id' => 1,
+            'qualification_id' => 3,
+            'major_id' => 8,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (hospitality - PGD in business)
+        DB::table('users')->insert([
+            'first_name' => "Tom",
+            'last_name' => "Cat",
+            'email'    => 'tom.cat@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '02034046523',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21254324',
+            'programme_id' => 1,
+            'qualification_id' => 3,
+            'major_id' => 9,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (information systems - PGD in business)
+        DB::table('users')->insert([
+            'first_name' => "Michael",
+            'last_name' => "Corleone",
+            'email'    => 'michael.corleone@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '02056320234',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21433244',
+            'programme_id' => 1,
+            'qualification_id' => 3,
+            'major_id' => 10,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (marketing - PGD in business)
+        DB::table('users')->insert([
+            'first_name' => "Ethan",
+            'last_name' => "Hunt",
+            'email'    => 'ethan.hunt@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '02234012234',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21038452',
+            'programme_id' => 1,
+            'qualification_id' => 3,
+            'major_id' => 11,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (finance - master in business)
+        DB::table('users')->insert([
+            'first_name' => "Lu",
+            'last_name' => "Yu",
+            'email'    => 'lu.yu@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0203462341',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21029421',
+            'programme_id' => 1,
+            'qualification_id' => 4,
+            'major_id' => 12,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (hospitality - master in business)
+        DB::table('users')->insert([
+            'first_name' => "Jocelyn",
+            'last_name' => "Yang",
+            'email'    => 'jocelyn.yang@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0209394245',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21090562',
+            'programme_id' => 1,
+            'qualification_id' => 4,
+            'major_id' => 13,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (information systems - master in business)
+        DB::table('users')->insert([
+            'first_name' => "Linda",
+            'last_name' => "Li",
+            'email'    => 'linda.li@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'female',
+            'phone_number' => '0202349215',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21049472',
+            'programme_id' => 1,
+            'qualification_id' => 4,
+            'major_id' => 14,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        // insert a student into the users table (marketing - master in business)
+        DB::table('users')->insert([
+            'first_name' => "Benjamin",
+            'last_name' => "Braddock",
+            'email'    => 'benjamin.braddock@whitireia.ac.nz',
+            'password' => bcrypt('secret'),
+            'role'     => 'student',
+            'active'   => 1,
+            'gender'   => 'male',
+            'phone_number' => '0205092384',
+            'address'   => '222 Health Road, Auckland 1010, New Zealand',
+            'school_id' => 1,
+            'code'    =>  '21804633',
+            'programme_id' => 1,
+            'qualification_id' => 4,
+            'major_id' => 15,
+            'enrolled_date' => date('Y-m-d'),
+            'about'  => 'I am a student',
+            'remember_token' => str_random(10),
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ]);
+
+        //***************************************************************************
         // insert a tutor into the users table
         DB::table('users')->insert([
             'first_name' => "Arkar",

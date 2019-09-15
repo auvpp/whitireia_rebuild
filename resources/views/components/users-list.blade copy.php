@@ -229,9 +229,8 @@
               });
               $('#adminUserDate{{$user->id}}').datepicker('setDate', "{{ Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y') }}");
             });
-
-            
           });
+         
         </script>
 
       @endif
