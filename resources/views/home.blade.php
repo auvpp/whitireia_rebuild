@@ -95,11 +95,15 @@
                                     </tr>
                                     <tr>
                                         <th>@lang('Qualification')</th>
-                                        <td>{{$current_user->qualification->name}}</td>
+                                        <td>{{$current_user->qualification->name}} ({{$current_user->qualification->credit}} @lang('Credits'))</td>
                                     </tr>
                                     <tr>
                                         <th>@lang('Programme')</th>
                                         <td>{{$current_user->programme->name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>@lang('Current Credits')</th>
+                                        <td></td>
                                     </tr>
                                 </table>
                                 </div>                         

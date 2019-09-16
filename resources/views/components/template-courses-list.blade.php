@@ -61,8 +61,8 @@
                 <h4 class="modal-title" id="selectionCourseModal{{$course->id}}Label">@lang('Course Information')</h4>
               </div>
               <div class="modal-body">
-                <div class="row" style="margin-bottom:7px;">
-                  <div class="col-sm-4">
+                <div class="row" style="margin-bottom:7px;" >
+                  <div class="col-sm-4" style="margin-top:10px;">
                     <label for="selectionCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
                   </div>
                   <div class="col-sm-8">
@@ -70,8 +70,8 @@
                   </div>                
                 </div>
                 <div class="row" style="margin-bottom:7px;">
-                  <div class="col-sm-4">
-                    <label for="selectionCourseDesc{{$course->id}}" class="pull-right">@lang('Description :')</label>
+                  <div class="col-sm-4" style="margin-top:10px;">
+                    <label for="selectionCourseDesc{{$course->id}}" class="control-label pull-right">@lang('Description :')</label>
                   </div>
                   <div class="col-sm-8">
                     <textarea rows="5" id="selectionCourseDesc{{$course->id}}" class="form-control" readonly>{{$course->description}}</textarea>

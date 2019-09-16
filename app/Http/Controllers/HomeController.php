@@ -27,7 +27,7 @@ class HomeController extends Controller
         $minutes = 1440;// 24 hours = 1440 minutes
         $school_id = \Auth::user()->school->id;
         $totalCourses = DB::table('courses')->count();
-        $current_user = \App\User::with('programme', 'qualification', 'major')->find(\Auth::user()->id);
+        $current_user = \App\User::with('myClasses', 'programme', 'qualification', 'major')->find(\Auth::user()->id);
 
 
         // $classes = \Cache::remember('classes-'.$school_id, $minutes, function () use($school_id) {

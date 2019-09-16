@@ -49,11 +49,11 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <!-- Courses List for Bachelor, GD and PGD in Business -->
+                    <!-- Courses List for Business -->
                     @if ($user->qualification->name == 'Bachelor of Applied Business Management' || 
                          $user->qualification->name == 'Graduate Diploma in Applied Business Studies' || 
                          $user->qualification->name == 'Postgraduate Diploma in Management')
-                        @component('components.template-courses-list',['courses'=>$courses, 'myClasses'=>$myClasses])
+                        @component('components.busBGDPGD-courses-list',['courses'=>$courses, 'myClasses'=>$myClasses])
                         @endcomponent
                     <!-- Courses List for master in Business -->
                     @elseif ($user->qualification->name == 'Master of Management')
