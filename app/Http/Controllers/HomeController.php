@@ -47,6 +47,17 @@ class HomeController extends Controller
                           ->where('active', 1)
                           ->count();
         });
+
+        $classdetails = \App\ClassDetail::where('user_id', \Auth::user()->id)
+                                   ->orderBy('course_id', 'asc')
+                                   ->get();
+        $totalCredits = 0;
+        if ($classdetails != null){
+          foreach ($classdetails as $k => $v) {
+            $totalCredits += $v->credit;
+          }
+        }
+
         // $totalBooks = \Cache::remember('totalBooks-'.$school_id, $minutes, function () use($school_id) {
         //   return \App\Book::bySchool($school_id)->count();
         // });
@@ -90,6 +101,7 @@ class HomeController extends Controller
           'totalTeachers'=>$totalTeachers,
           'totalCourses'=>$totalCourses,
           'current_user'=>$current_user,
+          'totalCredits'=>$totalCredits,
         ]);
     }
 }

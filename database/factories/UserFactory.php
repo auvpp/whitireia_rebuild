@@ -61,11 +61,7 @@ $factory->define(User::class, function (Faker $faker) {
             return $faker->randomElement(Qualification::pluck('id')->toArray());
           else return factory(Qualification::class)->create()->id;
         },
-        // 'term_id' => function () use ($faker) {
-        //   if (Term::count())
-        //     return $faker->randomElement(Term::pluck('id')->toArray());
-        //   else return factory(Term::class)->create()->id;
-        // },
+
         'enrolled_date' => date('Y-m-d'),
         // 'section_id' => function () use ($faker) {
         //   if (Section::count())

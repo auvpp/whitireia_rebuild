@@ -199,7 +199,7 @@
 
   @if(Auth::user()->role == 'student')
   <li class="nav-item">
-    <a class="nav-link" href="{{ url('courses/0/'.Auth::user()->section_id) }}"><i class="material-icons">subject</i>
+    <a class="nav-link" href="{{ url('mycourses') }}"><i class="material-icons">subject</i>
       <span class="nav-link-text">@lang('My Courses')</span></a>
   </li>
   <li class="nav-item">

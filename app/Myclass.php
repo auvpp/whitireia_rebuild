@@ -14,8 +14,7 @@ class MyClass extends Model
      * @var array
      */
     protected $fillable = [
-        //'class_number', 'group', 'school_id',
-        'user_id', 'term_credit', 'term_id', 'year',
+        'user_id', 'term', 'active',
     ];
 
     /**
@@ -32,14 +31,6 @@ class MyClass extends Model
     public function classDetails()
     {
         return $this->hasMany('App\ClassDetail', 'class_id', 'id');
-    }
-
-    /**
-     * One MyClass belongs to only one term.
-     */
-    public function term()
-    {
-      return $this->belongsTo('App\Term');
     }
 
 

@@ -65,7 +65,7 @@ Route::middleware(['auth', 'master'])->group(function () {
     Route::get('school/admin-list/{school_id}','SchoolController@show');
 });
 
-Route::get('users/{school_id}/students', 'UserController@indexStudent')->middleware(['auth', 'teacher']);
+//Route::get('users/{school_id}/students', 'UserController@indexStudent')->middleware(['auth', 'teacher']);
 
 
 /* the Route for all users */
@@ -77,6 +77,7 @@ Route::middleware(['auth'])->group(function (){
 
   // Route::get('users/{school_id}/{student_code}/{teacher_code}', 'UserController@index');
   Route::get('users/{school_id}/teachers', 'UserController@indexTeacher');
+  Route::get('users/{school_id}/students', 'UserController@indexStudent');
 
   //Route::get('users/{school_code}/{role}', 'UserController@indexOther');
   Route::get('user/{code}', 'UserController@show'); // show user's profile
@@ -154,6 +155,8 @@ Route::middleware(['auth','teacher'])->group(function (){
   Route::get('school/sections','SectionController@index');
 
   Route::get('gpa/all-gpa', 'GradesystemController@index');
+
+  Route::get('mycourses', 'MyClassController@teacherCourses');
 });
 
 Route::middleware(['auth','teacher'])->prefix('grades')->group(function (){
@@ -180,7 +183,8 @@ Route::middleware(['auth', 'student'])->prefix('stripe')->group(function(){
 
 Route::middleware(['auth', 'student'])->group(function(){
   Route::get('courses/selection', 'CourseController@selectionList');
-  Route::post('courses/selection', 'MyClassController@store');
+  Route::post('courses/selection', 'MyClassController@studentStore');
+  Route::get('mycourses', 'MyClassController@studentCourses');
   //Route::post('courses','CourseController@index');
 });
 

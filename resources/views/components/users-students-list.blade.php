@@ -7,7 +7,6 @@
         <th scope="col">@lang('Action')</th>
       @endif
       <th scope="col">@lang('Full Name')</th>
-      <th scope="col">@lang('Gender')</th>
       @if(Auth::user()->role != 'student')
         <th scope="col">@lang('Code')</th>
       @endif
@@ -304,7 +303,14 @@
         </script>
       @endif
       
-        <td><small>{{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</small></td>
+        <td><small>
+          @if(strtolower($user->gender) == trans('male'))
+            <img src="https://png.icons8.com/dusk/50/000000/user.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+          @else
+            <img src="https://png.icons8.com/dusk/50/000000/user-female.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
+          @endif
+          {{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}
+        </small></td>
 
           <!-- @if(Auth::user()->role != 'student')
             <a href="{{url('user/'.$user->code)}}">
@@ -313,14 +319,7 @@
           @else
             {{ucfirst($user->first_name).' '.ucfirst($user->last_name)}}</small></td>
           @endif -->
-          <td><small>
-           @if(strtolower($user->gender) == trans('male'))
-              <img src="https://png.icons8.com/dusk/50/000000/user.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
-            @else
-              <img src="https://png.icons8.com/dusk/50/000000/user-female.png" style="border-radius: 50%;" width="25px" height="25px">&nbsp;
-            @endif
-          </small></td>
-
+          
         @if(Auth::user()->role != 'student')
           <td><small>{{$user->code}}</small></td>
         @endif

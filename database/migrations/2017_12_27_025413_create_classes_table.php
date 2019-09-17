@@ -16,9 +16,8 @@ class CreateClassesTable extends Migration
         Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('term_credit')->default(0);
-            $table->integer('term_id');
-            $table->integer('year')->default(2019);
+            $table->string('term')->default('');
+            $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
     }

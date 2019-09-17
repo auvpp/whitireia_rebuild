@@ -13,7 +13,7 @@ class ClassDetail extends Model
      * @var array
      */
     protected $fillable = [
-        'class_id', 'grade_id', 'credit', 'course_id',
+        'class_id', 'grade_id', 'credit', 'course_id', 'term', 'user_id',
     ];
 
     /**
@@ -47,5 +47,13 @@ class ClassDetail extends Model
     public function grade()
     {
         return $this->belongsTo('App\Grade');
+    }
+
+    /**
+     * One ClassDetail belongs to only one user.
+    */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

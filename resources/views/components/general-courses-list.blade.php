@@ -1,21 +1,20 @@
 <div class="table-responsive">
- 
+<small class="text-danger">@lang('*Regulation of qualification - successful completion of your qualification credits (Bachelor - 360 credits / PgD - 120 credits / GD - 120 credits) including compulsory courses.')</small>
   <form action="{{url('courses/selection')}}" method="POST">
     {{csrf_field()}}
     <table class="table table-bordered table-striped table-hover table-condensed">
       <thead>
-        <tr><th class="bg-dark text-white" colspan="9">Compulsory Courses</th></tr>
+        <tr><th class="bg-dark text-white" colspan="8">Compulsory Courses</th></tr>
         <tr>      
           <!-- <th scope="col">#</th> -->
           <th scope="col">@lang('Select')</th>
-          <th scope="col">@lang('Course Code')</th>
-          <th scope="col">@lang('Course Name')</th>
-          <th scope="col">@lang('Course Level')</th>
+          <th scope="col">@lang('Code')</th>
+          <th scope="col">@lang('Name')</th>
+          <th scope="col">@lang('Level')</th>
           <th scope="col">@lang('Credits')</th>
           <th scope="col">@lang('Current Offered')</th>
           <th scope="col">@lang('Next Offered')</th>
           <th scope="col">@lang('Prerequisites')</th>
-          <th scope="col">@lang('Grade (if achieved)')</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +32,8 @@
               @if ($course->current_offered != 'No longer offered')
               <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
               <label class="checkbox-label">&nbsp;
-                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-courseCode="{{$course->code}}"/>
+                <input type="hidden" name="term" value="{{$course->current_offered}}"/>
+                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-coursecode="{{$course->code}}"/>
                 <span class="checkmark"></span>
               </label>
               @endif
@@ -46,7 +46,6 @@
           <td scope="row"><small>{{$course->current_offered}}</small></td>
           <td scope="row"><small>{{$course->next_offered}}</small></td>
           <td scope="row"><small>{{$course->prerequisite}}</small></td>
-          <td scope="row"><small></small></td>
         </tr>
         @endif
         
@@ -90,17 +89,16 @@
     
     <table class="table table-bordered table-striped table-hover table-condensed">
       <thead>
-        <tr><th class="bg-warning" colspan="9">Elective Courses</th></tr>
+        <tr><th class="bg-warning" colspan="8">Elective Courses</th></tr>
         <tr>
-          <th scope="col">@lang('Select')</th>
-          <th scope="col">@lang('Course Code')</th>
-          <th scope="col">@lang('Course Name')</th>
-          <th scope="col">@lang('Course Level')</th>
+        <th scope="col">@lang('Select')</th>
+          <th scope="col">@lang('Code')</th>
+          <th scope="col">@lang('Name')</th>
+          <th scope="col">@lang('Level')</th>
           <th scope="col">@lang('Credits')</th>
           <th scope="col">@lang('Current Offered')</th>
           <th scope="col">@lang('Next Offered')</th>
           <th scope="col">@lang('Prerequisites')</th>
-          <th scope="col">@lang('Grade (if achieved)')</th>
         </tr>
       </thead>
       <tbody>
@@ -112,7 +110,8 @@
               @if ($course->current_offered != 'No longer offered')
               <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
               <label class="checkbox-label">&nbsp;
-                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-CourseCode="{{$course->code}}"/>
+                <input type="hidden" name="term" value="{{$course->current_offered}}"/>
+                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-coursecode="{{$course->code}}"/>
                 <span class="checkmark"></span>
               </label>
               @endif
@@ -125,24 +124,23 @@
           <td scope="row"><small>{{$course->current_offered}}</small></td>
           <td scope="row"><small>{{$course->next_offered}}</small></td>
           <td scope="row"><small>{{$course->prerequisite}}</small></td>
-          <td scope="row"><small></small></td>
         </tr>
         @endif
         @endforeach
       </tbody>
     </table>
    
-    <input type="button" id="submitButton{{$course->id}}" class="btn btn-info pull-left" style="margin-left: 1%;" value="Submit"/>
+    <input type="button" id="submitButton" class="btn btn-info pull-left" style="margin-left: 1%;" value="Submit"/>
     
     <!-- Modal for Courses Confirmation -->
-    <div class="modal fade" id="confirmCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="confirmCourseModal{{$course->id}}Label">
+    <div class="modal fade" id="confirmCourseModal" tabindex="-1" role="dialog" aria-labelledby="confirmCourseModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header bg-success text-white">          
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title" id="confirmCourseModal{{$course->id}}Label">@lang('Course Confirmation')</h4>
+            <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Course Confirmation')</h4>
           </div>
           <div class="modal-body">
             <div class="row" style="margin-bottom:7px;">
@@ -150,7 +148,7 @@
               <div class="col-sm-10">
                 <h4><b>@lang('According to the requirements of Immigration New Zealand , each ')
                   <span class="text-danger">@lang('international student ')</span>@lang('must select ')
-                  <span class="text-danger">@lang('NO LESS THAN 2 COURSES ')</span>@lang('per trimester .')</b>
+                  <span class="text-danger">@lang('NO LESS THAN 2 COURSES ')(@lang('or 30 credits'))</span>@lang(' per semester .')</b>
                 </h4>
                 <br>
                 <h4><b>@lang('Once you have confirmed your course selection, you can ')
@@ -159,7 +157,7 @@
                 <br>
                 <h4><b>@lang('Are you sure about your course selction ?')</b></h4>
 
-              </div>    
+              </div>
             </div>
           </div>    
           <div class="modal-footer">
@@ -174,14 +172,14 @@
 </div>
 
 <!-- Modal for warning information (if the user selects more than 4 courses) -->
-<div class="modal fade" id="warnCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="warnCourseModal{{$course->id}}Label">
+<div class="modal fade" id="warnCourseModal" tabindex="-1" role="dialog" aria-labelledby="warnCourseModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-warning" >          
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="warnCourseModal{{$course->id}}Label">@lang('Notice')</h4>
+        <h4 class="modal-title" id="warnCourseModalLabel">@lang('Notice')</h4>
       </div>
       <div class="modal-body">
         <div class="row" style="margin-bottom:7px;">
@@ -200,20 +198,20 @@
 </div>
 
 <!-- Modal for error information (if the user didn't select any course) -->
-<div class="modal fade" id="errorCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="errorCourseModal{{$course->id}}Label">
+<div class="modal fade" id="errorCourseModal" tabindex="-1" role="dialog" aria-labelledby="errorCourseModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-danger text-white" >          
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="errorCourseModal{{$course->id}}Label">@lang('Error')</h4>
+        <h4 class="modal-title" id="errorCourseModalLabel">@lang('Error')</h4>
       </div>
       <div class="modal-body">
         <div class="row" style="margin-bottom:7px;">
           <div class="col-sm-1"></div>
           <div class="col-sm-10">
-            <h4><b>@lang('You did not select any course .')</b></h4>
+            <h4><b>@lang('You have not selected any course yet .')</b></h4>
           </div>    
         </div>
       </div>    
@@ -230,16 +228,16 @@
       // set the maximum of the checkbox
       if ($(".course_checkbox:checked").length > 4 ) {
           $(this).removeAttr("checked");
-          $("#warnCourseModal{{$course->id}}").modal(); 
+          $("#warnCourseModal").modal(); 
       }
     });
 
     // check user's selection before submitting
-    $("#submitButton{{$course->id}}").click(function(){
+    $("#submitButton").click(function(){
       if ($(".course_checkbox:checked").length < 1) {
-          $("#errorCourseModal{{$course->id}}").modal();  
+          $("#errorCourseModal").modal();  
       }else{
-          $("#confirmCourseModal{{$course->id}}").modal();  
+          $("#confirmCourseModal").modal();  
       }
     });  
   });

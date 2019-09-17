@@ -1,143 +1,249 @@
 <div class="table-responsive">
- 
-  <form id="" action="{{url('exams/activate-exam')}}" method="POST">
+  <small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from Levels 7 and 8 including all compulsory courses and at least 90 credits from Level 8.')</small>
+  <form action="{{url('courses/selection')}}" method="POST">
     {{csrf_field()}}
-  </form>
-  
-  <table class="table table-bordered table-striped table-hover table-condensed">
-    <thead>
-      <tr>
-      <tr><th class="bg-success text-white" colspan="9">Compulsory Courses</th></tr>
-        <!-- <th scope="col">#</th> -->
-        <th scope="col">@lang('Select')</th>
-        <th scope="col">@lang('Course Code')</th>
-        <th scope="col">@lang('Course Name')</th>
-        <th scope="col">@lang('Course Level')</th>
-        <th scope="col">@lang('Credits')</th>
-        <th scope="col">@lang('Current Offered')</th>
-        <th scope="col">@lang('Next Offered')</th>
-        <th scope="col">@lang('Prerequisites')</th>
-        <th scope="col">@lang('Grade (if achieved)')</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($courses as $course)
-      <!-- @if ($course->type == 'Compulsory' && $course->current_offered != 'No longer offered')
-        @if (($course->current_offered == 'Not offered' ^ $course->next_offered == 'Not offered') ||
-             ($course->current_offered != 'Not offered' && $course->next_offered != 'Not offered'))
-             @endif
-      @endif -->
-      @if ($course->type == 'Compulsory')
-      <tr>
-        <!-- <th scope="row">{{--($loop->index + 1)--}}</th> -->
-        <td scope="row">
-          @if ($course->current_offered != 'Not offered')
-            @if ($course->current_offered != 'No longer offered')
-            <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
-            <label class="checkbox-label">&nbsp;
-              <input type="checkbox" name="notice_published" form="form" />
-              <span class="checkmark"></span>
-            </label>
+    <table class="table table-bordered table-striped table-hover table-condensed">
+      <thead>
+        <tr><th class="bg-dark text-white" colspan="8">Compulsory Courses</th></tr>
+        <tr>      
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">@lang('Select')</th>
+          <th scope="col">@lang('Code')</th>
+          <th scope="col">@lang('Name')</th>
+          <th scope="col">@lang('Level')</th>
+          <th scope="col">@lang('Credits')</th>
+          <th scope="col">@lang('Current Offered')</th>
+          <th scope="col">@lang('Next Offered')</th>
+          <th scope="col">@lang('Prerequisites')</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($courses as $course)
+        <!-- @if ($course->type == 'Compulsory' && $course->current_offered != 'No longer offered')
+          @if (($course->current_offered == 'Not offered' ^ $course->next_offered == 'Not offered') ||
+              ($course->current_offered != 'Not offered' && $course->next_offered != 'Not offered'))
+              @endif
+        @endif -->
+        @if ($course->type == 'Compulsory')
+        <tr>
+          <!-- <th scope="row">{{--($loop->index + 1)--}}</th> -->
+          <td scope="row">
+            @if ($course->current_offered != 'Not offered')
+              @if ($course->current_offered != 'No longer offered')
+              <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
+              <label class="checkbox-label">&nbsp;
+                <input type="hidden" name="term" value="{{$course->current_offered}}"/>
+                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-coursecode="{{$course->code}}"/>
+                <span class="checkmark"></span>
+              </label>
+              @endif
             @endif
-          @endif
-        </td>
-        <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{$course->code}}</small></a></td>
-        <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{ucfirst($course->name)}}</small></a></td>
-        <td scope="row"><small>{{$course->level}}</small></td>
-        <td scope="row"><small>{{$course->credit}}</small></td>
-        <td scope="row"><small>{{$course->current_offered}}</small></td>
-        <td scope="row"><small>{{$course->next_offered}}</small></td>
-        <td scope="row"><small>{{$course->prerequisite}}</small></td>
-        <td scope="row"><small></small></td>
-      </tr>
-      @endif
-      
-      <!-- Modal -->
-      <div class="modal fade" id="selectionCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="selectionCourseModal{{$course->id}}Label">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header" style="background-color: #5cb85c; color:white !important;">          
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-              <h4 class="modal-title" id="selectionCourseModal{{$course->id}}Label">@lang('Course Information')</h4>
-            </div>
-            <div class="modal-body">
-              <div class="row" style="margin-bottom:7px;">
-                <div class="col-sm-4">
-                  <label for="selectionCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
-                </div>
-                <div class="col-sm-8">
-                  <input type="text" id="selectionCourseTeacher{{$course->id}}" class="form-control" value="{{$course->teacher}}" readonly>
-                </div>                
+          </td>
+          <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{$course->code}}</small></a></td>
+          <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{ucfirst($course->name)}}</small></a></td>
+          <td scope="row"><small>{{$course->level}}</small></td>
+          <td scope="row"><small>{{$course->credit}}</small></td>
+          <td scope="row"><small>{{$course->current_offered}}</small></td>
+          <td scope="row"><small>{{$course->next_offered}}</small></td>
+          <td scope="row"><small>{{$course->prerequisite}}</small></td>
+        </tr>
+        @endif
+        
+        <!-- Modal for Course Information -->
+        <div class="modal fade" id="selectionCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="selectionCourseModal{{$course->id}}Label">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #5cb85c; color:white !important;">          
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="selectionCourseModal{{$course->id}}Label">@lang('Course Information')</h4>
               </div>
-              <div class="row" style="margin-bottom:7px;">
-                <div class="col-sm-4">
-                  <label for="selectionCourseDesc{{$course->id}}" class="pull-right">@lang('Description :')</label>
+              <div class="modal-body">
+                <div class="row" style="margin-bottom:7px;" >
+                  <div class="col-sm-4" style="margin-top:10px;">
+                    <label for="selectionCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" id="selectionCourseTeacher{{$course->id}}" class="form-control" value="{{$course->teacher}}" readonly>
+                  </div>                
                 </div>
-                <div class="col-sm-8">
-                  <textarea rows="5" id="selectionCourseDesc{{$course->id}}" class="form-control" readonly>{{$course->description}}</textarea>
-                </div>                
+                <div class="row" style="margin-bottom:7px;">
+                  <div class="col-sm-4" style="margin-top:10px;">
+                    <label for="selectionCourseDesc{{$course->id}}" class="control-label pull-right">@lang('Description :')</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <textarea rows="5" id="selectionCourseDesc{{$course->id}}" class="form-control" readonly>{{$course->description}}</textarea>
+                  </div>                
+                </div>
+              </div>    
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
               </div>
-            </div>    
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
             </div>
           </div>
         </div>
-      </div>
-      @endforeach
-    </tbody>
-  </table>
-  
-  <table class="table table-bordered table-striped table-hover table-condensed">
-    <thead>
-      <tr>
-        <tr><th class="bg-warning" colspan="9">Elective Courses</th></tr>
-        <th scope="col">@lang('Select')</th>
-        <th scope="col">@lang('Course Code')</th>
-        <th scope="col">@lang('Course Name')</th>
-        <th scope="col">@lang('Course Level')</th>
-        <th scope="col">@lang('Credits')</th>
-        <th scope="col">@lang('Current Offered')</th>
-        <th scope="col">@lang('Next Offered')</th>
-        <th scope="col">@lang('Prerequisites')</th>
-        <th scope="col">@lang('Grade (if achieved)')</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($courses as $course)
-      @if ($course->type == 'Elective')
-      <tr>
-        <td scope="row">
-          @if ($course->current_offered != 'Not offered')
-           @if ($course->current_offered != 'No longer offered')
-            <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
-            <label class="checkbox-label">&nbsp;
-              <input type="checkbox" name="notice_published" form="form" />
-              <span class="checkmark"></span>
-            </label>
+        @endforeach
+      </tbody>
+    </table>
+    
+    <table class="table table-bordered table-striped table-hover table-condensed">
+      <thead>
+        <tr><th class="bg-warning" colspan="8">Elective Courses</th></tr>
+        <tr>
+          <th scope="col">@lang('Select')</th>
+          <th scope="col">@lang('Code')</th>
+          <th scope="col">@lang('Name')</th>
+          <th scope="col">@lang('Level')</th>
+          <th scope="col">@lang('Credits')</th>
+          <th scope="col">@lang('Current Offered')</th>
+          <th scope="col">@lang('Next Offered')</th>
+          <th scope="col">@lang('Prerequisites')</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($courses as $course)
+        @if ($course->type == 'Elective')
+        <tr>
+          <td scope="row">
+            @if ($course->current_offered != 'Not offered')
+              @if ($course->current_offered != 'No longer offered')
+              <!-- <input type="hidden" name="exam_id" value="" form="form"/> -->
+              <label class="checkbox-label">&nbsp;
+                <input type="hidden" name="term" value="{{$course->current_offered}}"/>
+                <input type="checkbox" name="course{{$course->id}}" value="{{$course->id}}" class="course_checkbox" data-coursecode="{{$course->code}}"/>
+                <span class="checkmark"></span>
+              </label>
+              @endif
             @endif
-          @endif
-        </td>
-        <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{$course->code}}</small></a></td>
-        <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{ucfirst($course->name)}}</small></a></td>
-        <td scope="row"><small>{{$course->level}}</small></td>
-        <td scope="row"><small>{{$course->credit}}</small></td>
-        <td scope="row"><small>{{$course->current_offered}}</small></td>
-        <td scope="row"><small>{{$course->next_offered}}</small></td>
-        <td scope="row"><small>{{$course->prerequisite}}</small></td>
-        <td scope="row"><small></small></td>
-      </tr>
-      @endif
-      @endforeach
-    </tbody>
-  </table>
-  <div >
-    <input type="submit" class="btn btn-info pull-left" style="margin-left: 1%;" value="@lang('Submit')" form="form"/> 
-  </div>
+          </td>
+          <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{$course->code}}</small></a></td>
+          <td scope="row"><a href="#" data-toggle="modal" data-target="#selectionCourseModal{{$course->id}}"><small>{{ucfirst($course->name)}}</small></a></td>
+          <td scope="row"><small>{{$course->level}}</small></td>
+          <td scope="row"><small>{{$course->credit}}</small></td>
+          <td scope="row"><small>{{$course->current_offered}}</small></td>
+          <td scope="row"><small>{{$course->next_offered}}</small></td>
+          <td scope="row"><small>{{$course->prerequisite}}</small></td>
+        </tr>
+        @endif
+        @endforeach
+      </tbody>
+    </table>
+   
+    <input type="button" id="submitButton" class="btn btn-info pull-left" style="margin-left: 1%;" value="Submit"/>
+    
+    <!-- Modal for Courses Confirmation -->
+    <div class="modal fade" id="confirmCourseModal" tabindex="-1" role="dialog" aria-labelledby="confirmCourseModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">          
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Course Confirmation')</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin-bottom:7px;">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+                <h4><b>@lang('According to the requirements of Immigration New Zealand , each ')
+                  <span class="text-danger">@lang('international student ')</span>@lang('must select ')
+                  <span class="text-danger">@lang('NO LESS THAN 2 COURSES ')(@lang('or 30 credits'))</span>@lang(' per semester .')</b>
+                </h4>
+                <br>
+                <h4><b>@lang('Once you have confirmed your course selection, you can ')
+                  <span class="text-danger">@lang('ONLY ')</span>@lang('contact the administrator to make changes within the specified time.')</b>
+                </h4>
+                <br>
+                <h4><b>@lang('Are you sure about your course selction ?')</b></h4>
 
+              </div>    
+            </div>
+          </div>    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+            <button type="submit" class="btn btn-danger btn-sm">@lang('Confirm')</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
 </div>
+
+<!-- Modal for warning information (if the user selects more than 4 courses) -->
+<div class="modal fade" id="warnCourseModal" tabindex="-1" role="dialog" aria-labelledby="warnCourseModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-warning" >          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="warnCourseModalLabel">@lang('Notice')</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <h4><b>@lang('We do not recommend that you choose more than 4 courses ...')</b></h4>
+            <h4><b>@lang('because you are likely to encounter the course clash .')</b></h4>
+          </div>    
+        </div>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for error information (if the user didn't select any course) -->
+<div class="modal fade" id="errorCourseModal" tabindex="-1" role="dialog" aria-labelledby="errorCourseModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white" >          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="errorCourseModalLabel">@lang('Error')</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <h4><b>@lang('You have not selected any course yet .')</b></h4>
+          </div>    
+        </div>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){  
+    $(".course_checkbox").click( function() { 
+      // set the maximum of the checkbox
+      if ($(".course_checkbox:checked").length > 4 ) {
+          $(this).removeAttr("checked");
+          $("#warnCourseModal").modal(); 
+      }
+    });
+
+    // check user's selection before submitting
+    $("#submitButton").click(function(){
+      if ($(".course_checkbox:checked").length < 1) {
+          $("#errorCourseModal").modal();  
+      }else{
+          $("#confirmCourseModal").modal();  
+      }
+    });  
+  });
+</script>
+
+
 <style>
 .checkbox-label {
   position: relative;

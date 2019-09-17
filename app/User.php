@@ -88,6 +88,14 @@ class User extends Model implements
         return $this->hasMany('App\MyClass');
     }
 
+    /**
+     * One user has many ClassDetails.
+     */
+    public function classDetails()
+    {
+        return $this->hasMany('App\ClassDetail');
+    }
+
     // public function department()
     // {
     //     return $this->belongsTo('App\Department','department_id', 'id');

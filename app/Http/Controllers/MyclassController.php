@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\ClassDetail;
 use App\MyClass as MyClass;
+use App\User;
+use App\Course;
 use App\Http\Resources\ClassResource;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Validator;
 
 class MyClassController extends Controller
 {
@@ -51,6 +54,52 @@ class MyClassController extends Controller
     }
 
     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function studentStore(Request $request)
+    {
+      $reqs = $request->all();
+      if ($reqs != null){
+
+        $term = '';
+        foreach ($reqs as $k => $v) {
+          if ($k == 'term'){
+            $term = $v;
+            break;
+          }
+        }
+
+        // store the data into MyClass
+        $tb_class = new MyClass;
+        $tb_class->user_id = \Auth::user()->id;
+        $tb_class->term = $term;
+        $tb_class->save();
+        
+        // store the data into ClassDetail
+        foreach ($reqs as $k => $current_course_id) {
+          if ($k != '_token' && $k != 'term'){
+            $tb_classdetail = new ClassDetail;
+            $tb_classdetail->user_id = \Auth::user()->id;
+            $tb_classdetail->class_id = $tb_class->id;
+            $tb_classdetail->course_id = $current_course_id;
+            $tb_classdetail->term = $term;            
+            $tb_classdetail->save();
+          }
+        }
+
+        // set a flag that once students confirm courses selection, they cannot select again.
+        $tb_user = User::find(\Auth::user()->id);
+        $tb_user->active = 0;
+        $tb_user->save();
+
+      }
+      return redirect('home')->with('status', __('Courses Confirmed'));
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -91,6 +140,43 @@ class MyClassController extends Controller
       ]);
     }
 
+    /**
+     * Show selected courses of the current student.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function studentCourses(){
+      // $myClasses = MyClass::with('user', 'classdetails')
+      //                     ->where('user_id', \Auth::user()->id)
+      //                     ->get();
+      $user = User::with('major', 'qualification', 'programme', 'myClasses')
+                  ->find(\Auth::user()->id);
+      $classdetails = ClassDetail::with('myClass', 'course', 'grade')
+                       ->where('user_id', \Auth::user()->id)
+                       ->orderBy('course_id', 'asc')
+                       ->get();
+      $totalCredits = 0;
+      if ($classdetails != null){
+        foreach ($classdetails as $k => $v) {
+          $totalCredits += $v->credit;
+        }
+      }
+
+      return view('mycourses.student-mycourses',compact('classdetails', 'user', 'totalCredits'));
+    }
+
+    /**
+     * Show selected courses of the current teacher.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function teacherCourses(){
+      $myClasses = MyClass::with('user', 'classdetails')
+                          ->where('user_id', \Auth::user()->id)
+                          ->get();
+      return view('mycourses.teacher-mycourses',compact('myClasses'));
+    }
+    
     /**
      * Remove the specified resource from storage.
      *

@@ -16,9 +16,11 @@ class CreateClassdetailsTable extends Migration
         Schema::create('classdetails', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('class_id');
-            $table->integer('grade_id')->nullable()->default(0);
+            $table->integer('grade_id')->default(0);
             $table->integer('credit')->default(0);
             $table->integer('course_id');
+            $table->integer('user_id');
+            $table->string('term')->default('');
             $table->timestamps();
         });
     }

@@ -103,7 +103,7 @@
                                     </tr>
                                     <tr>
                                         <th>@lang('Current Credits')</th>
-                                        <td></td>
+                                        <td>{{$totalCredits}}</td>
                                     </tr>
                                 </table>
                                 </div>                         
