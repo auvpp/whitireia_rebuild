@@ -29,18 +29,7 @@
                 </div>
 
                 <div class="panel-body">
-                    @if (\Auth::user()->active == 0)
-                    <div class="card text-white bg-danger col-sm-8">
-                        <div class="card-header">@lang('Notice')</div>
-                        <div class="card-body">
-                            @lang('You have confirmed the courses selection.')
-                            <br>
-                            @lang('If you want to make changes, please contact the administrator.')
-                            <br>
-                        </div>
-                    </div>
-                    <br>
-                    @else
+                    @if (\Auth::user()->course_token == 1 && \Auth::user()->school->toggle == 1)
                     <div class="card text-white bg-info">
                         <div class="card-header">@lang('Kindly Reminder')</div>
                         <div class="card-body">
@@ -56,31 +45,19 @@
                         </div>
                     </div>
                     <br>
-                    <!-- Courses List for Bachelor in IT -->
-                    @if ($user->qualification->name == 'Bachelor of Information Technology')
-                        @component('components.itBachelor-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    <!-- Courses List for GD in IT -->
-                    @elseif ($user->qualification->name == 'Graduate Diploma in Information Technology')
-                        @component('components.itGD-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    <!-- Courses List for PGD in IT -->
-                    @elseif ($user->qualification->name == 'Postgraduate Diploma in Information Technology')
-                        @component('components.itPGD-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    <!-- Courses List for Master in IT -->
-                    @elseif ($user->qualification->name == 'Master of Information Technology')
-                        @component('components.itMaster-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    <!-- Courses List for Master in Business -->
-                    @elseif ($user->qualification->name == 'Master of Management')
-                        @component('components.busMaster-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    <!-- other Courses (Bachelor / GD / PGD in Business)-->
+                        @component('components.general-courses-list', ['courses'=>$courses, 'user'=>$user])
+                        @endcomponent    
                     @else
-                        @component('components.general-courses-list',['courses'=>$courses])
-                        @endcomponent
-                    @endif
+                    <div class="card text-white bg-danger col-sm-8">
+                        <div class="card-header">@lang('Notice')</div>
+                        <div class="card-body">
+                            @lang('The current course selection system has been closed or you have already selected the class.')
+                            <br>
+                            @lang('If you want to make changes, please contact the administrator.')
+                            <br>
+                        </div>
+                    </div>
+                    <br>
                     @endif
                 </div>
             </div>

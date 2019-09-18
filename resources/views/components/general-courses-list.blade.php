@@ -1,5 +1,33 @@
 <div class="table-responsive">
-<small class="text-danger">@lang('*Regulation of qualification - successful completion of your qualification credits (Bachelor - 360 credits / PgD - 120 credits / GD - 120 credits) including compulsory courses.')</small>
+  <!-- Courses regulation for Bachelor in IT -->
+  @if ($user->qualification->name == 'Bachelor of Information Technology')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 360 credits including all compulsory courses of which no more than 135 credits from Level 5 courses and a minimum of 75 credits from Level 7 courses.')</small></div>
+  <!-- Courses regulation for GD in IT -->
+  @elseif ($user->qualification->name == 'Graduate Diploma in Information Technology')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from approved courses including all compulsory courses, no more than 15 credits from Level 5 courses and a minimum of 75 credits from Level 7 courses.')</small></div>
+  <!-- Courses regulation for PGD in IT -->
+  @elseif ($user->qualification->name == 'Postgraduate Diploma in Information Technology')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from Levels 7 and 8 including all compulsory courses and at least 90 credits from Level 8.')</small></div>
+  <!-- Courses regulation for Master in IT -->
+  @elseif ($user->qualification->name == 'Master of Information Technology')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 180 credits from Levels 8 and 9 including all compulsory courses and one of IT9501 or IT9502.')</small></div>
+  <div><small class="text-default">@lang('*Students need to complete 135 credits from Level 8 courses if they wish to study IT9501 Applied Research Project in second year.')</small></div>
+  <div><small class="text-default">@lang('*Students need to complete 90 credits from Level 8 courses if they wish to study IT9502 Thesis in second year.')</small></div>
+  <!-- Courses regulation for Bachelor in Business)-->
+  @elseif ($user->qualification->name == 'Bachelor of Applied Business Management')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 360 credits from approved courses including all compulsory courses.')</small></div>
+  <!-- Courses regulation for GD in Business)-->
+  @elseif ($user->qualification->name == 'Graduate Diploma in Applied Business Studies')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from approved courses including all compulsory courses.')</small></div>
+  <!-- Courses regulation for PGD in Business)-->
+  @elseif ($user->qualification->name == 'Postgraduate Diploma in Management')
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from level 8 including all compulsory courses.')</small></div>
+  <!-- Courses regulation for Master in Business)-->
+  @else
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 180 credits from levels 8 and 9 including all compulsory courses and one of BUS9501, BUS9502 or BUS9503.')</small></div>
+  <div><small class="text-default">@lang('*BUS9501, BUS9502 or BUS9503 is mutually exclusive which means students must choose only one of them in second year.')</small></div>
+  <div><small class="text-default">@lang('*Students need to complete an average grade of B from Level 8 courses if they wish to study BUS9502 in second year.')</small></div>
+  @endif
   <form action="{{url('courses/selection')}}" method="POST">
     {{csrf_field()}}
     <table class="table table-bordered table-striped table-hover table-condensed">
@@ -140,7 +168,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Course Confirmation')</h4>
+            <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Courses Confirmation')</h4>
           </div>
           <div class="modal-body">
             <div class="row" style="margin-bottom:7px;">
@@ -155,7 +183,7 @@
                   <span class="text-danger">@lang('ONLY ')</span>@lang('contact the administrator to make changes within the specified time.')</b>
                 </h4>
                 <br>
-                <h4><b>@lang('Are you sure about your course selction ?')</b></h4>
+                <h4><b>@lang('Are you sure about your course selection ?')</b></h4>
 
               </div>
             </div>
@@ -223,8 +251,33 @@
 </div>
 
 <script>
-  $(document).ready(function(){  
-    $(".course_checkbox").click( function() { 
+  $(document).ready(function(){
+
+    $(".course_checkbox").click( function() {
+      // BUS9501, BUS9502 and BUS9503 are mutually exclusive. (Master of Business)
+      let current_course_code = $(this).attr("data-coursecode");
+
+      if (current_course_code == "BUS9501") {
+        disableCheckBox("BUS9502");
+        disableCheckBox("BUS9503");
+      }
+      if (current_course_code == "BUS9502") {
+        disableCheckBox("BUS9501");
+        disableCheckBox("BUS9503");
+      }
+      if (current_course_code == "BUS9503") {
+        disableCheckBox("BUS9501");
+        disableCheckBox("BUS9502");
+      }
+
+      // IT9501 and IT9502 are mutually exclusive. (Master of IT)
+      if (current_course_code == "IT9501") {
+        disableCheckBox("IT9502");
+      }
+      if (current_course_code == "IT9502") {
+        disableCheckBox("IT9501");
+      }
+
       // set the maximum of the checkbox
       if ($(".course_checkbox:checked").length > 4 ) {
           $(this).removeAttr("checked");
@@ -241,8 +294,32 @@
       }
     });  
   });
-</script>
 
+  // $(".course_checkbox:checked").each(function(){
+  //   if ($(this).attr("data-coursecode") == "BUS9501"){
+  //     $(".course_checkbox:checked").each(function(){
+  //       if ($(this).attr("data-coursecode") == "BUS9502"){
+  //         $(this).removeAttr("checked");
+  //         $("#excludeCourseModal{{$course->id}}").modal(); 
+  //       }
+  //       if ($(this).attr("data-coursecode") == "BUS9503"){
+  //         $(this).removeAttr("checked");
+  //         $("#excludeCourseModal{{$course->id}}").modal(); 
+  //       }
+  //     });
+  //   }
+  // });
+
+  function disableCheckBox(target_course_code){
+    let checkboxes = document.getElementsByClassName("course_checkbox");
+    for (let i = 0; i < checkboxes.length; i++){
+      if (checkboxes[i].dataset.coursecode == target_course_code){
+        checkboxes[i].checked = false;
+        return;
+      }
+    }
+  }
+</script>
 
 <style>
 .checkbox-label {

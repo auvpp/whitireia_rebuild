@@ -104,11 +104,11 @@
       </li>
     </ul>
   </li> -->
-  @if(Auth::user()->role == 'admin' || Auth::user()->role == 'teacher')
-  <li class="nav-item">
+  
+  <!-- <li class="nav-item">
     <a class="nav-link" href="{{ url('grades/all-exams-grade') }}"><i class="material-icons">assignment</i> <span class="nav-link-text">@lang('Transcript')</span></a>
-  </li>
-  @endif
+  </li> -->
+ 
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li>
 
   <!-- <li class="nav-item">
@@ -202,10 +202,10 @@
     <a class="nav-link" href="{{ url('mycourses') }}"><i class="material-icons">subject</i>
       <span class="nav-link-text">@lang('My Courses')</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{ url('grades/'.Auth::user()->id) }}"><i class="material-icons">bubble_chart</i> <span
+  <!-- <li class="nav-item">
+    <a class="nav-link" href=""><i class="material-icons">bubble_chart</i> <span
         class="nav-link-text">@lang('My Transcript')</span></a>
-  </li>
+  </li> -->
   <!-- <li class="nav-item">
     <a class="nav-link" href="{{url('stripe/charge')}}"><i class="material-icons">payment</i> <span class="nav-link-text">@lang('Payment')</span></a>
   </li>

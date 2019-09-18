@@ -27,7 +27,7 @@ class User extends Model implements
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'role', /* school code*/'code', 'active', 'school_id', 'code', 'address', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'major_id', 'programme_id', 'qualification_id', 'enrolled_date', 'about' ];
+        'first_name', 'last_name', 'email', 'password', 'role', 'course_token', 'code', 'active', 'school_id', 'code', 'address', 'phone_number', /* 'blood_group' , 'nationality' , */ 'gender', 'major_id', 'programme_id', 'qualification_id', 'enrolled_date', 'about' ];
 
     /**
      * The attributes that should be hidden for arrays.

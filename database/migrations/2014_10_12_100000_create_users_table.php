@@ -20,7 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('role');
-            $table->tinyInteger('active');
+            $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('course_token')->default(1);
             $table->integer('school_id')->nullable();
             //$table->integer('code')->nullable();//school code Auto generated
             $table->string('code')->unique();//Auto generated

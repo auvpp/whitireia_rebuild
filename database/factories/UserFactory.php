@@ -30,6 +30,7 @@ $factory->define(User::class, function (Faker $faker) {
         'password'       => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
         'active'         => 1,
+        'course_token'   => 1,
         'role'           => $faker->randomElement(['student', 'teacher', 'admin', 'accountant', 'librarian']),
         'school_id' => function () use ($faker) {
           if (School::count())

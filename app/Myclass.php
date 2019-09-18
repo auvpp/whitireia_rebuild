@@ -33,6 +33,18 @@ class MyClass extends Model
         return $this->hasMany('App\ClassDetail', 'class_id', 'id');
     }
 
+    /**
+     * Cascade deleting
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function($my_class) {
+            $my_class->classDetails()->delete();
+        });
+    }
 
     // /**
     //  * Get the school record associated with the user.

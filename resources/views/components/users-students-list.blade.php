@@ -16,7 +16,6 @@
         <th scope="col">@lang('Qualification')</th>
         <th scope="col">@lang('Major')</th>
         <th scope="col">@lang('Phone')</th>
-        <th scope="col">@lang('Address')</th>
         <th scope="col">@lang('Enrolled Date')</th>
         <!-- <th scope="col">@lang('Active')</th> -->
       @endif
@@ -82,6 +81,7 @@
                             @endif
                             </span> - {{$user->code}} &nbsp; &nbsp; &nbsp;
                             <a href="#" type="button" class="btn btn-warning btn-xs">@lang('Rest Password')</a>
+                            <a href="{{url('reselect/student/'.$user->id)}}" type="button" class="btn btn-primary btn-xs">@lang('Reselect Courses')</a>
                           </h4>
                       </div>
                       <div class="modal-body">
@@ -196,7 +196,7 @@
                           </div>
 
                           <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
+                            <a href="{{url('selectionlist/student/'.$user->id)}}" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
                             <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>
@@ -329,7 +329,6 @@
           <td><small>@if ($user->qualification != null) {{$user->qualification->name}} @endif</small></td>
           <td><small>@if ($user->major != null) {{$user->major->name}} @endif</small></td>
           <td><small>{{$user->phone_number}}</small></td>
-          <td><small>{{$user->address}}</small></td>
           <td><small>{{Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y')}}</small></td>
           <!-- <td><small>{{$user->active}}</small></td> -->
         @endif

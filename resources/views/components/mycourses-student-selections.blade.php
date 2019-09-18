@@ -4,7 +4,7 @@
     </small>
     <table class="table table-bordered table-striped table-hover table-condensed">
       <thead class="bg-info text-white">
-        <tr>      
+        <tr>
           <th scope="col">#</th>
           <th scope="col">@lang('Code')</th>
           <th scope="col">@lang('Name')</th>
@@ -41,7 +41,7 @@
                 @endif
                 </small>
             </td>
-            <td scope="row"><small>{{$classdetail->credit}}</small></td>
+            <td scope="row"><small>{{$classdetail->approved_credit}}</small></td>
         </tr>
         @endforeach
         @endif

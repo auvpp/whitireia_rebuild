@@ -92,7 +92,7 @@ class MyClassController extends Controller
 
         // set a flag that once students confirm courses selection, they cannot select again.
         $tb_user = User::find(\Auth::user()->id);
-        $tb_user->active = 0;
+        $tb_user->course_token = 0;
         $tb_user->save();
 
       }
@@ -141,7 +141,7 @@ class MyClassController extends Controller
     }
 
     /**
-     * Show selected courses of the current student.
+     * Show selected courses of the current student on their own.
      *
      * @return \Illuminate\Http\Response
      */
@@ -155,6 +155,7 @@ class MyClassController extends Controller
                        ->where('user_id', \Auth::user()->id)
                        ->orderBy('course_id', 'asc')
                        ->get();
+      
       $totalCredits = 0;
       if ($classdetails != null){
         foreach ($classdetails as $k => $v) {
@@ -166,7 +167,7 @@ class MyClassController extends Controller
     }
 
     /**
-     * Show selected courses of the current teacher.
+     * Show selected courses of the current teacher on their own.
      *
      * @return \Illuminate\Http\Response
      */
@@ -177,6 +178,57 @@ class MyClassController extends Controller
       return view('mycourses.teacher-mycourses',compact('myClasses'));
     }
     
+    /**
+     * Show selected courses of a specified student by admin.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function studentSelections($id){
+      // $myClasses = MyClass::with('user', 'classdetails')
+      //                     ->where('user_id', \Auth::user()->id)
+      //                     ->get();
+      $user = User::with('major', 'qualification', 'programme', 'myClasses')
+                  ->find($id);
+      $classdetails = ClassDetail::with('myClass', 'course', 'grade')
+                       ->where('user_id', $id)
+                       ->orderBy('course_id', 'asc')
+                       ->get();
+      
+      $totalCredits = 0;
+      if ($classdetails != null){
+        foreach ($classdetails as $k => $v) {
+          $totalCredits += $v->credit;
+        }
+      }
+
+      return view('mycourses.student-mycourses',compact('classdetails', 'user', 'totalCredits'));
+    }
+
+     /**
+     * Show selected courses of a specified teacher by admin.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * delete the latest record from myclass and classdetails tables
+     * reset course_token for a specified student .
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function studentReselect($id){
+      $tb_user = User::find($id);
+      $current_class = MyClass::where('user_id', $id)->get()->last();
+      if ($tb_user->course_token == 0 && $tb_user->active == 1 && $current_class != null) {
+        $current_class->delete();
+        $tb_user->course_token = 1;
+        $tb_user->save();
+      }
+      return back();
+    }
+
+
+
     /**
      * Remove the specified resource from storage.
      *

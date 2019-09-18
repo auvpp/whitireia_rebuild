@@ -14,7 +14,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-8">
-                            @component('components.mycourses-student-list',['user'=>$user, 'classdetails'=>$classdetails, 'totalCredits'=>$totalCredits])
+                            @component('components.mycourses-student-selections',['user'=>$user, 'classdetails'=>$classdetails, 'totalCredits'=>$totalCredits])
                             @endcomponent
                         </div>
                         <div class="list-group col-sm-4">
@@ -26,7 +26,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-7">
+                        <div class="col-sm-1">
+                        @if (\Auth::user()->role == 'admin' || \Auth::user()->role == 'teacher')
+                            <a href="{{url()->previous()}}" class="btn btn-xs btn-warning"><i class="material-icons">keyboard_return</i> @lang('Go Back')</a>
+                        @endif
+                        </div>
+                        <div class="col-sm-6">
                             <button class="btn btn-xs btn-success pull-right" id="btnPrint"><i class="material-icons">print</i> @lang('Print Form')</button>
                         </div>
                         <div class="col-sm-1">

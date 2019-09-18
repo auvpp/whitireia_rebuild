@@ -86,14 +86,6 @@ Route::middleware(['auth'])->group(function (){
   Route::get('section/students/{section_id}', 'UserController@sectionStudents');
   
   Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
-
-  /* the Route for clicking "programmes"，which needs to be optimized later */
-  Route::get('/programmes/business', 'ProgrammeController@showBusiness')->name('programme.business');
-  Route::get('/programmes/it', 'ProgrammeController@ShowIT')->name('programme.it');
-
-  /* show all courses */
-  Route::get('/programmes/business/{id}', 'CourseController@course');
-  Route::get('/programmes/it/{id}', 'CourseController@course');
 });
 
 /* the Route for administrators */
@@ -135,12 +127,30 @@ Route::middleware(['auth','admin'])->group(function (){
     Route::post('accountant',  'UserController@storeAccountant');
     Route::post('librarian',  'UserController@storeLibrarian');
   });
+  
+  /* the Route for clicking "programmes"，which needs to be optimized later */
+  Route::get('/programmes/business', 'ProgrammeController@showBusiness')->name('programme.business');
+  Route::get('/programmes/it', 'ProgrammeController@ShowIT')->name('programme.it');
 
-  // the Route for editing courses
+  /* show all courses */
+  Route::get('/programmes/business/{id}', 'CourseController@course');
+  Route::get('/programmes/it/{id}', 'CourseController@course');
+
+  // edit courses
   //Route::get('edit/course/{id}','CourseController@edit');
   Route::post('edit/course/{id}','CourseController@update');
 
+  // show the selection list of a student or a teacher
+  Route::get('selectionlist/student/{id}', 'MyClassController@studentSelections');
+  Route::get('selectionlist/teacher/{id}', 'MyClassController@teacherSelections');
+  
+  // reselect courses
+  Route::get('reselect/student/{id}', 'MyClassController@studentReselect');
+
+  // settings page
   Route::get('/settings', 'SettingController@index')->name('settings.index');
+  Route::post('/settings', 'SettingController@toggle');
+
   Route::get('gpa/create-gpa', 'GradesystemController@create');
   Route::post('create-gpa', 'GradesystemController@store');
   Route::post('gpa/delete', 'GradesystemController@destroy');
@@ -155,6 +165,14 @@ Route::middleware(['auth','teacher'])->group(function (){
   Route::get('school/sections','SectionController@index');
 
   Route::get('gpa/all-gpa', 'GradesystemController@index');
+
+  /* the Route for clicking "programmes"，which needs to be optimized later */
+  Route::get('/programmes/business', 'ProgrammeController@showBusiness')->name('programme.business');
+  Route::get('/programmes/it', 'ProgrammeController@ShowIT')->name('programme.it');
+
+  /* show all courses */
+  Route::get('/programmes/business/{id}', 'CourseController@course');
+  Route::get('/programmes/it/{id}', 'CourseController@course');
 
   Route::get('mycourses', 'MyClassController@teacherCourses');
 });
@@ -184,7 +202,10 @@ Route::middleware(['auth', 'student'])->prefix('stripe')->group(function(){
 Route::middleware(['auth', 'student'])->group(function(){
   Route::get('courses/selection', 'CourseController@selectionList');
   Route::post('courses/selection', 'MyClassController@studentStore');
+
+  /* show seletec courses of a student*/
   Route::get('mycourses', 'MyClassController@studentCourses');
+  
   //Route::post('courses','CourseController@index');
 });
 

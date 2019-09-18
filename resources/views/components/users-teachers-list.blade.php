@@ -17,7 +17,6 @@
       <th scope="col">@lang('Email')</th>
       @if(Auth::user()->role != 'student')
         <th scope="col">@lang('Phone')</th>
-        <th scope="col">@lang('Address')</th>
         <th scope="col">@lang('Enrolled Date')</th>
         <!-- <th scope="col">@lang('Active')</th> -->
       @endif
@@ -64,7 +63,7 @@
     @foreach ($users as $key=>$user)
     <tr>
       <th scope="row">{{ ($current_page-1) * $per_page + $key + 1 }}</th>
-      @if(Auth::user()->role == 'admin') 
+        @if(Auth::user()->role == 'admin') 
         <td>
           <!-- <a class="btn btn-xs btn-danger" href="{{url('edit/user/'.$user->id)}}">@lang('Edit')</a> -->
           <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminUserModal{{$user->id}}">@lang('Edit')</button>
@@ -229,7 +228,6 @@
           <td><small>{{$user->email}}</small></td>          
         @if(Auth::user()->role != 'student')
           <td><small>{{$user->phone_number}}</small></td>
-          <td><small>{{$user->address}}</small></td>
           <td><small>{{Carbon\Carbon::parse($user->enrolled_date)->format('d-m-Y')}}</small></td>
           <!-- <td><small>{{$user->active}}</small></td> -->
         @endif

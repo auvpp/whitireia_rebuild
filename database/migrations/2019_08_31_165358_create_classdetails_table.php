@@ -17,7 +17,7 @@ class CreateClassdetailsTable extends Migration
             $table->increments('id');
             $table->integer('class_id');
             $table->integer('grade_id')->default(0);
-            $table->integer('credit')->default(0);
+            $table->integer('approved_credit')->default(0);
             $table->integer('course_id');
             $table->integer('user_id');
             $table->string('term')->default('');
