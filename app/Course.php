@@ -13,7 +13,7 @@ class Course extends Model
      * @var array
      */
     protected $fillable = [
-        'code', 'name', 'credit', 'major_id', 'level', 'type', 'active', 'current_offered', 'next_offered', 'prerequisite', 'description', 'teacher',
+        'code', 'name', 'credit', 'major_id', 'level', 'type', 'active', 'current_offered', 'next_offered', 'prerequisite', 'description', 'teacher_id',
     ];
 
     /**
@@ -46,6 +46,14 @@ class Course extends Model
     public function creit()
     {
         return $this->belongsTo('App\Credit');
+    }
+
+    /**
+     * One course belongs to only one teacher.
+    */
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'teacher_id');
     }
 
     // /**

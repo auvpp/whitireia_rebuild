@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\School;
+use App\Major;
+use App\Qualification;
+use App\Programme;
 use App\MyClass;
 use App\Section;
 use App\Department;
@@ -13,21 +16,29 @@ use Illuminate\Http\Request;
 class SettingController extends Controller
 {
     public function index() {
-        // $school      = \Auth::user()->school;
-        // $classes     = MyClass::all();
-        // $sections    = Section::all();
-        // $departments = Department::bySchool(\Auth::user()->school_id)->get();
-        // $teachers = User::select('departments.*', 'users.*')
-		// 	->join('departments', 'departments.id', '=', 'users.department_id')
-        //     ->where('role', 'teacher')
-        //     ->orderBy('name', 'ASC')
-        //     ->where('active', 1)
-        //     ->get();
         if (\Auth::user()->role == 'admin'){
+            // $school      = \Auth::user()->school;
+            // $classes     = MyClass::all();
+            // $sections    = Section::all();
+            // $departments = Department::bySchool(\Auth::user()->school_id)->get();
+            $teachers = User::with('programme')
+                            ->where('role', 'teacher')
+                            ->where('active', 1)
+                            ->orderBy('first_name', 'ASC')
+                            ->get();
+
+            $majors = Major::query()->get();
+            $programmes = Programme::query()->get();
+            $qualifications = Qualification::query()->get();
+            
             $toggle = \Auth::user()->school->toggle;
+            return view('settings.index', compact('toggle', 'teachers', 'majors', 'qualifications', 'programmes'));
+        }
+        else{
+            return redirect('home');
         }
 
-        return view('settings.index', compact('toggle'));
+        
     }
 
     public function toggle(Request $request) {

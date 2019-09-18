@@ -65,13 +65,13 @@
       @if(Auth::user()->role == 'admin') 
         <td>
           <!-- <a class="btn btn-xs btn-danger" href="{{url('edit/user/'.$user->id)}}">@lang('Edit')</a> -->
-          <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminUserModal{{$user->id}}">@lang('Edit')</button>
+          <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminUserModal{{$user->id}}">@lang('Edit')</button>
           <!-- Modal -->
           <div class="modal fade" id="adminUserModal{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="adminUserModal{{$user->id}}Label">
               <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                       <div class="modal-header" style="background-color: #5cb85c; color:white !important;">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <button class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
                           <h4 class="modal-title" id="adminUserModal{{$user->id}}Label">
@@ -197,7 +197,7 @@
 
                           <div class="modal-footer">
                             <a href="{{url('selectionlist/student/'.$user->id)}}" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
-                            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
+                            <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>
 

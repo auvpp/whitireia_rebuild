@@ -82,7 +82,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header" style="background-color: #5cb85c; color:white !important;">          
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="selectionCourseModal{{$course->id}}Label">@lang('Course Information')</h4>
@@ -93,7 +93,7 @@
                     <label for="selectionCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
                   </div>
                   <div class="col-sm-8">
-                    <input type="text" id="selectionCourseTeacher{{$course->id}}" class="form-control" value="{{$course->teacher}}" readonly>
+                    <input type="text" id="selectionCourseTeacher{{$course->id}}" class="form-control" value="@if ($course->user == null) TBA @else {{ucfirst($course->user->first_name).' '.ucfirst($course->user->last_name)}} @endif" readonly>
                   </div>                
                 </div>
                 <div class="row" style="margin-bottom:7px;">
@@ -106,7 +106,7 @@
                 </div>
               </div>    
               <div class="modal-footer">
-                <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
+                <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header bg-success text-white">          
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Courses Confirmation')</h4>
@@ -189,7 +189,7 @@
             </div>
           </div>    
           <div class="modal-footer">
-            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+            <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
             <button type="submit" class="btn btn-danger btn-sm">@lang('Confirm')</button>
           </div>
         </div>
@@ -204,7 +204,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-warning" >          
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="warnCourseModalLabel">@lang('Notice')</h4>
@@ -219,7 +219,7 @@
         </div>
       </div>    
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+        <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
       </div>
     </div>
   </div>
@@ -230,7 +230,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-danger text-white" >          
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="errorCourseModalLabel">@lang('Error')</h4>
@@ -244,7 +244,7 @@
         </div>
       </div>    
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+        <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
       </div>
     </div>
   </div>

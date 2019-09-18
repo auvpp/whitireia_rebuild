@@ -1,11 +1,11 @@
-<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#addClassModal{{$school->id}}">+@lang('Add New Class')</button>
+<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#addClassModal{{$school->id}}">+@lang('Add New Class')</button>
 
 <!-- Modal -->
 <div class="modal fade" id="addClassModal{{$school->id}}" tabindex="-1" role="dialog" aria-labelledby="addClassModal{{$school->id}}Label">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="myModalLabel">@lang('Add New Class')</h4>
@@ -41,7 +41,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">@lang('Close')</button>
+        <button class="btn btn-danger btn-sm" data-dismiss="modal">@lang('Close')</button>
       </div>
     </div>
   </div>

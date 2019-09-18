@@ -21,12 +21,12 @@ class CreateCoursesTable extends Migration
             $table->integer('major_id');
             $table->string('level');
             $table->string('type');
-            $table->tinyInteger('active');
+            $table->tinyInteger('active')->default(1);
             $table->string('current_offered')->nullable();
             $table->string('next_offered')->nullable();
             $table->string('prerequisite')->nullable()->default('');
             $table->text('description')->default('');
-            $table->string('teacher')->nullalbe();
+            $table->integer('teacher_id')->default(0);
             $table->timestamps();
             // $table->string('course_name');
             // $table->integer('class_id')->unsigned();

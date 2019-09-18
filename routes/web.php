@@ -140,6 +140,9 @@ Route::middleware(['auth','admin'])->group(function (){
   //Route::get('edit/course/{id}','CourseController@edit');
   Route::post('edit/course/{id}','CourseController@update');
 
+  // add a new course
+  Route::post('add/course','CourseController@store');
+
   // show the selection list of a student or a teacher
   Route::get('selectionlist/student/{id}', 'MyClassController@studentSelections');
   Route::get('selectionlist/teacher/{id}', 'MyClassController@teacherSelections');

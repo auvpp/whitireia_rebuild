@@ -32,7 +32,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -49,7 +49,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -66,7 +66,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -83,7 +83,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -100,7 +100,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -117,7 +117,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -134,7 +134,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -151,7 +151,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -168,7 +168,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -185,7 +185,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -202,7 +202,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -219,7 +219,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -236,7 +236,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -253,7 +253,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -270,7 +270,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -287,7 +287,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -304,7 +304,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -321,7 +321,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -338,7 +338,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jill Dawson",
+            'teacher_id'    => 38,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -355,7 +355,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jill Dawson",
+            'teacher_id'    => 38,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -372,7 +372,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jill Dawson",
+            'teacher_id'    => 38,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -389,7 +389,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -406,7 +406,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -423,7 +423,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -440,7 +440,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -457,7 +457,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -474,7 +474,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -491,7 +491,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -508,7 +508,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -525,7 +525,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -542,7 +542,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -559,7 +559,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -576,7 +576,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -593,7 +593,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -610,7 +610,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -627,7 +627,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -644,7 +644,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -661,7 +661,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -678,7 +678,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -695,7 +695,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -712,7 +712,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -729,7 +729,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -746,7 +746,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -763,7 +763,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -780,7 +780,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -797,7 +797,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -814,7 +814,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -831,7 +831,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -851,7 +851,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -868,7 +868,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -885,7 +885,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -902,7 +902,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -919,7 +919,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -939,7 +939,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -956,7 +956,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -973,7 +973,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -990,7 +990,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1007,7 +1007,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1027,7 +1027,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1044,7 +1044,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1061,7 +1061,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1078,7 +1078,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1095,7 +1095,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1117,7 +1117,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1134,7 +1134,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1151,7 +1151,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "All Year 1 & Year 2 Core Papers and Major type Papers",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1171,7 +1171,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jagath Pushpakumar",
+            'teacher_id'    => 33,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1188,7 +1188,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jagath Pushpakumar",
+            'teacher_id'    => 33,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1205,7 +1205,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Markus Klose",
+            'teacher_id'    => 28,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1222,7 +1222,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  "TBA",
+            'teacher_id'    =>  0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1239,7 +1239,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jonathan Latimer",
+            'teacher_id'    => 34,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1256,7 +1256,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  "Andrew Zaliwski",
+            'teacher_id'    =>  30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1273,7 +1273,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1290,7 +1290,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1307,7 +1307,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Jagath Pushpakumar",
+            'teacher_id'    => 33,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1327,7 +1327,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1344,7 +1344,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1361,7 +1361,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1379,7 +1379,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1396,7 +1396,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1413,7 +1413,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Daymon Heyzer",
+            'teacher_id'    => 32,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1430,7 +1430,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1450,7 +1450,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1466,8 +1466,8 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
-            'description' => "Markus Klose",
-            'teacher'    =>  1,
+            'description' => $faker->sentence(),
+            'teacher_id'    => 28,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1484,7 +1484,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Daymon Heyzer",
+            'teacher_id'    => 32,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1501,7 +1501,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Markus Klose",
+            'teacher_id'    => 28,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1518,7 +1518,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Daymon Heyzer",
+            'teacher_id'    => 32,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1535,7 +1535,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1552,7 +1552,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1569,7 +1569,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Daymon Heyzer",
+            'teacher_id'    => 32,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1586,7 +1586,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  "TBA",
+            'teacher_id'    =>  0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1603,7 +1603,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour/Suzan Sariefe",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1623,7 +1623,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Markus Klose",
+            'teacher_id'    => 28,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1640,7 +1640,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Markus Klose",
+            'teacher_id'    => 28,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1657,7 +1657,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1674,7 +1674,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Daymon Heyzer",
+            'teacher_id'    => 32,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1691,7 +1691,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1708,7 +1708,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Paul Gilmour/Suzan Sariefe",
+            'teacher_id'    => 29,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1731,7 +1731,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1748,7 +1748,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1765,7 +1765,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1782,7 +1782,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1799,7 +1799,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1816,7 +1816,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1828,12 +1828,12 @@ class CoursesTableSeeder extends Seeder
             'level' => "Level 8",
             'type'     => "Compulsory",
             'credit'   => 15,
-            'active' => "Sharan GaribSingh",
+            'active' => 40,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  1,
+            'teacher_id'    =>  40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1850,7 +1850,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1867,7 +1867,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1884,7 +1884,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1901,7 +1901,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1918,7 +1918,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1938,7 +1938,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1954,8 +1954,8 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
-            'description' => "Matthew Abraham",
-            'teacher'    =>  1,
+            'description' => $faker->sentence(),
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1972,7 +1972,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1989,7 +1989,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2006,7 +2006,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2023,7 +2023,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2040,7 +2040,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2057,7 +2057,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2077,7 +2077,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2094,7 +2094,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2111,7 +2111,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2127,8 +2127,8 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
-            'description' => "Matthew Abraham",
-            'teacher'    =>  1,
+            'description' => $faker->sentence(),
+            'teacher_id'    =>  35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2145,7 +2145,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2162,7 +2162,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2179,7 +2179,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2196,7 +2196,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2216,7 +2216,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2233,7 +2233,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2250,7 +2250,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2266,8 +2266,8 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
-            'description' => "Matthew Abraham",
-            'teacher'    =>  1,
+            'description' => $faker->sentence(),
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2284,7 +2284,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2301,7 +2301,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2318,7 +2318,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2335,7 +2335,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2355,7 +2355,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2372,7 +2372,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2389,7 +2389,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2405,8 +2405,8 @@ class CoursesTableSeeder extends Seeder
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
-            'description' => "Matthew Abraham",
-            'teacher'    =>  1,
+            'description' => $faker->sentence(),
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2423,7 +2423,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2440,7 +2440,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2457,7 +2457,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2474,7 +2474,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2497,7 +2497,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2514,7 +2514,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  "Andrew Zaliwski",
+            'teacher_id'    =>  30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2531,7 +2531,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2548,7 +2548,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2565,7 +2565,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2582,7 +2582,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2599,7 +2599,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2616,7 +2616,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2633,7 +2633,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2650,7 +2650,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2667,7 +2667,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2684,7 +2684,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2701,7 +2701,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2718,7 +2718,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2735,7 +2735,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2752,7 +2752,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2775,7 +2775,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2792,7 +2792,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2809,7 +2809,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2826,7 +2826,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Keith Macky",
+            'teacher_id'    => 27,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2843,7 +2843,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2860,7 +2860,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2877,7 +2877,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2894,7 +2894,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2911,7 +2911,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2928,7 +2928,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2945,7 +2945,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2962,7 +2962,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Sharan GaribSingh",
+            'teacher_id'    => 40,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2982,7 +2982,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -2999,7 +2999,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3016,7 +3016,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3033,7 +3033,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3050,7 +3050,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3067,7 +3067,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3084,7 +3084,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3101,7 +3101,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3121,7 +3121,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3138,7 +3138,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3155,7 +3155,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3172,7 +3172,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3189,7 +3189,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3206,7 +3206,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3223,7 +3223,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3240,7 +3240,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3260,7 +3260,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3277,7 +3277,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3294,7 +3294,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3311,7 +3311,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3328,7 +3328,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3345,7 +3345,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3362,7 +3362,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3379,7 +3379,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3399,7 +3399,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Ann Cameron",
+            'teacher_id'    => 31,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3416,7 +3416,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Rohit Pande",
+            'teacher_id'    => 36,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3433,7 +3433,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3450,7 +3450,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Matthew Abraham",
+            'teacher_id'    => 35,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3467,7 +3467,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3484,7 +3484,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3501,7 +3501,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3518,7 +3518,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Yalim Ozdinc",
+            'teacher_id'    => 39,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3541,7 +3541,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3558,7 +3558,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3575,7 +3575,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3592,7 +3592,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3609,7 +3609,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3626,7 +3626,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3643,7 +3643,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3660,7 +3660,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Suzan Sariefe",
+            'teacher_id'    => 37,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3677,7 +3677,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  1,
+            'teacher_id'    =>  0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3694,7 +3694,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3711,7 +3711,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3728,7 +3728,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3745,7 +3745,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3762,7 +3762,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3779,7 +3779,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3796,7 +3796,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' =>      "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3813,7 +3813,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3830,7 +3830,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3847,7 +3847,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3864,7 +3864,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3881,7 +3881,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "The average grade of all level 8 courses must no less than B",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503. If you choose BUS9503, the average grade of all level 8 courses must no less than B.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3898,7 +3898,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "The average grade of all level 8 courses must no less than B",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503. If you choose BUS9503, the average grade of all level 8 courses must no less than B.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3915,7 +3915,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "The average grade of all level 8 courses must no less than B",
             'description' => "Level 9 Master students must choose ONE of the BUS9501, BUS9502 or BUS9503. If you choose BUS9503, the average grade of all level 8 courses must no less than B.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3932,7 +3932,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "The average grade of all level 8 courses must no less than B",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503. If you choose BUS9503, the average grade of all level 8 courses must no less than B.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3949,7 +3949,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3966,7 +3966,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -3983,7 +3983,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4000,7 +4000,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "",
             'description' => "Level 9 master students must choose ONE of the BUS9501, BUS9502 or BUS9503",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4021,7 +4021,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4038,7 +4038,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4055,7 +4055,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4072,7 +4072,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4089,7 +4089,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4106,7 +4106,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4123,7 +4123,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4140,7 +4140,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4157,7 +4157,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5101 or IT5181",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4174,7 +4174,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5117 or IT5189",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4191,7 +4191,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4208,7 +4208,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5104 or IT5184",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4225,7 +4225,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5103 or IT5182",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4242,7 +4242,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4259,7 +4259,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5103 or IT5183",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4276,7 +4276,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5104 or IT5184 & IT5182",
             'description' => $faker->sentence(),
-            'teacher'    => "Noor Al-Ani",
+            'teacher_id'    => 26,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4293,7 +4293,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT5117 or IT5187",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4310,7 +4310,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7305 or IT7125 & 300 credits",
             'description' => $faker->sentence(),
-            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
+            'teacher_id'    => 26,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4327,7 +4327,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4344,7 +4344,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4361,7 +4361,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6209 or IT6129",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4378,7 +4378,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT5183, IT5185, IT5186, IT6111",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4395,7 +4395,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT5106 or IT5186",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4412,7 +4412,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6203 or IT6210 / IT6123 or IT6130",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4429,7 +4429,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T2-2020",
             'prerequisite'   => "IT6206 or IT6126",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4446,7 +4446,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6218 or IT6119",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4463,7 +4463,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6217 or IT6187",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4480,7 +4480,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4500,7 +4500,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4517,7 +4517,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4534,7 +4534,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4551,7 +4551,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "Not offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4568,7 +4568,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4585,7 +4585,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4602,7 +4602,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4619,7 +4619,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4636,7 +4636,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4653,7 +4653,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "No longer offered",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4670,7 +4670,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4687,7 +4687,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Noor Al-Ani",
+            'teacher_id'    => 26,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4704,7 +4704,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4721,7 +4721,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7225",
             'description' => $faker->sentence(),
-            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
+            'teacher_id'    => 26,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4738,7 +4738,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4755,7 +4755,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4772,7 +4772,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4789,7 +4789,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4806,7 +4806,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4823,7 +4823,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    =>  "TBA",
+            'teacher_id'    =>  0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4840,7 +4840,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4857,7 +4857,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "IT6219",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4874,7 +4874,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "IT6287",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4891,7 +4891,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4911,7 +4911,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4928,7 +4928,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4945,7 +4945,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4962,7 +4962,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Premalatha Sampath",
+            'teacher_id'    => 24,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4979,7 +4979,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -4996,7 +4996,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5013,7 +5013,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5030,7 +5030,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "Knowledge / Experience in Operating System",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5047,7 +5047,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "Knowledge / Experience in Network System",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5064,7 +5064,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Noor Al-Ani & Arkar Kyaw",
+            'teacher_id'    => 26,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5081,7 +5081,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);    
@@ -5098,7 +5098,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5115,7 +5115,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5132,7 +5132,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5149,7 +5149,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5166,7 +5166,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5183,7 +5183,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5200,7 +5200,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5217,7 +5217,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5234,7 +5234,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5251,7 +5251,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT7325 & IT8401",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5268,7 +5268,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5288,7 +5288,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5305,7 +5305,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT8501",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);   
@@ -5322,7 +5322,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5339,7 +5339,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5356,7 +5356,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5373,7 +5373,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Shafiq Alam",
+            'teacher_id'    => 25,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5390,7 +5390,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5407,7 +5407,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Andrew Zaliwski",
+            'teacher_id'    => 30,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5424,7 +5424,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5441,7 +5441,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T2-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "Arkar Kyaw",
+            'teacher_id'    => 23,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5458,7 +5458,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5475,7 +5475,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5492,7 +5492,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered'      => "TBA",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5509,7 +5509,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "IT8501",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5526,7 +5526,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "None",
             'description' => $faker->sentence(),
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5543,7 +5543,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "135 Credits from Level 8 including IT8501 & IT8502",
             'description' => "Level 9 master students must choose ONE of the IT9501 or IT9502 in second year.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -5560,7 +5560,7 @@ class CoursesTableSeeder extends Seeder
             'next_offered' => "T1-2020",
             'prerequisite'   => "90 Credits from Level 8 including IT8501 & IT8502",
             'description' => "Level 9 master students must choose ONE of the IT9501 or IT9502 in second year.",
-            'teacher'    => "TBA",
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);

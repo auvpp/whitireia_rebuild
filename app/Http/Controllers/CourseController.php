@@ -97,7 +97,8 @@ class CourseController extends Controller
     public function selectionList(){
       $user = User::with('major', 'qualification', 'programme')
                   ->find(\Auth::user()->id);
-      $courses = Course::where('major_id', $user->major_id)
+      $courses = Course::with('user')
+                       ->where('major_id', $user->major_id)
                        ->orderBy('code', 'asc')
                        ->get();
       return view('course.students', compact('courses', 'user'));
@@ -116,7 +117,7 @@ class CourseController extends Controller
       } catch (\Exception $ex){
         return __('Could not add course.');
       }
-      return back()->with('status', __('Created'));
+      return back()->with('status', __('Course Created'));
     }
 
     /**
@@ -173,7 +174,7 @@ class CourseController extends Controller
         'prerequisite' =>'string',
         'current_offered' => 'required|string',
         'next_offered' => 'required|string',
-        'teacher' => 'required|string',
+        'teacher_id' => 'required|integer',
         'description' => 'nullable|string',
       ]);
       $this->courseService->updateCourseInfo($id, $request);

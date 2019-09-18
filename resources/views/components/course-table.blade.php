@@ -33,13 +33,13 @@
               <td>
                 <!-- <a href="{{--url('edit/course/'.$course->id)--}}" class="btn btn-xs btn-danger">
                    <i class="material-icons">edit</i> @lang('Edit')</a> -->
-                <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminCourseModal{{$course->id}}">@lang('Edit')</button>
+                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminCourseModal{{$course->id}}">@lang('Edit')</button>
                 <!-- Modal -->
                 <div class="modal fade" id="adminCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="adminCourseModal{{$course->id}}Label">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header" style="background-color: #5cb85c; color:white !important;">          
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title" id="adminCourseModal{{$course->id}}Label">@lang('Manage Course')</h4>
@@ -157,10 +157,10 @@
                               <label for="adminCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
                             </div>
                             <div class="col-sm-8">
-                              <select style="width:100%" class="form-control" id="adminCourseTeacher{{$course->id}}" name="teacher" required>
-                                <option value="TBA">@lang('TBA')</option>
-                                @foreach ($teachers as $t)
-                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
+                              <select style="width:100%" class="form-control" id="adminCourseTeacher{{$course->id}}" name="teacher_id" required>
+                                <option value="0">@lang('TBA')</option>
+                                @foreach ($teachers as $teacher)
+                                <option value="{{$teacher->user_id}}">{{ucfirst($teacher->first_name).' '.ucfirst($teacher->last_name).' ('.ucfirst($teacher->programme->name).')'}}</option>
                                 @endforeach
                               </select>
                             </div>
@@ -175,7 +175,7 @@
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
+                            <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>
                         </form>
@@ -193,13 +193,13 @@
                   $("#adminCourseCredit{{$course->id}}").val('{{ucfirst($course->credit)}}');
                   $("#adminCourseCurrentOffered{{$course->id}}").val('{{ucfirst($course->current_offered)}}');
                   $("#adminCourseNextOffered{{$course->id}}").val('{{ucfirst($course->next_offered)}}');
-                  $("#adminCourseTeacher{{$course->id}}").val('{{ucfirst($course->teacher)}}');
+                  $("#adminCourseTeacher{{$course->id}}").val('{{$course->teacher_id}}');
                   $("#adminCourseCurrentOffered{{$course->id}}").change(function(){
                     var current_offered = $("#adminCourseCurrentOffered{{$course->id}}").val();
                     if (current_offered == 'No longer offered') {
                       $("#adminCourseNextOffered{{$course->id}}").val('No longer offered');
                       $("#adminCourseNextOffered{{$course->id}}").attr("disabled", "disabled");
-                      $("#adminCourseTeacher{{$course->id}}").val('TBA');
+                      $("#adminCourseTeacher{{$course->id}}").val('0');
                       $("#adminCourseTeacher{{$course->id}}").attr("disabled", "disabled");
                     }
                     else{

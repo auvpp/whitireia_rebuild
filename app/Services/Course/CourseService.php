@@ -45,7 +45,7 @@ class CourseService {
         $tb->prerequisite = $request->prerequisite;
         $tb->current_offered = $request->current_offered;
         $tb->next_offered = $request->next_offered;
-        $tb->teacher = $request->teacher;
+        $tb->teacher_id = $request->teacher_id;
         $tb->description = $request->description;
         $tb->save();
     }
@@ -65,36 +65,21 @@ class CourseService {
 
     public function addCourse($request){
         $tb = new Course;
-        $tb->course_name = $request->course_name;
-        $tb->class_id = $request->class_id;
-        $tb->course_type = $request->course_type;
-        $tb->course_time = $request->course_time;
-        $tb->section_id = $request->section_id;
+        $tb->code = $request->code;
+        $tb->name = $request->name;
+        $tb->type = $request->type;
+        $tb->level = $request->level;
+        $tb->current_offered =  $request->current_offered;
+        $tb->next_offered =  $request->next_offered;
+        $tb->prerequisite = $request->prerequisite;
+        $tb->description = $request->description;
+        $tb->credit = $request->credit;
+
+        $tb->major_id = $request->major_id;
         $tb->teacher_id = $request->teacher_id;
-        $tb->grade_system_name = '';
-        $tb->quiz_count = 0;
-        $tb->assignment_count = 0;
-        $tb->ct_count = 0;
-        $tb->quiz_percent = 0;
-        $tb->attendance_percent = 0;
-        $tb->assignment_percent = 0;
-        $tb->ct_percent = 0;
-        $tb->final_exam_percent = 0;
-        $tb->practical_percent = 0;
-        $tb->att_fullmark = 0;
-        $tb->quiz_fullmark = 0;
-        $tb->a_fullmark = 0;
-        $tb->ct_fullmark = 0;
-        $tb->final_fullmark = 0;
-        $tb->practical_fullmark = 0;
-        $tb->exam_id = 0;
-        $tb->school_id = auth()->user()->school_id;
-        $tb->user_id = auth()->user()->id; // who is creating
-        // $tb->quiz_percent = $request->quiz_percent;
-        // $tb->test_percent = $request->test_percent;
-        // $tb->assignment_percent = $request->assignment_percent;
-        // $tb->class_work_percent = $request->class_work_percent;
-        // $tb->final_exam_percent = $request->final_exam_percent;
+
+        
+        // $tb->user_id = auth()->user()->id; // who is creating
         $tb->save();
     }
 
