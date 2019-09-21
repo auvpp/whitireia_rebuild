@@ -27,7 +27,7 @@
                           <label for="year" class="col-md-4 control-label">@lang('Year')</label>
 
                           <div class="col-md-6">
-                              <input id="date" type="text" class="form-control datepicker" name="year" value="{{ old('year') }}" placeholder="@lang('Year')" required>
+                              <input id="date" class="form-control datepicker" name="year" value="{{ old('year') }}" placeholder="@lang('Year')" required>
 
                               @if ($errors->has('year'))
                                   <span class="help-block">

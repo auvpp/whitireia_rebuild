@@ -10,9 +10,9 @@
   <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 120 credits from Levels 7 and 8 including all compulsory courses and at least 90 credits from Level 8.')</small></div>
   <!-- Courses regulation for Master in IT -->
   @elseif ($user->qualification->name == 'Master of Information Technology')
-  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 180 credits from Levels 8 and 9 including all compulsory courses and one of IT9501 or IT9502.')</small></div>
-  <div><small class="text-default">@lang('*Students need to complete 135 credits from Level 8 courses if they wish to study IT9501 Applied Research Project in second year.')</small></div>
-  <div><small class="text-default">@lang('*Students need to complete 90 credits from Level 8 courses if they wish to study IT9502 Thesis in second year.')</small></div>
+  <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 180 credits from Levels 8 and 9 including all compulsory courses and one of IT9x01 or IT9x02.')</small></div>
+  <div><small class="text-default">@lang('*Students need to complete 135 credits from Level 8 courses if they wish to study IT9x01 Applied Research Project in second year.')</small></div>
+  <div><small class="text-default">@lang('*Students need to complete 90 credits from Level 8 courses if they wish to study IT9x02 Thesis in second year.')</small></div>
   <!-- Courses regulation for Bachelor in Business)-->
   @elseif ($user->qualification->name == 'Bachelor of Applied Business Management')
   <div><small class="text-danger">@lang('*Regulation of qualification - successful completion of 360 credits from approved courses including all compulsory courses.')</small></div>
@@ -82,7 +82,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header" style="background-color: #5cb85c; color:white !important;">          
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="selectionCourseModal{{$course->id}}Label">@lang('Course Information')</h4>
@@ -93,7 +93,7 @@
                     <label for="selectionCourseTeacher{{$course->id}}" class="pull-right control-label">@lang('Tutor :')</label>
                   </div>
                   <div class="col-sm-8">
-                    <input type="text" id="selectionCourseTeacher{{$course->id}}" class="form-control" value="{{$course->teacher}}" readonly>
+                    <input id="selectionCourseTeacher{{$course->id}}" class="form-control" value="{{$course->teacher}}" readonly>
                   </div>                
                 </div>
                 <div class="row" style="margin-bottom:7px;">
@@ -106,7 +106,7 @@
                 </div>
               </div>    
               <div class="modal-footer">
-                <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
+                <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header bg-success text-white">          
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4 class="modal-title" id="confirmCourseModalLabel">@lang('Courses Confirmation')</h4>
@@ -189,7 +189,7 @@
             </div>
           </div>    
           <div class="modal-footer">
-            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+            <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
             <button type="submit" class="btn btn-danger btn-sm">@lang('Confirm')</button>
           </div>
         </div>
@@ -204,7 +204,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-warning" >          
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="warnCourseModalLabel">@lang('Notice')</h4>
@@ -219,7 +219,7 @@
         </div>
       </div>    
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+        <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
       </div>
     </div>
   </div>
@@ -230,7 +230,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-danger text-white" >          
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <h4 class="modal-title" id="errorCourseModalLabel">@lang('Error')</h4>
@@ -244,7 +244,7 @@
         </div>
       </div>    
       <div class="modal-footer">
-        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
+        <button class="btn btn-info btn-sm" data-dismiss="modal" >@lang('Close')</button>
       </div>
     </div>
   </div>
@@ -270,12 +270,12 @@
         disableCheckBox("BUS9502");
       }
 
-      // IT9501 and IT9502 are mutually exclusive. (Master of IT)
-      if (current_course_code == "IT9501") {
-        disableCheckBox("IT9502");
+      // IT9x01 and IT9x02 are mutually exclusive. (Master of IT)
+      if (current_course_code == "IT9x01") {
+        disableCheckBox("IT9x02");
       }
-      if (current_course_code == "IT9502") {
-        disableCheckBox("IT9501");
+      if (current_course_code == "IT9x02") {
+        disableCheckBox("IT9x01");
       }
 
       // set the maximum of the checkbox

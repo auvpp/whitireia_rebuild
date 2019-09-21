@@ -2,7 +2,7 @@
     @if($upload_type != 'profile')
         <h3>{{__(ucfirst($upload_type))}}</h3>
         <label for="upload-title">@lang('File Title'): </label>
-        <input type="text" class="form-control" name="upload-title" id="upload-title" placeholder="@lang('File title here...')" required>
+        <input class="form-control" name="upload-title" id="upload-title" placeholder="@lang('File title here...')" required>
         <br/>
     @endif
   <input class="form-control-sm" id="fileupload" type="file"  accept=".xlsx,.xls,.doc,.docx,.ppt,.pptx,.txt,.pdf,image/png,image/jpeg" name="file" data-url="{{url('upload/file')}}">

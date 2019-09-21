@@ -38,7 +38,7 @@
               @endforeach
                 <div class="panel-body" style="padding-top: 0px;">
                   <div class="alert alert-info alert-dismissible" style="font-size:13px;">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <ul>
                       <li>
                         @lang('Select which Grade System you want to use.')

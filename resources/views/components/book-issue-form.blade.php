@@ -4,7 +4,7 @@
         <label for="student_code" class="col-md-4 control-label">@lang('Student Code')</label>
 
         <div class="col-md-6">
-            <input id="student_code" type="text" class="form-control" name="student_code" value="{{ old('student_code') }}"
+            <input id="student_code" class="form-control" name="student_code" value="{{ old('student_code') }}"
                 placeholder="@lang('Student Code')" required>
 
             @if ($errors->has('student_code'))

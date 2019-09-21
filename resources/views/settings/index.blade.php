@@ -13,16 +13,28 @@
                     <div class="page-panel-title"><h3>@lang('Academic Settings')</h3></div>
                     <div class="panel-body">
                         
+                        @if (session('status'))
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        
                         <h4>@lang('Manage Courses')</h4>
                         <div class="row">
                             <div class="col-sm-3">
-                                <button class="btn btn-warning btn-sm">+ @lang('Add Course')</button>
+                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#addCourseModal">+ @lang('Add Course')</button>
+                                @component('components.add-course', ['programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors, 'teachers'=>$teachers])
+                                @endcomponent
                             </div>
                             <div class="col-sm-4">
                                 @if ($toggle == 1)
-                                <button type="button" class="btn btn-danger btn-sm" id="toggle" value="1">@lang('Close Selection')</button>
+                                <button class="btn btn-danger btn-sm" id="toggle" value="1">@lang('Close Selection')</button>
                                 @else
-                                <button type="button" class="btn btn-success btn-sm" id="toggle" value="0">@lang('Open Selection')</button>
+                                <button class="btn btn-success btn-sm" id="toggle" value="0">@lang('Open Selection')</button>
                                 @endif
                             </div>
                         </div>  
@@ -33,10 +45,10 @@
                                 @endcomponent
                             </div>
                             <div class="col-sm-5">
-                                @if ($toggle == 0)
-                                <small>@lang('Click the "Open Selection" button to activate the course selection system.')</small>
-                                @else
+                                @if ($toggle == 1)
                                 <small>@lang('Click the "Close Selection" button to deactivate the course selection system.')</small>
+                                @else
+                                <small>@lang('Click the "Open Selection" button to activate the course selection system.')</small>
                                 @endif
                             </div>
                         </div>
@@ -47,10 +59,14 @@
                         <h4>@lang('Add Users')</h4>
                         <div class="row">
                             <div class="col-sm-3">
-                                <button class="btn btn-primary btn-sm">+ @lang('Add Student')</button>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addStudentModal">+ @lang('Add Student')</button>
+                                @component('components.add-student', ['programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors])
+                                @endcomponent
                             </div>
                             <div class="col-sm-4">
-                                <button class="btn btn-info btn-sm">+ @lang('Add Tutor')</button>
+                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#addTeacherModal">+ @lang('Add Tutor')</button>
+                                @component('components.add-teacher', ['programmes'=>$programmes])
+                                @endcomponent
                             </div>
                         </div>
                         <div class="row">

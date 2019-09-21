@@ -14,7 +14,7 @@
                     <label for="name" class="col-md-4 control-label">@lang('School Name')</label>
 
                     <div class="col-md-6">
-                        <input id="name" type="text" class="form-control" name="name" value="{{ $school->name }}" placeholder="@lang('School Name')" required>
+                        <input id="name" class="form-control" name="name" value="{{ $school->name }}" placeholder="@lang('School Name')" required>
 
                         @if ($errors->has('name'))
                             <span class="help-block">
@@ -28,8 +28,7 @@
                     <label for="about" class="col-md-4 control-label">@lang('About School')</label>
 
                     <div class="col-md-6">
-                        <textarea id="about" type="text" class="form-control" name="about"
-                            placeholder="@lang('About School')" required>{{ $school->about }}</textarea>
+                        <textarea id="about" class="form-control" name="about" placeholder="@lang('About School')" required>{{ $school->about }}</textarea>
 
                         @if ($errors->has('about'))
                             <span class="help-block">

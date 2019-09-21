@@ -22,7 +22,7 @@
                         <label for="course_name" class="col-md-4 control-label">@lang('Course Name')</label>
 
                         <div class="col-md-6">
-                            <input id="course_name" type="text" class="form-control" name="course_name" value="{{ $course->course_name }}" required>
+                            <input id="course_name" class="form-control" name="course_name" value="{{ $course->course_name }}" required>
 
                             @if ($errors->has('course_name'))
                                 <span class="help-block">
@@ -35,7 +35,7 @@
                         <label for="course_time" class="col-md-4 control-label">@lang('Course Time')</label>
 
                         <div class="col-md-6">
-                            <input id="course_time" type="text" class="form-control" name="course_time" value="{{ $course->course_time }}" required>
+                            <input id="course_time" class="form-control" name="course_time" value="{{ $course->course_time }}" required>
 
                             @if ($errors->has('course_time'))
                                 <span class="help-block">

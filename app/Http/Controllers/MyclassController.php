@@ -217,14 +217,17 @@ class MyClassController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function studentReselect($id){
-      $tb_user = User::find($id);
-      $current_class = MyClass::where('user_id', $id)->get()->last();
-      if ($tb_user->course_token == 0 && $tb_user->active == 1 && $current_class != null) {
+      $tb_user = User::with('school')->find($id);
+      $current_class = MyClass::where('user_id', $id)->where('active', 1)->get()->last();
+      if ($tb_user->course_token == 0 && 
+          $tb_user->school->toggle == 1 && 
+          $tb_user->active == 1 && 
+          $current_class != null) {
         $current_class->delete();
         $tb_user->course_token = 1;
         $tb_user->save();
       }
-      return back();
+      return back()->with('status', __('Done!'));
     }
 
 

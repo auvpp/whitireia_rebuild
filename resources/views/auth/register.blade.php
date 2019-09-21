@@ -40,7 +40,7 @@
                             <label for="name" class="col-md-4 control-label">* @lang('Full Name')</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}"
+                                <input id="name" class="form-control" name="name" value="{{ old('name') }}"
                                     required>
 
                                 @if ($errors->has('name'))
@@ -69,7 +69,7 @@
                             <label for="phone_number" class="col-md-4 control-label">* @lang('Phone Number')</label>
 
                             <div class="col-md-6">
-                                <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
+                                <input id="phone_number" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
 
                                 @if ($errors->has('phone_number'))
                                 <span class="help-block">
@@ -124,7 +124,7 @@
                             <label for="birthday" class="col-md-4 control-label">* @lang('Birthday')</label>
 
                             <div class="col-md-6">
-                                <input id="birthday" type="text" class="form-control" name="birthday" value="{{ old('birthday') }}"
+                                <input id="birthday" class="form-control" name="birthday" value="{{ old('birthday') }}"
                                     required>
 
                                 @if ($errors->has('birthday'))
@@ -202,7 +202,7 @@
                             <label for="nationality" class="col-md-4 control-label">* @lang('Nationality')</label>
 
                             <div class="col-md-6">
-                                <input id="nationality" type="text" class="form-control" name="nationality" value="{{ old('nationality') }}"
+                                <input id="nationality" class="form-control" name="nationality" value="{{ old('nationality') }}"
                                     required>
 
                                 @if ($errors->has('nationality'))
@@ -251,7 +251,7 @@
                             <label for="session" class="col-md-4 control-label">* @lang('Session')</label>
 
                             <div class="col-md-6">
-                                <input id="session" type="text" class="form-control" name="session" value="{{ old('session') }}"
+                                <input id="session" class="form-control" name="session" value="{{ old('session') }}"
                                     required>
 
                                 @if ($errors->has('session'))
@@ -266,7 +266,7 @@
                             <label for="group" class="col-md-4 control-label">@lang('Group (Optional)')</label>
 
                             <div class="col-md-6">
-                                <input id="group" type="text" class="form-control" name="group" value="{{ old('group') }}"
+                                <input id="group" class="form-control" name="group" value="{{ old('group') }}"
                                     placeholder="@lang('Science, Arts, Commerce,etc.')">
 
                                 @if ($errors->has('group'))
@@ -302,7 +302,7 @@
                             <label for="address" class="col-md-4 control-label">* @lang('address')</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}"
+                                <input id="address" class="form-control" name="address" value="{{ old('address') }}"
                                     required>
 
                                 @if ($errors->has('address'))
@@ -331,7 +331,7 @@
                             <label for="father_name" class="col-md-4 control-label">* @lang('Father\'s Name')</label>
 
                             <div class="col-md-6">
-                                <input id="father_name" type="text" class="form-control" name="father_name" value="{{ old('father_name') }}"
+                                <input id="father_name" class="form-control" name="father_name" value="{{ old('father_name') }}"
                                     required>
 
                                 @if ($errors->has('father_name'))
@@ -346,7 +346,7 @@
                             <label for="father_phone_number" class="col-md-4 control-label">@lang('Father\'s Phone Number')</label>
 
                             <div class="col-md-6">
-                                <input id="father_phone_number" type="text" class="form-control" name="father_phone_number"
+                                <input id="father_phone_number" class="form-control" name="father_phone_number"
                                     value="{{ old('father_phone_number') }}">
 
                                 @if ($errors->has('father_phone_number'))
@@ -361,7 +361,7 @@
                             <label for="father_national_id" class="col-md-4 control-label">@lang('Father\'s National ID')</label>
 
                             <div class="col-md-6">
-                                <input id="father_national_id" type="text" class="form-control" name="father_national_id"
+                                <input id="father_national_id" class="form-control" name="father_national_id"
                                     value="{{ old('father_national_id') }}">
 
                                 @if ($errors->has('father_national_id'))
@@ -376,7 +376,7 @@
                             <label for="father_occupation" class="col-md-4 control-label">@lang('Father\'s Occupation')</label>
 
                             <div class="col-md-6">
-                                <input id="father_occupation" type="text" class="form-control" name="father_occupation"
+                                <input id="father_occupation" class="form-control" name="father_occupation"
                                     value="{{ old('father_occupation') }}">
 
                                 @if ($errors->has('father_occupation'))
@@ -391,7 +391,7 @@
                             <label for="father_designation" class="col-md-4 control-label">@lang('Father\'s Designation')</label>
 
                             <div class="col-md-6">
-                                <input id="father_designation" type="text" class="form-control" name="father_designation"
+                                <input id="father_designation" class="form-control" name="father_designation"
                                     value="{{ old('father_designation') }}">
 
                                 @if ($errors->has('father_designation'))
@@ -406,7 +406,7 @@
                             <label for="father_annual_income" class="col-md-4 control-label">@lang('Father\'s Annual Income')</label>
 
                             <div class="col-md-6">
-                                <input id="father_annual_income" type="text" class="form-control" name="father_annual_income"
+                                <input id="father_annual_income" class="form-control" name="father_annual_income"
                                     value="{{ old('father_annual_income') }}">
 
                                 @if ($errors->has('father_annual_income'))
@@ -421,7 +421,7 @@
                             <label for="mother_name" class="col-md-4 control-label">* @lang('Mother\'s Name')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_name" type="text" class="form-control" name="mother_name" value="{{ old('mother_name') }}"
+                                <input id="mother_name" class="form-control" name="mother_name" value="{{ old('mother_name') }}"
                                     required>
 
                                 @if ($errors->has('mother_name'))
@@ -436,7 +436,7 @@
                             <label for="mother_phone_number" class="col-md-4 control-label">@lang('Mother\'s Phone Number')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_phone_number" type="text" class="form-control" name="mother_phone_number"
+                                <input id="mother_phone_number" class="form-control" name="mother_phone_number"
                                     value="{{ old('mother_phone_number') }}">
 
                                 @if ($errors->has('mother_phone_number'))
@@ -451,7 +451,7 @@
                             <label for="mother_national_id" class="col-md-4 control-label">@lang('Mother\'s National ID')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_national_id" type="text" class="form-control" name="mother_national_id"
+                                <input id="mother_national_id" class="form-control" name="mother_national_id"
                                     value="{{ old('mother_national_id') }}">
 
                                 @if ($errors->has('mother_national_id'))
@@ -466,7 +466,7 @@
                             <label for="mother_occupation" class="col-md-4 control-label">@lang('Mother\'s Occupation')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_occupation" type="text" class="form-control" name="mother_occupation"
+                                <input id="mother_occupation" class="form-control" name="mother_occupation"
                                     value="{{ old('mother_occupation') }}">
 
                                 @if ($errors->has('mother_occupation'))
@@ -481,7 +481,7 @@
                             <label for="mother_designation" class="col-md-4 control-label">@lang('Mother\'s Designation')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_designation" type="text" class="form-control" name="mother_designation"
+                                <input id="mother_designation" class="form-control" name="mother_designation"
                                     value="{{ old('mother_designation') }}">
 
                                 @if ($errors->has('mother_designation'))
@@ -496,7 +496,7 @@
                             <label for="mother_annual_income" class="col-md-4 control-label">@lang('Mother\'s Annual Income')</label>
 
                             <div class="col-md-6">
-                                <input id="mother_annual_income" type="text" class="form-control" name="mother_annual_income"
+                                <input id="mother_annual_income" class="form-control" name="mother_annual_income"
                                     value="{{ old('mother_annual_income') }}">
 
                                 @if ($errors->has('mother_annual_income'))

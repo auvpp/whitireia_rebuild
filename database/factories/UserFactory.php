@@ -42,7 +42,7 @@ $factory->define(User::class, function (Faker $faker) {
         //     return $faker->randomElement(School::pluck('code')->toArray());
         //   else return factory(School::class)->create()->code;
         // },
-        'code'   => $faker->unique()->randomNumber(8, false),
+        'code'   => $faker->unique()->randomNumber(6, false),
         'address'        => $faker->address,
         'pic_path'       => $faker->imageUrl(640, 480),
         'phone_number'   => $faker->unique()->phoneNumber,

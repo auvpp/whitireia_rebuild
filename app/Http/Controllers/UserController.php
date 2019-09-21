@@ -8,7 +8,6 @@ use App\MyClass;
 use App\Programme;
 use App\Qualification;
 use App\Major;
-use App\Term;
 use App\Section;
 use App\StudentInfo;
 use App\User;
@@ -20,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\User\CreateUserRequest;
+use App\Http\Requests\User\CreateStudentRequest;
 use App\Http\Requests\User\UpdateUserRequest;
 use App\Http\Requests\User\CreateAdminRequest;
 use App\Http\Requests\User\CreateTeacherRequest;
@@ -217,34 +217,6 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param CreateUserRequest $request
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function store(CreateUserRequest $request)
-    {
-        DB::transaction(function () use ($request) {
-            $password = $request->password;
-            $tb = $this->userService->storeStudent($request);
-            try {
-                // Fire event to store Student information
-                if(event(new StudentInfoUpdateRequested($request,$tb->id))){
-                    // Fire event to send welcome email
-                    event(new UserRegistered($tb, $password));
-                } else {
-                    throw new \Exeception('Event returned false');
-                }
-            } catch(\Exception $ex) {
-                Log::info('Email failed to send to this address: '.$tb->email.'\n'.$ex->getMessage());
-            }
-        });
-
-        return back()->with('status', __('Saved'));
-    }
-
-    /**
      * @param CreateAdminRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -269,52 +241,39 @@ class UserController extends Controller
      */
     public function storeTeacher(CreateTeacherRequest $request)
     {
-        $password = $request->password;
-        $tb = $this->userService->storeStaff($request, 'teacher');
         try {
             // Fire event to send welcome email
-            event(new UserRegistered($tb, $password));
+            // event(new UserRegistered($tb, $password));
+            $tb = $this->userService->storeTeacher($request, 'teacher');
+            
         } catch(\Exception $ex) {
-            Log::info('Email failed to send to this address: '.$tb->email);
+            // Log::info('Email failed to send to this address: '.$tb->email);
+            return __('Could not add the tutor.');
         }
 
-        return back()->with('status', __('Saved'));
+        return back()->with('status', __('Tutor Created'));
     }
 
     /**
-     * @param CreateAccountantRequest $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Store a newly created resource in storage.
+     *
+     * @param CreateStudentRequest $request
+     *
+     * @return \Illuminate\Http\Response
      */
-    public function storeAccountant(CreateAccountantRequest $request)
+    public function storeStudent(CreateStudentRequest $request)
     {
-        $password = $request->password;
-        $tb = $this->userService->storeStaff($request, 'accountant');
         try {
             // Fire event to send welcome email
-            event(new UserRegistered($tb, $password));
+            // event(new UserRegistered($tb, $password));
+            $tb = $this->userService->storeStudent($request, 'student');
+            
         } catch(\Exception $ex) {
-            Log::info('Email failed to send to this address: '.$tb->email);
+            // Log::info('Email failed to send to this address: '.$tb->email);
+            return __('Could not add the student.');
         }
 
-        return back()->with('status', __('Saved'));
-    }
-
-    /**
-     * @param CreateLibrarianRequest $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function storeLibrarian(CreateLibrarianRequest $request)
-    {
-        $password = $request->password;
-        $tb = $this->userService->storeStaff($request, 'librarian');
-        try {
-            // Fire event to send welcome email
-            event(new UserRegistered($tb, $password));
-        } catch(\Exception $ex) {
-            Log::info('Email failed to send to this address: '.$tb->email);
-        }
-
-        return back()->with('status', __('Saved'));
+        return back()->with('status', __('Student Created'));
     }
 
     /**
@@ -408,7 +367,7 @@ class UserController extends Controller
             return back()->with('status', __('User Saved'));
         }
         else{
-            return back()->with('status', __('UPDATE FAILED!'));
+            return __('Update Failded.');
         }
     }
 

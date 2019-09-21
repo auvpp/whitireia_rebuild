@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\School;
+use App\Qualification;
+use App\Programme;
+use App\Major;
 use App\MyClass;
 use App\Section;
 use App\Department;
-use App\Toggle;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -27,7 +29,32 @@ class SettingController extends Controller
             $toggle = \Auth::user()->school->toggle;
         }
 
-        return view('settings.index', compact('toggle'));
+        $programmes = Programme::get();
+        $qualifications = Qualification::get();
+        $majors = Major::get();
+        $teachers = User::with('programme')
+                        ->where('role', 'teacher')
+                        ->orderBy('first_name', 'asc')
+                        ->get();
+        //dd($programmes);
+        // $majors = Major::with(['users', 'courses', 'qualification',])
+        //                 ->where('qualification_id', $id)
+        //                 ->orderBy('name', 'asc')
+        //                 ->get();
+        
+        // $teachers = User::with('programme')
+        //                 ->where('role', 'teacher')
+        //                 ->orderBy('first_name', 'asc')
+        //                 ->get();
+
+        // $teachers = User::with('programme')
+        // ->where('programme_id', $programme_id)
+        // ->where('role', 'teacher')
+        // ->get();
+
+        //$courses = $this->courseService->getCoursesByMajors();
+
+        return view('settings.index', compact('toggle', 'programmes', 'qualifications', 'majors', 'teachers'));
     }
 
     public function toggle(Request $request) {
@@ -39,6 +66,8 @@ class SettingController extends Controller
                 $tb_school->save();
                 // all students cannot select courses
                 User::where('role', 'student')->where('active', 1)->update(['course_token' => 0]);
+                // Deactivated all MyClass
+                MyClass::where('active', 1)->update(['active' => 0]);
             }
             else{
                 $tb_school->toggle = 1;

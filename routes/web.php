@@ -114,18 +114,6 @@ Route::middleware(['auth','admin'])->group(function (){
       ]);
       return redirect()->route('register');
     });
-    Route::get('accountant', function(){
-      session(['register_role' => 'accountant']);
-      return redirect()->route('register');
-    });
-    Route::get('librarian', function(){
-      session(['register_role' => 'librarian']);
-      return redirect()->route('register');
-    });
-    Route::post('student', 'UserController@store');
-    Route::post('teacher',  'UserController@storeTeacher');
-    Route::post('accountant',  'UserController@storeAccountant');
-    Route::post('librarian',  'UserController@storeLibrarian');
   });
   
   /* the Route for clicking "programmes"，which needs to be optimized later */
@@ -150,6 +138,10 @@ Route::middleware(['auth','admin'])->group(function (){
   // settings page
   Route::get('/settings', 'SettingController@index')->name('settings.index');
   Route::post('/settings', 'SettingController@toggle');
+  Route::post('/settings/checkcode', 'CourseController@checkCode');
+  Route::post('/settings/addcourse', 'CourseController@store');
+  Route::post('/settings/addteacher', 'UserController@storeTeacher');
+  Route::post('/settings/addstudent', 'UserController@storeStudent');
 
   Route::get('gpa/create-gpa', 'GradesystemController@create');
   Route::post('create-gpa', 'GradesystemController@store');

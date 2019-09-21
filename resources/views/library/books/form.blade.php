@@ -2,7 +2,7 @@
     <label for="title" class="col-md-4 control-label">@lang('Book Title')</label>
 
     <div class="col-md-6">
-        <input id="title" type="text" class="form-control" name="title" value="{{ $book->title Or old('title') }}" placeholder="@lang('Book Title')" required>
+        <input id="title" class="form-control" name="title" value="{{ $book->title Or old('title') }}" placeholder="@lang('Book Title')" required>
 
         @if ($errors->has('title'))
             <span class="help-block">
@@ -16,7 +16,7 @@
     <label for="about" class="col-md-4 control-label">@lang('About Book')</label>
 
     <div class="col-md-6">
-        <textarea rows="3" id="about" type="text" class="form-control" name="about" placeholder="@lang('About Book')" required>{{ $book->about Or old('about') }}</textarea>
+        <textarea rows="3" id="about" class="form-control" name="about" placeholder="@lang('About Book')" required>{{ $book->about Or old('about') }}</textarea>
 
         @if ($errors->has('about'))
             <span class="help-block">
@@ -30,7 +30,7 @@
     <label for="book_code" class="col-md-4 control-label">@lang('Book Code')</label>
 
     <div class="col-md-6">
-        <input id="book_code" type="text" class="form-control" name="book_code" value="{{ $book->book_code Or old('book_code') }}" placeholder="@lang('Book Code')" required>
+        <input id="book_code" class="form-control" name="book_code" value="{{ $book->book_code Or old('book_code') }}" placeholder="@lang('Book Code')" required>
 
         @if ($errors->has('book_code'))
             <span class="help-block">
@@ -44,7 +44,7 @@
     <label for="author" class="col-md-4 control-label">@lang('Book Author')</label>
 
     <div class="col-md-6">
-        <input id="author" type="text" class="form-control" name="author" value="{{ $book->author Or old('author') }}" placeholder="@lang('Book Author')" required>
+        <input id="author" class="form-control" name="author" value="{{ $book->author Or old('author') }}" placeholder="@lang('Book Author')" required>
 
         @if ($errors->has('author'))
             <span class="help-block">
@@ -114,7 +114,7 @@
     <label for="img_path" class="col-md-4 control-label">@lang('Book Image Url')</label>
 
     <div class="col-md-6">
-        <input id="img_path" type="text" class="form-control" name="img_path" value="{{ $book->img_path Or old('img_path') }}" placeholder="@lang('Book Image Url')" required>
+        <input id="img_path" class="form-control" name="img_path" value="{{ $book->img_path Or old('img_path') }}" placeholder="@lang('Book Image Url')" required>
 
         @if ($errors->has('img_path'))
             <span class="help-block">

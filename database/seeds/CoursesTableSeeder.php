@@ -4010,7 +4010,7 @@ class CoursesTableSeeder extends Seeder
          * Bachelor of Information Technology (General IT)
          */
         DB::table('courses')->insert([
-            'code' => "IT5181",
+            'code' => "IT5x81",
             'name' => "Communication Studies",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4027,7 +4027,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5182",
+            'code' => "IT5x82",
             'name' => "Fundamentals of Data Models and Databases",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4044,7 +4044,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5183",
+            'code' => "IT5x83",
             'name' => "Fundamentals of Software Design and Development",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4061,7 +4061,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5184",
+            'code' => "IT5x84",
             'name' => "Programming",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4078,7 +4078,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5185",
+            'code' => "IT5x85",
             'name' => "Mathematics for Information Technology",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4095,7 +4095,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5186",
+            'code' => "IT5x86",
             'name' => "The Information Technology Environment",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4112,7 +4112,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5187",
+            'code' => "IT5x87",
             'name' => "Fundamentals of Networking",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4129,7 +4129,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5189",
+            'code' => "IT5x89",
             'name' => "Introduction to Operation System",
             'major_id'    => 16,
             'level' => "Level 5",
@@ -4146,7 +4146,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6111",
+            'code' => "IT6x11",
             'name' => "Research and Theory in Information Technology",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4155,7 +4155,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT5101 or IT5181",
+            'prerequisite'   => "IT5x01 or IT5x81",
             'description' => $faker->sentence(),
             'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4163,7 +4163,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT6119",
+            'code' => "IT6x19",
             'name' => "Operation Systems",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4172,7 +4172,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5117 or IT5189",
+            'prerequisite'   => "IT5x17 or IT5x89",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4180,7 +4180,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT6122",
+            'code' => "IT6x22",
             'name' => "Software Quality Assurance",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4189,7 +4189,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT5103 or IT5183",
+            'prerequisite'   => "IT5x03 or IT5x83",
             'description' => $faker->sentence(),
             'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4197,7 +4197,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT6123",
+            'code' => "IT6x23",
             'name' => "Software Development Methods",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4206,7 +4206,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5104 or IT5184",
+            'prerequisite'   => "IT5x04 or IT5x84",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4214,7 +4214,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6126",
+            'code' => "IT6x26",
             'name' => "Data Models and Databases",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4223,7 +4223,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5103 or IT5182",
+            'prerequisite'   => "IT5x03 or IT5x82",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4231,7 +4231,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT6128",
+            'code' => "IT6x28",
             'name' => "Evaluation and Procurement",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4240,7 +4240,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 0,
             'current_offered'   => "No longer offered",
             'next_offered' => "No longer offered",
-            'prerequisite'   => "IT5103 or IT5183",
+            'prerequisite'   => "IT5x03 or IT5x83",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4248,7 +4248,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6129",
+            'code' => "IT6x29",
             'name' => "System Analysis and Design",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4257,7 +4257,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5103 or IT5183",
+            'prerequisite'   => "IT5x03 or IT5x83",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4265,7 +4265,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT6130",
+            'code' => "IT6x30",
             'name' => "Internet Application Development",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4274,7 +4274,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5104 or IT5184 & IT5182",
+            'prerequisite'   => "IT5x04 or IT5x84 & IT5x82",
             'description' => $faker->sentence(),
             'teacher'    => "Noor Al-Ani",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4282,7 +4282,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6187",
+            'code' => "IT6x87",
             'name' => "Network Technologies - LAN & WAN",
             'major_id'    => 16,
             'level' => "Level 6",
@@ -4291,7 +4291,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT5117 or IT5187",
+            'prerequisite'   => "IT5x17 or IT5x87",
             'description' => $faker->sentence(),
             'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4299,7 +4299,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7101",
+            'code' => "IT7x01",
             'name' => "Project",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4308,7 +4308,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT7305 or IT7125 & 300 credits",
+            'prerequisite'   => "IT7x05 or IT7x25 & 300 credits",
             'description' => $faker->sentence(),
             'teacher'    => "Noor Al-Ani & Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4316,7 +4316,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT7111",
+            'code' => "IT7x11",
             'name' => "Advanced Internet Development",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4325,7 +4325,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
+            'prerequisite'   => "IT6x03 or IT6x10 or IT6x23 or IT6x30",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4333,7 +4333,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT7122",
+            'code' => "IT7x22",
             'name' => "Software Development",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4342,7 +4342,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T1-2020",
-            'prerequisite'   => "IT6203 or IT6210 or IT6123 or IT6130",
+            'prerequisite'   => "IT6x03 or IT6x10 or IT6x23 or IT6x30",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4350,7 +4350,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7123",
+            'code' => "IT7x23",
             'name' => "System Analysis, Design and Control",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4359,7 +4359,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT6209 or IT6129",
+            'prerequisite'   => "IT6x09 or IT6x29",
             'description' => $faker->sentence(),
             'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4367,7 +4367,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7125",
+            'code' => "IT7x25",
             'name' => "Project Management for IT",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4376,7 +4376,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT5183, IT5185, IT5186, IT6111",
+            'prerequisite'   => "IT5x83, IT5x85, IT5x86, IT6x11",
             'description' => $faker->sentence(),
             'teacher'    => "Premalatha Sampath",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4384,7 +4384,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7126",
+            'code' => "IT7x26",
             'name' => "Information System in Management",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4393,7 +4393,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T1-2020",
-            'prerequisite'   => "IT5106 or IT5186",
+            'prerequisite'   => "IT5x06 or IT5x86",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4401,7 +4401,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7128",
+            'code' => "IT7x28",
             'name' => "Human Computer Interaction",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4410,7 +4410,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T1-2020",
-            'prerequisite'   => "IT6203 or IT6210 / IT6123 or IT6130",
+            'prerequisite'   => "IT6x03 or IT6x10 / IT6x23 or IT6x30",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4418,7 +4418,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7129",
+            'code' => "IT7x29",
             'name' => "Data Models and Databases",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4427,7 +4427,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T2-2020",
-            'prerequisite'   => "IT6206 or IT6126",
+            'prerequisite'   => "IT6x06 or IT6x26",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4435,7 +4435,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7137",
+            'code' => "IT7x37",
             'name' => "System Administrator and VOIP",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4444,7 +4444,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT6218 or IT6119",
+            'prerequisite'   => "IT6x18 or IT6x19",
             'description' => $faker->sentence(),
             'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4452,7 +4452,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7138",
+            'code' => "IT7x38",
             'name' => "Internet Security & Wireless Technologies",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4461,7 +4461,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T1-2020",
-            'prerequisite'   => "IT6217 or IT6187",
+            'prerequisite'   => "IT6x17 or IT6x87",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4469,7 +4469,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7144",
+            'code' => "IT7x44",
             'name' => "Internship",
             'major_id'    => 16,
             'level' => "Level 7",
@@ -4489,7 +4489,7 @@ class CoursesTableSeeder extends Seeder
          * GD in Information Technology (General IT)
          */
         DB::table('courses')->insert([
-            'code' => "IT5282",
+            'code' => "IT5x82",
             'name' => "Fundamentals of Data Models and Databases",
             'major_id'    => 17,
             'level' => "Level 5",
@@ -4506,7 +4506,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5284",
+            'code' => "IT5x84",
             'name' => "Programming",
             'major_id'    => 17,
             'level' => "Level 5",
@@ -4523,7 +4523,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5287",
+            'code' => "IT5x87",
             'name' => "Fundamentals of Networking",
             'major_id'    => 17,
             'level' => "Level 5",
@@ -4540,7 +4540,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT5289",
+            'code' => "IT5x89",
             'name' => "Introduction to Operation System",
             'major_id'    => 17,
             'level' => "Level 5",
@@ -4557,7 +4557,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6211",
+            'code' => "IT6x11",
             'name' => "Research and Theory in Information Technology",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4574,7 +4574,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6219",
+            'code' => "IT6x19",
             'name' => "Operation Systems",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4591,7 +4591,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6222",
+            'code' => "IT6x22",
             'name' => "Software Quality Assurance",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4608,7 +4608,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6223",
+            'code' => "IT6x23",
             'name' => "Software Development Methods",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4625,7 +4625,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6226",
+            'code' => "IT6x26",
             'name' => "Data Models and Databases",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4642,7 +4642,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6228",
+            'code' => "IT6x28",
             'name' => "Evaluation and Procurement",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4659,7 +4659,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6229",
+            'code' => "IT6x29",
             'name' => "System Analysis and Design",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4676,7 +4676,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6230",
+            'code' => "IT6x30",
             'name' => "Internet Application Development",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4693,7 +4693,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT6287",
+            'code' => "IT6x87",
             'name' => "Network Technologies - LAN & WAN",
             'major_id'    => 17,
             'level' => "Level 6",
@@ -4710,7 +4710,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7201",
+            'code' => "IT7x01",
             'name' => "Project",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4719,7 +4719,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT7225",
+            'prerequisite'   => "IT7x25",
             'description' => $faker->sentence(),
             'teacher'    => "Noor Al-Ani & Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4727,7 +4727,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7211",
+            'code' => "IT7x11",
             'name' => "Advanced Internet Development",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4744,7 +4744,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7222",
+            'code' => "IT7x22",
             'name' => "Software Development",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4761,7 +4761,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7223",
+            'code' => "IT7x23",
             'name' => "System Analysis, Design and Control",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4778,7 +4778,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7225",
+            'code' => "IT7x25",
             'name' => "Project Management for IT",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4795,7 +4795,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7226",
+            'code' => "IT7x26",
             'name' => "Information System in Management",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4812,7 +4812,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7228",
+            'code' => "IT7x28",
             'name' => "Human Computer Interaction",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4829,7 +4829,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7229",
+            'code' => "IT7x29",
             'name' => "Data Models and Databases",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4846,7 +4846,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7237",
+            'code' => "IT7x37",
             'name' => "System Administrator and VOIP",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4855,7 +4855,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T2-2020",
-            'prerequisite'   => "IT6219",
+            'prerequisite'   => "IT6x19",
             'description' => $faker->sentence(),
             'teacher'    => "Arkar Kyaw",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4863,7 +4863,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7238",
+            'code' => "IT7x38",
             'name' => "Internet Security & Wireless Technologies",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4872,7 +4872,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "Not offered",
             'next_offered'      => "T1-2020",
-            'prerequisite'   => "IT6287",
+            'prerequisite'   => "IT6x87",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -4880,7 +4880,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7244",
+            'code' => "IT7x44",
             'name' => "Internship",
             'major_id'    => 17,
             'level' => "Level 7",
@@ -4900,7 +4900,7 @@ class CoursesTableSeeder extends Seeder
          * PGD in Information Technology (General IT)
          */
         DB::table('courses')->insert([
-            'code' => "IT7311",
+            'code' => "IT7x11",
             'name' => "Advanced Internet Development",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -4917,7 +4917,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT7322",
+            'code' => "IT7x22",
             'name' => "Software Development",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -4934,7 +4934,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7323",
+            'code' => "IT7x23",
             'name' => "System Analysis, Design and Control",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -4951,7 +4951,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7325",
+            'code' => "IT7x25",
             'name' => "Project Management for IT",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -4968,7 +4968,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         
         DB::table('courses')->insert([
-            'code' => "IT7326",
+            'code' => "IT7x26",
             'name' => "Information System in Management",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -4985,7 +4985,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7328",
+            'code' => "IT7x28",
             'name' => "Human Computer Interaction",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -5002,7 +5002,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7329",
+            'code' => "IT7x29",
             'name' => "Data Models and Databases",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -5019,7 +5019,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7337",
+            'code' => "IT7x37",
             'name' => "System Administrator and VOIP",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -5036,7 +5036,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT7338",
+            'code' => "IT7x38",
             'name' => "Internet Security & Wireless Technologies",
             'major_id'    => 18,
             'level' => "Level 7",
@@ -5053,7 +5053,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8401",
+            'code' => "IT8x01",
             'name' => "Research in Information Technology",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5070,7 +5070,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8410",
+            'code' => "IT8x10",
             'name' => "Business Analysis for Information Technology",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5087,7 +5087,7 @@ class CoursesTableSeeder extends Seeder
         ]);    
 
         DB::table('courses')->insert([
-            'code' => "IT8411",
+            'code' => "IT8x11",
             'name' => "Business Intelligence and Data Mining",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5104,7 +5104,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8412",
+            'code' => "IT8x12",
             'name' => "Cloud Computing and ICT Infrastructure",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5121,7 +5121,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8413",
+            'code' => "IT8x13",
             'name' => "Data Modelling",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5138,7 +5138,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8414",
+            'code' => "IT8x14",
             'name' => "Information Management",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5155,7 +5155,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8415",
+            'code' => "IT8x15",
             'name' => "Multimedia Applications for Mobile Devices",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5172,7 +5172,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8416",
+            'code' => "IT8x16",
             'name' => "Network Design and Management",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5189,7 +5189,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8417",
+            'code' => "IT8x17",
             'name' => "Network Security and Forensics",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5206,7 +5206,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8418",
+            'code' => "IT8x18",
             'name' => "Quality Assurance and Testing",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5223,7 +5223,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8419",
+            'code' => "IT8x19",
             'name' => "Systems Architecture and Technology Integration",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5240,7 +5240,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8421",
+            'code' => "IT8x21",
             'name' => "Research Project",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5249,7 +5249,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT7325 & IT8401",
+            'prerequisite'   => "IT7x25 & IT8x01",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -5257,7 +5257,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8424",
+            'code' => "IT8x24",
             'name' => "Internship",
             'major_id'    => 18,
             'level' => "Level 8",
@@ -5277,7 +5277,7 @@ class CoursesTableSeeder extends Seeder
          * Master of Information Technology (General IT)
          */
         DB::table('courses')->insert([
-            'code' => "IT8501",
+            'code' => "IT8x01",
             'name' => "Research in Information Technology",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5294,7 +5294,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8502",
+            'code' => "IT8x02",
             'name' => "Research Proposal",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5303,7 +5303,7 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "IT8501",
+            'prerequisite'   => "IT8x01",
             'description' => $faker->sentence(),
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
@@ -5311,7 +5311,7 @@ class CoursesTableSeeder extends Seeder
         ]);   
 
         DB::table('courses')->insert([
-            'code' => "IT8510",
+            'code' => "IT8x10",
             'name' => "Business Analysis for Information Technology",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5328,7 +5328,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8511",
+            'code' => "IT8x11",
             'name' => "Business Intelligence and Data Mining",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5345,7 +5345,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8512",
+            'code' => "IT8x12",
             'name' => "Cloud Computing and ICT Infrastructure",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5362,7 +5362,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8513",
+            'code' => "IT8x13",
             'name' => "Data Modelling",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5379,7 +5379,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8514",
+            'code' => "IT8x14",
             'name' => "Information Management",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5396,7 +5396,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8515",
+            'code' => "IT8x15",
             'name' => "Multimedia Applications for Mobile Devices",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5413,7 +5413,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8516",
+            'code' => "IT8x16",
             'name' => "Network Design and Management",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5430,7 +5430,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8517",
+            'code' => "IT8x17",
             'name' => "Network Security and Forensics",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5447,7 +5447,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8518",
+            'code' => "IT8x18",
             'name' => "Quality Assurance and Testing",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5464,7 +5464,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8519",
+            'code' => "IT8x19",
             'name' => "Systems Architecture and Technology Integration",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5481,7 +5481,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8520",
+            'code' => "IT8x20",
             'name' => "Special Topic in Information Technology",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5498,7 +5498,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8521",
+            'code' => "IT8x21",
             'name' => "Research Project",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5515,7 +5515,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT8524",
+            'code' => "IT8x24",
             'name' => "Internship",
             'major_id'    => 19,
             'level' => "Level 8",
@@ -5532,7 +5532,7 @@ class CoursesTableSeeder extends Seeder
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT9501",
+            'code' => "IT9x01",
             'name' => "Applied Research Project",
             'major_id'    => 19,
             'level' => "Level 9",
@@ -5541,15 +5541,15 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "135 Credits from Level 8 including IT8501 & IT8502",
-            'description' => "Level 9 master students must choose ONE of the IT9501 or IT9502 in second year.",
+            'prerequisite'   => "135 Credits from Level 8 including IT8x01 & IT8x02",
+            'description' => "Level 9 master students must choose ONE of the IT9x01 or IT9x02 in second year.",
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('courses')->insert([
-            'code' => "IT9502",
+            'code' => "IT9x02",
             'name' => "Thesis",
             'major_id'    => 19,
             'level' => "Level 9",
@@ -5558,8 +5558,8 @@ class CoursesTableSeeder extends Seeder
             'active' => 1,
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",
-            'prerequisite'   => "90 Credits from Level 8 including IT8501 & IT8502",
-            'description' => "Level 9 master students must choose ONE of the IT9501 or IT9502 in second year.",
+            'prerequisite'   => "90 Credits from Level 8 including IT8x01 & IT8x02",
+            'description' => "Level 9 master students must choose ONE of the IT9x01 or IT9x02 in second year.",
             'teacher'    => "TBA",
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),

@@ -45,7 +45,7 @@
                             <label for="name" class="col-md-4 control-label">* @lang('First Name')</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="first_name" value="{{ ucfirst($user->first_name) }}"
+                                <input id="name" class="form-control" name="first_name" value="{{ ucfirst($user->first_name) }}"
                                     required>
 
                                 @if ($errors->has('first_name'))
@@ -60,7 +60,7 @@
                             <label for="name" class="col-md-4 control-label">* @lang('Last Name')</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="last_name" value="{{ ucfirst($user->last_name) }}"
+                                <input id="name" class="form-control" name="last_name" value="{{ ucfirst($user->last_name) }}"
                                     required>
 
                                 @if ($errors->has('last_name'))
@@ -90,7 +90,7 @@
                             <label for="phone_number" class="col-md-4 control-label">* @lang('Phone Number')</label>
 
                             <div class="col-md-6">
-                                <input id="phone_number" type="text" class="form-control" name="phone_number"
+                                <input id="phone_number" class="form-control" name="phone_number"
                                     value="{{ $user->phone }}" required>
 
                                 @if ($errors->has('phone_number'))
@@ -149,7 +149,7 @@
                             <label for="address" class="col-md-4 control-label">@lang('Address')</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control" name="address"
+                                <input id="address" class="form-control" name="address"
                                     value="{{ $user->address }}">
 
                                 @if ($errors->has('address'))
@@ -164,7 +164,7 @@
                             <label for="enrolled_date" class="col-md-4 control-label">@lang('Enrolled Date')</label>
 
                             <div class="col-md-6">
-                                <input id="enrolled_date" type="text" class="form-control" name="enrolled_date">
+                                <input id="enrolled_date" class="form-control" name="enrolled_date">
 
                                 @if ($errors->has('enrolled_date'))
                                 <span class="help-block">

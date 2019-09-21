@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('phone_number')->unique()->default('');
             $table->string('address')->nullable()->default('');
             $table->string('pic_path')->default('');
-            $table->tinyInteger('verified');
+            $table->tinyInteger('verified')->default(1);
             $table->integer('major_id')->nullable();
             $table->integer('qualification_id')->nullable();
             $table->integer('programme_id')->nullable();

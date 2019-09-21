@@ -24,7 +24,7 @@
                           <label for="name" class="col-md-4 control-label">@lang('Sector Name')</label>
 
                           <div class="col-md-6">
-                              <input id="name" type="text" class="form-control" name="name" value="{{$sector->name}}" placeholder="@lang('Sector Name')" required>
+                              <input id="name" class="form-control" name="name" value="{{$sector->name}}" placeholder="@lang('Sector Name')" required>
 
                               @if ($errors->has('name'))
                                   <span class="help-block">

@@ -9,7 +9,7 @@
             {{ csrf_field() }}
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">@lang('Create School')</h4>
                 </div>
                 <div class="modal-body">
@@ -17,7 +17,7 @@
                         <label for="name" class="col-md-4 control-label">@lang('School Name')</label>
 
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="@lang('School Name')" required>
+                            <input id="name" class="form-control" name="name" value="{{ old('name') }}" placeholder="@lang('School Name')" required>
 
                             @if ($errors->has('name'))
                                 <span class="help-block">
@@ -52,7 +52,7 @@
                         <label for="established" class="col-md-4 control-label">@lang('School Established')</label>
 
                         <div class="col-md-6">
-                            <input id="established" type="text" class="form-control" name="established" value="{{ old('established') }}" placeholder="@lang('School Established')" required>
+                            <input id="established" class="form-control" name="established" value="{{ old('established') }}" placeholder="@lang('School Established')" required>
 
                             @if ($errors->has('established'))
                                 <span class="help-block">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">@lang('Close')</button>
+                    <button class="btn btn-danger" data-dismiss="modal">@lang('Close')</button>
                     <button type="submit" class="btn btn-primary">@lang('Save changes')</button>
                 </div>
             </div>

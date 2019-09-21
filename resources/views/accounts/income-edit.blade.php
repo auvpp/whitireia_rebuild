@@ -24,7 +24,7 @@
                           <label for="name" class="col-md-4 control-label">@lang('Sector Name')</label>
 
                           <div class="col-md-6">
-                              <input id="name" type="text" class="form-control" name="name" value="{{$income->name}}" placeholder="@lang('Sector Name')" required>
+                              <input id="name" class="form-control" name="name" value="{{$income->name}}" placeholder="@lang('Sector Name')" required>
 
                               @if ($errors->has('name'))
                                   <span class="help-block">
@@ -37,7 +37,7 @@
                           <label for="amount" class="col-md-4 control-label">@lang('Amount')</label>
 
                           <div class="col-md-6">
-                              <input id="amount" type="text" class="form-control" name="amount" value="{{$income->amount}}" placeholder="@lang('Amount')" required>
+                              <input id="amount" class="form-control" name="amount" value="{{$income->amount}}" placeholder="@lang('Amount')" required>
 
                               @if ($errors->has('amount'))
                                   <span class="help-block">

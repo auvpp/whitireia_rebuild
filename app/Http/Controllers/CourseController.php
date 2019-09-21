@@ -112,11 +112,25 @@ class CourseController extends Controller
     public function store(Request $request)
     {
       try{
+        $request->validate([
+          'code' => 'required|string',
+          'name' => 'required|string',
+          'level' => 'required|string',
+          'type'  => 'required|string',
+          'credit' => 'required|integer',
+          'major_id' => 'required|integer',
+          'prerequisite' =>'nullable|string',
+          'current_offered' => 'required|string',
+          'next_offered' => 'required|string',
+          'teacher' => 'required|string',
+          'description' => 'nullable|string',
+        ]);
+        //dd($request);
         $this->courseService->addCourse($request);
       } catch (\Exception $ex){
-        return __('Could not add course.');
+        return __('Could not add the course.');
       }
-      return back()->with('status', __('Created'));
+      return back()->with('status', __('Course Created'));
     }
 
     /**
@@ -170,7 +184,7 @@ class CourseController extends Controller
         'level' => 'required|string',
         'type'  => 'required|string',
         'credit' => 'required|integer',
-        'prerequisite' =>'string',
+        'prerequisite' =>'nullable|string',
         'current_offered' => 'required|string',
         'next_offered' => 'required|string',
         'teacher' => 'required|string',
@@ -178,6 +192,19 @@ class CourseController extends Controller
       ]);
       $this->courseService->updateCourseInfo($id, $request);
       return back()->with('status', __('Course Saved'));
+    }
+
+    public function checkCode(Request $request) {
+      if (\Auth::user()->role == 'admin'){
+          $major = Major::with('courses')
+                        ->find($request->major_id);
+          foreach ($major->courses as $k => $v){
+              if (strtolower($v->code) == strtolower($request->code)){
+                  return response()->json(['success' => true, 'code' => $v->code]);
+              }
+          }
+          return response()->json(['success' => false, 'code' => $v->code]);
+      }
     }
 
     /**

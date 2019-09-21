@@ -65,13 +65,13 @@
       @if(Auth::user()->role == 'admin') 
         <td>
           <!-- <a class="btn btn-xs btn-danger" href="{{url('edit/user/'.$user->id)}}">@lang('Edit')</a> -->
-          <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminUserModal{{$user->id}}">@lang('Edit')</button>
+          <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminUserModal{{$user->id}}">@lang('Edit')</button>
           <!-- Modal -->
           <div class="modal fade" id="adminUserModal{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="adminUserModal{{$user->id}}Label">
               <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                       <div class="modal-header" style="background-color: #5cb85c; color:white !important;">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <button class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
                           <h4 class="modal-title" id="adminUserModal{{$user->id}}Label">
@@ -94,13 +94,13 @@
                               <label for="adminUserFName{{$user->id}}" class="pull-right control-label">@lang('First Name :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="first_name" class="form-control" id="adminUserFName{{$user->id}}" value="{{$user->first_name}}" required>
+                              <input style="width:100%" name="first_name" class="form-control" id="adminUserFName{{$user->id}}" value="{{$user->first_name}}" required>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserCode{{$user->id}}" class="pull-right control-label">@lang('Code :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="code" class="form-control" id="adminUserCode{{$user->id}}" value="{{$user->code}}" required>
+                              <input style="width:100%" name="code" class="form-control" id="adminUserCode{{$user->id}}" value="{{$user->code}}" required>
                             </div>
                             
                           </div>
@@ -110,7 +110,7 @@
                               <label for="adminUserLName{{$user->id}}" class="pull-right control-label">@lang('Last Name :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="last_name" class="form-control" id="adminUserLName{{$user->id}}" value="{{$user->last_name}}" required>
+                              <input style="width:100%" name="last_name" class="form-control" id="adminUserLName{{$user->id}}" value="{{$user->last_name}}" required>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserGender{{$user->id}}" class="pull-right control-label">@lang('Gender :')</label>
@@ -128,7 +128,7 @@
                               <label for="adminUserEmail{{$user->id}}" class="pull-right control-label">@lang('Email :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="email" class="form-control" id="adminUserEmail{{$user->id}}" value="{{$user->email}}" required>
+                              <input style="width:100%" name="email" class="form-control" id="adminUserEmail{{$user->id}}" value="{{$user->email}}" required>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserProgramme{{$user->id}}" class="pull-right control-label">@lang('Programme :')</label>
@@ -147,7 +147,7 @@
                               <label for="adminUserPhoneNumber{{$user->id}}" class="pull-right control-label">@lang('Phone Number :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="phone_number" class="form-control" id="adminUserPhoneNumber{{$user->id}}" value="{{$user->phone_number}}" required>
+                              <input style="width:100%" name="phone_number" class="form-control" id="adminUserPhoneNumber{{$user->id}}" value="{{$user->phone_number}}" required>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserQualification{{$user->id}}" class="pull-right control-label">@lang('Qualification :')</label>
@@ -166,7 +166,7 @@
                               <label for="adminUserAddress{{$user->id}}" class="pull-right control-label">@lang('Address :')</label>
                             </div>
                             <div class="col-sm-4">
-                              <input style="width:100%" type="text" name="address" class="form-control" id="adminUserAddress{{$user->id}}" value="{{$user->address}}">
+                              <input style="width:100%" name="address" class="form-control" id="adminUserAddress{{$user->id}}" value="{{$user->address}}">
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserMajor{{$user->id}}" class="pull-right control-label">@lang('Major :')</label>
@@ -185,7 +185,7 @@
                               <label for="adminUserDate{{$user->id}}" class="pull-right control-label">@lang('Enrolled Date :')</label>
                             </div>
                             <div class="col-sm-4">
-                                <input style="width:100%" type="text" name="enrolled_date" class="form-control" id="adminUserDate{{$user->id}}" value="{{$user->enrolled_date}}" required>
+                                <input style="width:100%" name="enrolled_date" class="form-control" id="adminUserDate{{$user->id}}" value="{{$user->enrolled_date}}" required>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminUserAbout{{$user->id}}" class="pull-right control-label">@lang('About :')</label>
@@ -197,7 +197,7 @@
 
                           <div class="modal-footer">
                             <a href="{{url('selectionlist/student/'.$user->id)}}" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
-                            <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
+                            <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>
 
@@ -247,15 +247,15 @@
             getQualificationsByProgrammeId{{$user->id}}(selected_programme_id);
 
             // show corresponding options of the major
-            let selected_major_id = $("#adminUserQualification{{$user->id}}").val();
-            getMajorsByQualificationId{{$user->id}}(selected_major_id);
+            let selected_qualification_id = $("#adminUserQualification{{$user->id}}").val();
+            getMajorsByQualificationId{{$user->id}}(selected_qualification_id);
           });
           
           // if user change the select of qualification
           $('#adminUserQualification{{$user->id}}').change(function () {
             // show corresponding options of the major
-            let selected_major_id = $("#adminUserQualification{{$user->id}}").val();
-            getMajorsByQualificationId{{$user->id}}(selected_major_id);
+            let selected_qualification_id = $("#adminUserQualification{{$user->id}}").val();
+            getMajorsByQualificationId{{$user->id}}(selected_qualification_id);
           });
 
           function getQualificationsByProgrammeId{{$user->id}}(programme_id){

@@ -8,7 +8,7 @@
       <div class="form-group">
         <label for="section_number{{$class->class_number}}" class="col-sm-2 control-label">@lang('Section Name')</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="section_number{{$class->class_number}}" name="section_number" placeholder="@lang('A, B, C, etc..')">
+          <input class="form-control" id="section_number{{$class->class_number}}" name="section_number" placeholder="@lang('A, B, C, etc..')">
         </div>
       </div>
       <div class="form-group">

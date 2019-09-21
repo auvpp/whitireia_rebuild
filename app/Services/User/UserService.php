@@ -6,6 +6,8 @@ use App\StudentInfo;
 use Illuminate\Support\Facades\DB;
 use Mavinoo\LaravelBatch\Batch;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
+use Faker\Generator as Faker;
 
 class UserService {
     
@@ -13,11 +15,13 @@ class UserService {
     protected $db;
     protected $batch;
     protected $st, $st2;
+    protected $faker;
 
-    public function __construct(User $user, DB $db, Batch $batch){
+    public function __construct(User $user, DB $db, Batch $batch, Faker $faker){
         $this->user = $user;
         $this->db = $db;
         $this->batch = $batch;
+        $this->faker = $faker;
     }
 
     public function isListOfStudents($school_code, $student_code){
@@ -218,51 +222,55 @@ class UserService {
         return $tb;
     }
 
-    public function storeStudent($request){
+    public function storeStudent($request, $role){
         $tb = new $this->user;
-        $tb->name = $request->name;
+        $tb->about = (!empty($request->about)) ? $request->about : '';
+        $tb->first_name = ucfirst($request->first_name);
+        $tb->last_name = ucfirst($request->last_name);
+        $tb->code = $this->faker->unique()->randomNumber(6, true);
+        $tb->school_id = \Auth::user()->school_id;
         $tb->email = (!empty($request->email)) ? $request->email : '';
-        $tb->password = bcrypt($request->password);
-        $tb->role = 'student';
+        $tb->password = bcrypt('secret');
+        $tb->enrolled_date = date('Y-m-d');
+        $tb->role = $role;
         $tb->active = 1;
-        $tb->school_id = auth()->user()->school_id;
-        $tb->code = auth()->user()->code;// School Code
-        $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = $request->gender;
-        //$tb->blood_group = $request->blood_group;
-        //$tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
         $tb->address = (!empty($request->address)) ? $request->address : '';
-        $tb->about = (!empty($request->about)) ? $request->about : '';
+        $tb->programme_id = $request->programme_id;   
         $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
-        $tb->verified = 1;
-        $tb->section_id = $request->section;
+        $tb->course_token = 1;
+        $tb->remember_token = str_random(10);
+        $tb->qualification_id = $request->qualification_id;
+        $tb->major_id = $request->major_id;
+        //dd($tb);
+        // $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->save();
         return $tb;
     }
 
-    public function storeStaff($request, $role){
+    public function storeTeacher($request, $role){
+
         $tb = new $this->user;
-        $tb->name = $request->name;
+        $tb->about = (!empty($request->about)) ? $request->about : '';
+        $tb->first_name = ucfirst($request->first_name);
+        $tb->last_name = ucfirst($request->last_name);
+        $tb->code = $this->faker->unique()->randomNumber(6, true);
+        $tb->school_id = \Auth::user()->school_id;
         $tb->email = (!empty($request->email)) ? $request->email : '';
-        $tb->password = bcrypt($request->password);
+        $tb->password = bcrypt('secret');
+        $tb->enrolled_date = date('Y-m-d');
         $tb->role = $role;
         $tb->active = 1;
-        $tb->school_id = auth()->user()->school_id;
-        $tb->code = auth()->user()->code;
-        $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->gender = $request->gender;
-        //$tb->blood_group = $request->blood_group;
-        //$tb->nationality = (!empty($request->nationality)) ? $request->nationality : '';
         $tb->phone_number = $request->phone_number;
+        $tb->address = (!empty($request->address)) ? $request->address : '';
+        $tb->programme_id = $request->programme_id;   
         $tb->pic_path = (!empty($request->pic_path)) ? $request->pic_path : '';
-        $tb->verified = 1;
-        $tb->department_id = (!empty($request->department_id))?$request->department_id:0;
-        
-        if($role == 'teacher'){
-            $tb->section_id = ($request->class_teacher_section_id != 0) ? $request->class_teacher_section_id : 0;
-        }
-        
+        $tb->course_token = 1;
+        $tb->remember_token = str_random(10);
+        //dd($tb);
+        // $tb->student_code = auth()->user()->school_id.date('y').substr(number_format(time() * mt_rand(), 0, '', ''), 0, 5);
         $tb->save();
         return $tb;
     }
