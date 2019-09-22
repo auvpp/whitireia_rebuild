@@ -45,21 +45,20 @@ class CourseService {
         $tb->prerequisite = $request->prerequisite;
         $tb->current_offered = $request->current_offered;
         $tb->next_offered = $request->next_offered;
+        $tb->teacher_id = $request->teacher_id;
         $tb->teacher = $request->teacher;
         $tb->description = $request->description;
         $tb->save();
 
         // Simultaneously update all courses with the same code except course type, credits, prerequisite, descriptions
         Course::where('code', $request->code)
-              ->update(['teacher' => $request->teacher, 
+              ->update(['teacher' => $request->teacher,
+                        'teacher_id' => $request->teacher_id,
                         'name'    => $request->name,
                         'level'   => $request->level,
                         'current_offered' => $request->current_offered,
                         'next_offered' => $request->next_offered
                         ]);
-
-
-
     }
 
     public function getCoursesBySection($section_id){

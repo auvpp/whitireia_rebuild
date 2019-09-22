@@ -128,6 +128,9 @@ Route::middleware(['auth','admin'])->group(function (){
   //Route::get('edit/course/{id}','CourseController@edit');
   Route::post('edit/course/{id}','CourseController@update');
 
+  // add a new course
+  Route::post('add/course','CourseController@store');
+
   // show the selection list of a student or a teacher
   Route::get('selectionlist/student/{id}', 'MyClassController@studentSelections');
   Route::get('selectionlist/teacher/{id}', 'MyClassController@teacherSelections');
@@ -166,7 +169,8 @@ Route::middleware(['auth','teacher'])->group(function (){
   Route::get('/programmes/business/{id}', 'CourseController@course');
   Route::get('/programmes/it/{id}', 'CourseController@course');
 
-  Route::get('mycourses', 'MyClassController@teacherCourses');
+  Route::get('tcourses', 'MyClassController@teacherCourses')->name('mycourses.teacher-mycourses');
+  Route::post('tcourses', 'MyClassController@teacherGrade');
 });
 
 Route::middleware(['auth','teacher'])->prefix('grades')->group(function (){

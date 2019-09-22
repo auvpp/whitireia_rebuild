@@ -28,13 +28,14 @@ class CreateTeacherRequest extends FormRequest
     public function rules()
     {
         return [
+            'code'   =>  'required|string|unique:users',
             'about'    =>  'nullable|string',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'sometimes|email|max:255|unique:users',
             'phone_number' => 'required|unique:users',
             'gender' => 'required|string',
-            'programme_id' => 'required|numeric',
+            'programme_id' => 'required|integer',
             'address'  =>   'nullable|string',
         ];
     }

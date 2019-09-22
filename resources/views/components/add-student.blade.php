@@ -14,25 +14,25 @@
                 {{csrf_field()}}                    
                     <div class="row" style="margin-bottom:7px;">
                         <div class="col-sm-2">
-                            <label for="addStudentFName" class="pull-right control-label">@lang('First Name :')</label>
+                            <label for="addStudentCode" class="pull-right control-label">@lang('Code :')</label>
                         </div>
                         <div class="col-sm-4">
-                            <input style="width:100%" name="first_name" class="form-control" id="addStudentFName" required>
+                            <input style="width:100%" name="code" class="form-control" id="addStudentCode" required>
                         </div>
-                        <div class="col-sm-2">
-                            <label for="addStudentLName" class="pull-right control-label">@lang('Last Name :')</label>
-                        </div>
-                        <div class="col-sm-4">
-                            <input style="width:100%" name="last_name" class="form-control" id="addStudentLName" required>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-bottom:7px;">
                         <div class="col-sm-2">
                             <label for="addStudentEmail" class="pull-right control-label">@lang('Email :')</label>
                         </div>
                         <div class="col-sm-4">
                             <input style="width:100%" name="email" class="form-control" id="addStudentEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:7px;">
+                        <div class="col-sm-2">
+                            <label for="addStudentFName" class="pull-right control-label">@lang('First Name :')</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input style="width:100%" name="first_name" class="form-control" id="addStudentFName" required>
                         </div>
                         <div class="col-sm-2">
                             <label for="addStudentPhoneNumber" class="pull-right control-label">@lang('Phone Number :')</label>
@@ -44,6 +44,12 @@
 
                     <div class="row" style="margin-bottom:7px;">
                         <div class="col-sm-2">
+                            <label for="addStudentLName" class="pull-right control-label">@lang('Last Name :')</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input style="width:100%" name="last_name" class="form-control" id="addStudentLName" required>
+                        </div>
+                        <div class="col-sm-2">
                             <label for="addStudentProgramme" class="pull-right control-label">@lang('Programme :')</label>
                         </div>
                         <div class="col-sm-4">
@@ -54,6 +60,9 @@
                             @endforeach
                             </select>
                         </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:7px;">
                         <div class="col-sm-2">
                             <label for="addStudentGender" class="pull-right control-label">@lang('Gender :')</label>
                         </div>
@@ -63,9 +72,6 @@
                                 <option value="Female">@lang('Female')</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div class="row" style="margin-bottom:7px;">
                         <div class="col-sm-2">
                             <label for="addStudentQualification" class="pull-right control-label">@lang('Qualification :')</label>
                         </div>
@@ -76,16 +82,16 @@
                                 <option value="{{$q->id}}">{{ucfirst($q->name)}}</option>
                             @endforeach
                             </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="addStudentAbout" class="pull-right control-label">@lang('About :')</label>
-                        </div>
-                        <div class="col-sm-4">
-                            <textarea style="width:100%" class="form-control" name="about" rows="1" id="addStudentAbout"></textarea>
-                        </div>
+                        </div>                                               
                     </div>
 
                     <div class="row" style="margin-bottom:7px;">
+                        <div class="col-sm-2">
+                            <label for="addStudentAddress" class="pull-right control-label">@lang('Address :')</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input style="width:100%" name="address" class="form-control" id="addStudentAddress">
+                        </div>                         
                         <div class="col-sm-2">
                             <label for="addStudentMajor" class="pull-right control-label">@lang('Major :')</label>
                         </div>
@@ -97,11 +103,15 @@
                             @endforeach
                             </select>
                         </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:7px;">
+                        
                         <div class="col-sm-2">
-                            <label for="addStudentAddress" class="pull-right control-label">@lang('Address :')</label>
+                            <label for="addStudentAbout" class="pull-right control-label">@lang('About :')</label>
                         </div>
-                        <div class="col-sm-4">
-                            <input style="width:100%" name="address" class="form-control" id="addStudentAddress">
+                        <div class="col-sm-10">
+                            <textarea style="width:100%" class="form-control" name="about" rows="1" id="addStudentAbout"></textarea>
                         </div>
                     </div>
 

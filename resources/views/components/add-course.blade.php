@@ -107,9 +107,10 @@
                             <select style="width:100%" class="form-control" id="addCourseTeacher" name="teacher" required>
                                 <option value="TBA">@lang('TBA')</option>
                                 @foreach ($teachers as $t)
-                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
+                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}" data-teacherid="{{$t->id}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
                                 @endforeach
                             </select>
+                            <input type="hidden" name="teacher_id" id="addCourseTeacherId" required/>
                         </div>
                     </div>
 
@@ -171,7 +172,7 @@
                                 <div class="modal-body">                  
                                     <div class="row" style="margin-bottom:7px;">
                                         <div class="col-sm-3">
-                                            <label for="addCourseCode" class="pull-right control-label">@lang('Code :')</label>
+                                            <label for="addCourseCode" class="pull-right control-label">@lang('Course Code :')</label>
                                         </div>
                                         <div class="col-sm-3">
                                             <input style="width:100%" name="code" class="form-control" id="addCourseCode" required>
@@ -204,6 +205,7 @@
     $(document).ready(function(){
         $("#addCourseQualification").attr("disabled", "disabled");
         $("#addCourseMajor").attr("disabled", "disabled");
+        $("#addCourseTeacherId").val(0);
         
         // if user changes the selection of programme
         $('#addCourseProgramme').change(function () {
@@ -224,7 +226,6 @@
             $("#addCourseMajor").removeAttr("disabled");
             // show corresponding options of the major
             let selected_qualifiction_id = $("#addCourseQualification").val();
-            console.log(selected_qualifiction_id);
             getMajorsByQualificationId(selected_qualifiction_id);
         });
 
@@ -261,6 +262,17 @@
             else{
                 $("#addCourseNext").removeAttr("disabled"); 
                 $("#addCourseTeacher").removeAttr('disabled');
+            }
+        });
+
+        $("#addCourseTeacher").change(function(){
+            let current_teacher = $("#addCourseTeacher").val() 
+            if (current_teacher== 'TBA'){
+                $("#addCourseTeacherId").val(0);
+            }else{
+                let teacher_id = $("#addCourseTeacher option:selected").data("teacherid");
+                // let teacher_id = $("#addCourseTeacher").find("option:selected").data("teacherid");
+                $("#addCourseTeacherId").val(teacher_id);
             }
         });
 

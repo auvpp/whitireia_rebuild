@@ -28,16 +28,17 @@ class CreateStudentRequest extends FormRequest
     public function rules()
     {
         return [
-            'about'    =>  'nullable|string',
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'sometimes|email|max:255|unique:users',
-            'phone_number' => 'required|unique:users',
-            'gender' => 'required|string',
-            'programme_id' => 'required|numeric',
-            'qualification_id' => 'required|numeric',
-            'major_id' => 'required|numeric',
-            'address'  =>   'nullable|string',
+            'code'       => 'required|string|unique:users',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'gender'  => 'required|string',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string',
+            'address' => 'nullable|string',
+            'programme_id' => 'required|integer',
+            'qualification_id' => 'required|integer',
+            'major_id' => 'required|integer',
+            'about' => 'nullable|string',
         ];
     }
 }

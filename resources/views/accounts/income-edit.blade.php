@@ -19,7 +19,7 @@
                     @isset($income)
                     <form class="form-horizontal" action="{{url('accounts/update-income')}}" method="post">
                       {{ csrf_field() }}
-                        <input type="hidden" name="id" value="{{$income->id}}">
+                      <input type="hidden" name="id" value="{{$income->id}}">
                       <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                           <label for="name" class="col-md-4 control-label">@lang('Sector Name')</label>
 

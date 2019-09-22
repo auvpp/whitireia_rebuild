@@ -174,7 +174,7 @@
                           </div>
 
                           <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
+                            <a href="{{url('selectionlist/teacher/'.$user->id)}}" type="button" class="btn btn-primary pull-left">@lang('View Courses')</a>
                             <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
                           </div>

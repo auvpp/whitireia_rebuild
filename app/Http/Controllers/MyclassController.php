@@ -5,6 +5,7 @@ use App\ClassDetail;
 use App\MyClass as MyClass;
 use App\User;
 use App\Course;
+use App\Grade;
 use App\Http\Resources\ClassResource;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Validator;
@@ -85,7 +86,7 @@ class MyClassController extends Controller
             $tb_classdetail->user_id = \Auth::user()->id;
             $tb_classdetail->class_id = $tb_class->id;
             $tb_classdetail->course_id = $current_course_id;
-            $tb_classdetail->term = $term;            
+            $tb_classdetail->term = $term;       
             $tb_classdetail->save();
           }
         }
@@ -151,7 +152,7 @@ class MyClassController extends Controller
       //                     ->get();
       $user = User::with('major', 'qualification', 'programme', 'myClasses')
                   ->find(\Auth::user()->id);
-      $classdetails = ClassDetail::with('myClass', 'course', 'grade')
+      $classdetails = ClassDetail::with('myClass', 'course')
                        ->where('user_id', \Auth::user()->id)
                        ->orderBy('course_id', 'asc')
                        ->get();
@@ -159,7 +160,7 @@ class MyClassController extends Controller
       $totalCredits = 0;
       if ($classdetails != null){
         foreach ($classdetails as $k => $v) {
-          $totalCredits += $v->credit;
+          $totalCredits += $v->approved_credit;
         }
       }
 
@@ -172,12 +173,48 @@ class MyClassController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function teacherCourses(){
-      $myClasses = MyClass::with('user', 'classdetails')
-                          ->where('user_id', \Auth::user()->id)
-                          ->get();
-      return view('mycourses.teacher-mycourses',compact('myClasses'));
+      $myclasses = Course::where('teacher_id', \Auth::user()->id)
+                         ->whereNotIn('current_offered', ['Not offered', 'No longer offered', 'TBA'])
+                         ->distinct()
+                         ->get(['code', 'name', 'credit']);
+
+      $mystudents = Course::where('teacher_id', \Auth::user()->id)
+                          ->whereNotIn('current_offered', ['Not offered', 'No longer offered', 'TBA'])
+                          ->with(['classdetails' => function($query){
+                              $query->where('active', 1);
+                              $query->with(['user' => function ($query) {
+                                    $query->get();
+                              }]);
+                            }])
+                            ->get();
+                         
+                            // with(['author' => function ($query) {
+                            //   $query->select(['specified column']);
+                            //   $query->with(['contacts' => function ($query) {
+                            //       $query->select(['specified column']);
+                            //   }]);
+ 
+      //dd($mystudents);                  
+      $user = User::with('programme')->find(\Auth::user()->id);
+      $grades = Grade::get();
+ 
+      return view('mycourses.teacher-mycourses',compact('myclasses', 'user', 'grades', 'mystudents'));
     }
     
+    public function teacherGrade(Request $request) {
+      if (\Auth::user()->role == 'teacher' || \Auth::user()->role == 'admin'){
+        $current_classdetail = ClassDetail::find($request->classdetail_id);
+        if ($current_classdetail->active == 1){
+          $current_classdetail->approved_credit = $request->approved_credit;
+          $current_classdetail->grade_id = $request->grade_id;
+          $current_classdetail->save();
+          return response()->json(['success' => true]);
+        }else{
+          return response()->json(['success' => false]);
+        }
+      }
+    }
+
     /**
      * Show selected courses of a specified student by admin.
      *
@@ -197,12 +234,40 @@ class MyClassController extends Controller
       $totalCredits = 0;
       if ($classdetails != null){
         foreach ($classdetails as $k => $v) {
-          $totalCredits += $v->credit;
+          $totalCredits += $v->approved_credit;
         }
       }
 
       return view('mycourses.student-mycourses',compact('classdetails', 'user', 'totalCredits'));
     }
+
+    /**
+     * Show courses list of a specified teacher by admin.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function teacherSelections($id){
+      $myclasses = Course::where('teacher_id', $id)
+                         ->whereNotIn('current_offered', ['Not offered', 'No longer offered', 'TBA'])
+                         ->distinct()
+                         ->get(['code', 'name', 'credit']);
+
+      $mystudents = Course::where('teacher_id', $id)
+                          ->whereNotIn('current_offered', ['Not offered', 'No longer offered', 'TBA'])
+                          ->with(['classdetails' => function($query){
+                              $query->where('active', 1);
+                              $query->with(['user' => function ($query) {
+                                    $query->get();
+                              }]);
+                            }])
+                            ->get();
+
+      $user = User::with('programme')->find($id);
+      $grades = Grade::get();
+ 
+      return view('mycourses.teacher-mycourses',compact('myclasses', 'user', 'grades', 'mystudents'));
+    }
+
 
      /**
      * Show selected courses of a specified teacher by admin.
@@ -229,8 +294,6 @@ class MyClassController extends Controller
       }
       return back()->with('status', __('Done!'));
     }
-
-
 
     /**
      * Remove the specified resource from storage.

@@ -31,8 +31,6 @@
             <tr>
               @if(Auth::user()->role == 'admin')
               <td>
-                <!-- <a href="{{--url('edit/course/'.$course->id)--}}" class="btn btn-xs btn-danger">
-                   <i class="material-icons">edit</i> @lang('Edit')</a> -->
                 <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminCourseModal{{$course->id}}">@lang('Edit')</button>
                 <!-- Modal -->
                 <div class="modal fade" id="adminCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="adminCourseModal{{$course->id}}Label">
@@ -77,18 +75,6 @@
                               </select>
                             </div>
                             <div class="col-sm-2">
-                              <label for="adminCourseType{{$course->id}}" class="pull-right control-label">@lang('Course Type :')</label>
-                            </div>
-                            <div class="col-sm-4">
-                              <select style="width:100%" class="form-control" id="adminCourseType{{$course->id}}" name="type" required>
-                                <option value="Compulsory">@lang('Compulsory')</option>
-                                <option value="Elective">@lang('Elective')</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div class="row" style="margin-bottom:7px;">
-                            <div class="col-sm-2">
                               <label for="adminCourseCredit{{$course->id}}" class="pull-right control-label">@lang('Credits :')</label>
                             </div>
                             <div class="col-sm-4">
@@ -100,12 +86,6 @@
                                 <option value="60">60</option>
                                 <option value="90">90</option>
                               </select>
-                            </div>
-                            <div class="col-sm-2">
-                              <label for="adminCoursePrerequisite{{$course->id}}" class="pull-right control-label">@lang('Prerequisites :')</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input style="width:100%" name="prerequisite" class="form-control" id="adminCoursePrerequisite{{$course->id}}" value="{{$course->prerequisite}}">
                             </div>
                           </div>
 
@@ -125,6 +105,18 @@
                               </select>
                             </div>
                             <div class="col-sm-2">
+                              <label for="adminCourseType{{$course->id}}" class="pull-right control-label">@lang('Course Type :')</label>
+                            </div>
+                            <div class="col-sm-4">
+                              <select style="width:100%" class="form-control" id="adminCourseType{{$course->id}}" name="type" required>
+                                <option value="Compulsory">@lang('Compulsory')</option>
+                                <option value="Elective">@lang('Elective')</option>
+                              </select>
+                            </div>  
+                          </div>
+
+                          <div class="row" style="margin-bottom:7px;">
+                            <div class="col-sm-2">
                               <label for="adminCourseNextTerm{{$course->id}}" class="pull-right control-label">@lang('Next Offered :')</label>
                             </div>
                             <div class="col-sm-4">
@@ -138,6 +130,12 @@
                                 <option value="No longer offered">@lang('No longer offered')</option>
                               </select>
                             </div>
+                            <div class="col-sm-2">
+                              <label for="adminCoursePrerequisite{{$course->id}}" class="pull-right control-label">@lang('Prerequisites :')</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input style="width:100%" name="prerequisite" class="form-control" id="adminCoursePrerequisite{{$course->id}}" value="{{$course->prerequisite}}">
+                            </div>
                           </div>
 
                           <div class="row" style="margin-bottom:7px;">
@@ -148,9 +146,10 @@
                               <select style="width:100%" class="form-control" id="adminCourseTeacher{{$course->id}}" name="teacher" required>
                                 <option value="TBA">@lang('TBA')</option>
                                 @foreach ($teachers as $t)
-                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
+                                <option value="{{ucfirst($t->first_name).' '.ucfirst($t->last_name)}}" data-teacherid="{{$t->id}}">{{ucfirst($t->first_name).' '.ucfirst($t->last_name).' ('.ucfirst($t->programme->name).')'}}</option>
                                 @endforeach
                               </select>
+                              <input type="hidden" name="teacher_id" id="adminCourseTeacherId{{$course->id}}" required/>
                             </div>
                             <div class="col-sm-2">
                               <label for="adminCourseDescription{{$course->id}}" class="pull-right control-label">@lang('Description :')</label>
@@ -159,7 +158,6 @@
                               <textarea style="width:100%" class="form-control" name="description" rows="1" id="adminCourseDescription{{$course->id}}">{{$course->description}}</textarea>
                             </div>
                           </div>
-
                           <div class="modal-footer">
                             <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
                             <button type="submit" class="btn btn-danger btn-sm">@lang('Save')</button>
@@ -180,8 +178,9 @@
                   $("#adminCourseCurrentOffered{{$course->id}}").val('{{ucfirst($course->current_offered)}}');
                   $("#adminCourseNextOffered{{$course->id}}").val('{{ucfirst($course->next_offered)}}');
                   $("#adminCourseTeacher{{$course->id}}").val('{{ucfirst($course->teacher)}}');
+                  $("#adminCourseTeacherId{{$course->id}}").val("{{$course->teacher_id}}");
                   $("#adminCourseCurrentOffered{{$course->id}}").change(function(){
-                    var current_offered = $("#adminCourseCurrentOffered{{$course->id}}").val();
+                    let current_offered = $("#adminCourseCurrentOffered{{$course->id}}").val();
                     if (current_offered == 'No longer offered') {
                       $("#adminCourseNextOffered{{$course->id}}").val('No longer offered');
                       $("#adminCourseNextOffered{{$course->id}}").attr("disabled", "disabled");
@@ -191,6 +190,17 @@
                     else{
                       $("#adminCourseNextOffered{{$course->id}}").removeAttr("disabled"); 
                       $("#adminCourseTeacher{{$course->id}}").removeAttr('disabled');
+                    }
+                  });
+
+                  $("#adminCourseTeacher{{$course->id}}").change(function(){
+                    let current_teacher = $("#adminCourseTeacher{{$course->id}}").val() 
+                    if (current_teacher== 'TBA'){
+                      $("#adminCourseTeacherId{{$course->id}}").val(0);
+                    }else{
+                      let teacher_id = $("#adminCourseTeacher{{$course->id}} option:selected").data("teacherid");
+                      // let teacher_id = $("#adminCourseTeacher{{$course->id}}").find("option:selected").data("teacherid");
+                      $("#adminCourseTeacherId{{$course->id}}").val(teacher_id);
                     }
                   });
                 });

@@ -13,7 +13,7 @@ class ClassDetail extends Model
      * @var array
      */
     protected $fillable = [
-        'class_id', 'grade_id', 'approved_credit', 'course_id', 'term', 'user_id',
+        'class_id', 'grade_id', 'approved_credit', 'course_id', 'term', 'user_id', 'active'
     ];
 
     /**

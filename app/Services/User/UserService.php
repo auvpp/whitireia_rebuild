@@ -227,7 +227,8 @@ class UserService {
         $tb->about = (!empty($request->about)) ? $request->about : '';
         $tb->first_name = ucfirst($request->first_name);
         $tb->last_name = ucfirst($request->last_name);
-        $tb->code = $this->faker->unique()->randomNumber(6, true);
+        //$tb->code = $this->faker->unique()->randomNumber(6, true);
+        $tb->code = $request->code;
         $tb->school_id = \Auth::user()->school_id;
         $tb->email = (!empty($request->email)) ? $request->email : '';
         $tb->password = bcrypt('secret');

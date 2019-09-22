@@ -26,34 +26,9 @@ class CreateCoursesTable extends Migration
             $table->string('next_offered');
             $table->string('prerequisite')->nullable()->default('None');
             $table->text('description')->nullable()->default('');
-            $table->string('teacher')->nullalbe();
+            $table->integer('teacher_id')->default(0);
+            $table->string('teacher')->default('TBA');
             $table->timestamps();
-            // $table->string('course_name');
-            // $table->integer('class_id')->unsigned();
-            // $table->string('course_type');
-            // $table->string('course_time');
-            // $table->string('grade_system_name');
-            // $table->integer('quiz_count');
-            // $table->integer('assignment_count');
-            // $table->integer('ct_count');
-            // $table->integer('quiz_percent');
-            // $table->integer('attendance_percent');
-            // $table->integer('assignment_percent');
-            // $table->integer('ct_percent');
-            // $table->integer('final_exam_percent');
-            // $table->integer('practical_percent');
-            // $table->integer('att_fullmark');
-            // $table->integer('quiz_fullmark');
-            // $table->integer('a_fullmark');
-            // $table->integer('ct_fullmark');
-            // $table->integer('final_fullmark');
-            // $table->integer('practical_fullmark');
-            // $table->integer('school_id')->unsigned();
-            // $table->integer('exam_id')->unsigned();
-            // $table->integer('teacher_id')->unsigned();
-            // $table->integer('section_id')->unsigned();
-            // $table->integer('user_id')->unsigned();
-            // $table->timestamps();
         });
     }
 

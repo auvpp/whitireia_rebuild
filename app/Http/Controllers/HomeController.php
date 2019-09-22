@@ -54,9 +54,10 @@ class HomeController extends Controller
         $totalCredits = 0;
         if ($classdetails != null){
           foreach ($classdetails as $k => $v) {
-            $totalCredits += $v->credit;
+            $totalCredits += $v->approved_credit;
           }
         }
+        
 
         // $totalBooks = \Cache::remember('totalBooks-'.$school_id, $minutes, function () use($school_id) {
         //   return \App\Book::bySchool($school_id)->count();

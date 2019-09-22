@@ -5,7 +5,7 @@
     <table class="table table-bordered table-striped table-hover table-condensed">
       <thead class="bg-info text-white">
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">@lang('New')</th>
           <th scope="col">@lang('Code')</th>
           <th scope="col">@lang('Name')</th>
           <th scope="col">@lang('Level')</th>
@@ -46,7 +46,7 @@
         @endforeach
         @endif
         <tr>
-            <th class="bg-info text-white" colspan="8">Total Courses</th>
+            <th class="bg-info text-white" colspan="8">Current Total Credits</th>
             <th class="bg-info text-white" colspan="8">{{$totalCredits}}</th>
         </tr>
       </tbody>

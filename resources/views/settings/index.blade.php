@@ -30,7 +30,10 @@
                                 @component('components.add-course', ['programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors, 'teachers'=>$teachers])
                                 @endcomponent
                             </div>
-                            <div class="col-sm-4">
+                            <!-- <div class="col-sm-3">
+                                <a href="" type="button" class="btn btn-danger btn-sm">@lang('Arrange Courses')</a>
+                            </div> -->
+                            <div class="col-sm-6">
                                 @if ($toggle == 1)
                                 <button class="btn btn-danger btn-sm" id="toggle" value="1">@lang('Close Selection')</button>
                                 @else
@@ -44,9 +47,11 @@
                                 @component('components.excel-upload-form', ['type'=>'student'])
                                 @endcomponent
                             </div>
-                            <div class="col-sm-5">
+                            <!-- <div class="col-sm-3"><small>@lang('Arrange courses for teachers.')</small></div> -->
+                            <div class="col-sm-6">
                                 @if ($toggle == 1)
                                 <small>@lang('Click the "Close Selection" button to deactivate the course selection system.')</small>
+                                <small>@lang('Teachers can only fill in and modify the grades of the courses during the system shutdown period.')</small>
                                 @else
                                 <small>@lang('Click the "Open Selection" button to activate the course selection system.')</small>
                                 @endif
@@ -63,7 +68,7 @@
                                 @component('components.add-student', ['programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors])
                                 @endcomponent
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#addTeacherModal">+ @lang('Add Tutor')</button>
                                 @component('components.add-teacher', ['programmes'=>$programmes])
                                 @endcomponent
@@ -75,7 +80,7 @@
                                 @component('components.excel-upload-form', ['type'=>'student'])
                                 @endcomponent
                             </div> 
-                            <div class="col-sm-4">           
+                            <div class="col-sm-3">           
                                 <small>@lang('Or, Mass upload Excel')</small>
                                 @component('components.excel-upload-form', ['type'=>'teacher'])
                                 @endcomponent
@@ -89,6 +94,7 @@
 
 	<script>
 		$(document).ready(function(){
+            // toggle of the course selection system
             $("#toggle").click(function() {         
                 let toggle =$(this).val();
                 $.ajax({
