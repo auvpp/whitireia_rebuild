@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-8">   
+                        <div class="col-sm-8">
                             @component('components.mycourses-teacher-selections',['myclasses'=>$myclasses, 'grades'=>$grades, 'mystudents'=>$mystudents])
                             @endcomponent
                         </div>

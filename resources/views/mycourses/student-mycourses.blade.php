@@ -31,12 +31,6 @@
                             <a href="{{url()->previous()}}" class="btn btn-xs btn-warning"><i class="material-icons">keyboard_return</i> @lang('Go Back')</a>
                         @endif
                         </div>
-                        <div class="col-sm-6">
-                            <button class="btn btn-xs btn-success pull-right" id="btnPrint"><i class="material-icons">print</i> @lang('Print Form')</button>
-                        </div>
-                        <div class="col-sm-1">
-                            <button class="btn btn-xs btn-default"><i class="material-icons">get_app</i> Excel</button>
-                        </div>
                     </div> 
                 </div>    
             </div>

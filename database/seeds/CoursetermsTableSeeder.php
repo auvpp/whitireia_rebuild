@@ -3,37 +3,24 @@
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
-class CoursesTableSeeder extends Seeder
+class CoursetermsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        // factory(App\Course::class, 50)->create();
-
-
         /**
          * Bachelor of Business (Business Analysis & Knowledgement / 
          *                       Marketing & Sales /
          *                       Supply Chain & Logistics Management)
          */
-        DB::table('courses')->insert([
-            'code' => "BM5201",
-            'name' => "Business Operations",
-            'major_id'    => 1,
-            'level' => "Level 5",
-            'type'     => "Compulsory",
-            'credit'   => 15,
-            'active' => 1,
-            'current_offered'   => "Not offered",
-            'next_offered'      => "T1-2020",
-            'prerequisite'   => "None",
-            'description' => $faker->sentence(),
-            'teacher_id' => 0,
-            'teacher' => 'TBA',
+        DB::table('courseterms')->insert([
+            'course_id' => 1,
+            'term_id' => 1,
+            'teacher_id'    => 0,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -1929,7 +1916,7 @@ class CoursesTableSeeder extends Seeder
             'level' => "Level 8",
             'type'     => "Compulsory",
             'credit'   => 15,
-            'active' => 1,
+            'active' => 40,
             'teacher' => 'Sharan GaribSingh',
             'current_offered'   => "T2-2019",
             'next_offered' => "T1-2020",

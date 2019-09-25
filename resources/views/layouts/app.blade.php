@@ -25,6 +25,17 @@
         });
     </script>
     <script src="{{ url('js/application.js') }}"></script>
+    
+    <style type="text/css" media="print">
+        @page { size: landscape; }
+    </style>
+
+    <style type="text/css">
+        @media print {
+            .noprint{ display: none; }
+        }
+    </style>
+
     @yield('after_scripts')
 </head>
 

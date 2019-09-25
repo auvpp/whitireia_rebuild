@@ -9,9 +9,6 @@
             @include('layouts.leftside-menubar')
         </div>
         <div class="col-md-10" id="main-container">
-            @if(Auth::user()->role != 'student')
-            
-            @endif
             <h2>@lang('Business')</h2>
             
             <div class="row">

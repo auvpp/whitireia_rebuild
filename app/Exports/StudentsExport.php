@@ -17,23 +17,21 @@ class StudentsExport implements FromQuery,ShouldAutoSize,WithHeadings
         'Phone Number',
         'Gender',
         'Student Code',
-        //'Blood Group',
-        //'Section',
         'Class',
         'Address'
     ];
 
-    private $headingsES = [ //for spanish
-        'Nombre', 
-        'Correo',
-        'Tefelono',
-        'Genero',
-        'Matricula',
-        'Grupo sanguineo',
-        'Seccion',
-        'Clase',
-        'Dirección'
-    ];
+    // private $headingsES = [ //for spanish
+    //     'Nombre', 
+    //     'Correo',
+    //     'Tefelono',
+    //     'Genero',
+    //     'Matricula',
+    //     'Grupo sanguineo',
+    //     'Seccion',
+    //     'Clase',
+    //     'Dirección'
+    // ];
 
     public function __construct(int $year){
         $this->year = $year;

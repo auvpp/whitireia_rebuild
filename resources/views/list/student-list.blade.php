@@ -22,8 +22,8 @@
                  @break($loop->first)
               @endforeach
                 <div class="panel-body">
-                    @component('components.users-export',['type'=>'student'])
-                    @endcomponent
+                    <!-- @component('components.users-export',['type'=>'student'])
+                    @endcomponent -->
 
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -31,7 +31,7 @@
                         </div>
                     @endif
 
-                    @component('components.users-students-list',['users'=>$users,'current_page'=>$current_page,'per_page'=>$per_page, 'programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors])
+                    @component('components.users-students-list',['users'=>$users, 'programmes'=>$programmes, 'qualifications'=>$qualifications, 'majors'=>$majors])
                     @endcomponent
                 </div>
               @else

@@ -38,13 +38,15 @@ class DatabaseSeeder extends Seeder
         // $this->call(AccountsTableSeeder::class);
         // $this->call(AccountSectorsTableSeeder::class);
         // $this->call(StudentinfosTableSeeder::class);
-        // $this->call(StudentboardexamsTableSeeder::class);s
+        // $this->call(StudentboardexamsTableSeeder::class);
+        $this->call(TermsTableSeeder::class);
         $this->call(GradesTableSeeder::class);
         $this->call(ProgrammesTableSeeder::class);
         $this->call(QualificationsTableSeeder::class);
         $this->call(MajorsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(CoursesTableSeeder::class);
+        //$this->call(CoursetermsTableSeeder::class);
         // $this->call(ClassesTableSeeder::class);
         // $this->call(ClassDetailsTableSeeder::class);
     }

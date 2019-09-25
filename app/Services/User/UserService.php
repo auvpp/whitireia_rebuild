@@ -35,8 +35,8 @@ class UserService {
     public function indexView($view, $users){
         return view($view, [
             'users' => $users,
-            'current_page' => $users->currentPage(),
-            'per_page' => $users->perPage(),
+            // 'current_page' => $users->currentPage(),
+            // 'per_page' => $users->perPage(),
         ]);
     }
 
@@ -125,21 +125,23 @@ class UserService {
         return $this->user->with(['school', 'programme', 'major', 'myClasses', 'qualification'])
                 //->where('code', auth()->user()->school->code)
                 //->student()
-                //->where('active', 1)
+                ->where('active', 1)
                 ->where('school_id', $school_id)
                 ->where('role', 'student')
                 ->orderBy('first_name', 'asc')
-                ->paginate(10);
+                ->get();
+                //->paginate(10);
     }
 
     public function getTeachers($school_id){
-        return $this->user->with(['school', 'programme', 'major', 'myClasses', 'qualification'])
+        return $this->user->with(['school', 'programme'])
                 //->where('code', auth()->user()->school->code)
                 ->where('school_id', $school_id)
                 ->where('role', 'teacher')
-                //->where('active', 1)
+                ->where('active', 1)
                 ->orderBy('first_name', 'asc')
-                ->paginate(10);
+                ->get();
+                //->paginate(10);
     }
 
     public function getAccountants(){
@@ -195,11 +197,15 @@ class UserService {
                 ->get();
     }
 
-    public function getUserByCode($code){
-        return $this->user->with('programme', 'major', 'school', 'myClasses')
-              ->where('code', $code)
-              ->where('active', 1)
-              ->first();
+    public function getUserByCode($id){
+        if ($id == \Auth::user()->id){
+            return $this->user->with('programme', 'major', 'qualification', 'school')
+                              ->where('id', $id)
+                              ->where('active', 1)
+                              ->first();
+        }else{
+            return 'no permission';
+        }
     }
 
     public function storeAdmin($request){

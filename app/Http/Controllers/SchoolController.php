@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\School;
+use App\Programme;
 use App\MyClass;
 use App\Section;
 use App\Department;
@@ -49,12 +50,83 @@ class SchoolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($school_id)
+    public function showAdmins($school_id)
     {
-      $admins = User::bySchool($school_id)->where('role','admin')->get();
-      return view('school.admin-list',compact('admins'));
+      $admins = User::bySchool($school_id)->where('role', 'admin')->get();
+      $programmes = Programme::get();
+      return view('school.admin-list',compact('admins', 'programmes'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function storeAdminProfile(Request $request)
+    {
+      $tb = User::find($request->id);
+        $request->validate([
+          'first_name' => 'required|string',
+          'last_name' => 'required|string',
+          'code' => 'required|string',
+          'gender'  => 'required|string',
+          'email' => 'required|email|max:255',
+          'phone_number' => 'required|string',
+          'address' => 'nullable|string',
+          'programme_id' => 'required|integer',
+          'qualification_id' => 'nullable|integer',
+          'major_id' => 'nullable|integer',
+          'enrolled_date' => 'required|string',
+          'about' => 'nullable|string',
+        ]);
+        
+        $tb->id = $request->id;
+        $tb->first_name = $request->first_name;
+        $tb->last_name = $request->last_name;
+        $tb->code = $request->code;
+        $tb->gender = $request->gender;
+        $tb->email = $request->email;
+        $tb->phone_number = $request->phone_number;
+        $tb->address = $request->address;
+        $tb->programme_id = $request->programme_id;
+        $tb->qualification_id = $request->qualification_id;
+        $tb->major_id = $request->major_id;
+        $tb->enrolled_date = $request->enrolled_date;
+        $tb->about = $request->about;
+        if ($tb->save()) {
+            return back()->with('status', __('Administrator Saved'));
+        }
+        else{
+            return __('Update Failded.');
+        }
+    }
+
+    /**
+     * Reset admin's password.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function resetAdmin(Request $request)
+    {
+        //dd($request);
+        $request->validate([
+            'id' => 'required|integer',
+        ]);
+
+        $tb = User::find($request->id);
+        $tb->password = bcrypt('secret');     
+        if ($tb->save()) {
+            return back()->with('status', __('Password Reset.'));
+        }
+        else{
+            return __('Update Failded.');
+        }
+    }
+    
     public function edit(School $school) {
         return view('schools.edit', compact('school'));
     }

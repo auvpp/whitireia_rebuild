@@ -156,7 +156,7 @@
 
                     <div class="modal-footer">
                         <button class="btn btn-info btn-sm" data-dismiss="modal">@lang('Close')</button>
-                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#addCourseConfirmModal">@lang('Save')</button>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#addCourseConfirmModal" id="saveButton">@lang('Save')</button>
                     </div>
 
                     <!-- Modal for confirmation -->
@@ -178,14 +178,14 @@
                                             <input style="width:100%" name="code" class="form-control" id="addCourseCode" required>
                                         </div>
                                         <div class="col-sm-1">
-                                            <button id="check_code" type="button" class="btn btn-info">@lang('Occupied ?')</button>
+                                            <button id="occupiedButton" type="button" class="btn btn-info">@lang('Occupied ?')</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="col-sm-10 text-danger text-left" id="check_result"></div>
                                     <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-danger btn-sm">@lang('Confirm')</button>
+                                        <button type="submit" class="btn btn-danger btn-sm" id="confirmButton">@lang('Confirm')</button>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +276,13 @@
             }
         });
 
-        $("#check_code").click(function() {         
+        $("#saveButton").click(function(){
+            $("#addCourseCode").val('');
+            $("#check_result").html('');
+            $("#confirmButton").attr("disabled", "disabled");
+        })
+
+        $("#occupiedButton").click(function() {         
             let code =$("#addCourseCode").val().trim();
             let major_id = $("#addCourseMajor").val();
             if (code == null || code == ''){
@@ -294,9 +300,14 @@
                     success: function(data){
                         if(data.success){
                             $("#check_result").html("This course code has been taken, please use another one.");
+                            // Prevent a link from opening the URL
+                            $("form").submit(function(event){
+                                event.preventDefault();
+                            });
                         }
                         else{
                             $("#check_result").html("This code can be used as Course Code.");
+                            $("#confirmButton").removeAttr("disabled");
                         }
                     }
                 });

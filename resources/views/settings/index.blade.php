@@ -43,9 +43,9 @@
                         </div>  
                         <div class="row">
                             <div class="col-sm-3">
-                                <small>@lang('Or, Mass upload Excel')</small>
+                                <!-- <small>@lang('Or, Mass upload Excel')</small>
                                 @component('components.excel-upload-form', ['type'=>'student'])
-                                @endcomponent
+                                @endcomponent -->
                             </div>
                             <!-- <div class="col-sm-3"><small>@lang('Arrange courses for teachers.')</small></div> -->
                             <div class="col-sm-6">
@@ -76,14 +76,14 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-3">
-                                <small>@lang('Or, Mass upload Excel')</small>
+                                <!-- <small>@lang('Or, Mass upload Excel')</small>
                                 @component('components.excel-upload-form', ['type'=>'student'])
-                                @endcomponent
+                                @endcomponent -->
                             </div> 
                             <div class="col-sm-3">           
-                                <small>@lang('Or, Mass upload Excel')</small>
+                                <!-- <small>@lang('Or, Mass upload Excel')</small>
                                 @component('components.excel-upload-form', ['type'=>'teacher'])
-                                @endcomponent
+                                @endcomponent -->
                             </div>
                         </div>
                     </div>

@@ -62,7 +62,14 @@ Route::middleware(['auth', 'master'])->group(function () {
     Route::post('register/admin', 'UserController@storeAdmin');
     Route::get('master/activate-admin/{id}','UserController@activateAdmin');
     Route::get('master/deactivate-admin/{id}','UserController@deactivateAdmin');
-    Route::get('school/admin-list/{school_id}','SchoolController@show');
+
+    Route::get('school/admin-list/{school_id}','SchoolController@showAdmins');
+
+    // manage administrators
+    Route::post('school/admin-list/store','SchoolController@storeAdminProfile');
+
+    // the Route for resetting password
+    Route::post('admin/password/reset', 'SchoolController@resetAdmin');
 });
 
 //Route::get('users/{school_id}/students', 'UserController@indexStudent')->middleware(['auth', 'teacher']);
@@ -80,12 +87,15 @@ Route::middleware(['auth'])->group(function (){
   Route::get('users/{school_id}/students', 'UserController@indexStudent');
 
   //Route::get('users/{school_code}/{role}', 'UserController@indexOther');
-  Route::get('user/{code}', 'UserController@show'); // show user's profile
+  Route::get('user/{id}', 'UserController@show'); // show user's profile
   Route::get('user/config/change_password', 'UserController@changePasswordGet');
   Route::post('user/config/change_password', 'UserController@changePasswordPost');
   Route::get('section/students/{section_id}', 'UserController@sectionStudents');
   
   Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
+
+  //Route::get('edit/user/{id}','UserController@edit');  // edit user
+  Route::post('edit/user','UserController@update'); // update a user
 });
 
 /* the Route for administrators */
@@ -145,6 +155,12 @@ Route::middleware(['auth','admin'])->group(function (){
   Route::post('/settings/addcourse', 'CourseController@store');
   Route::post('/settings/addteacher', 'UserController@storeTeacher');
   Route::post('/settings/addstudent', 'UserController@storeStudent');
+
+  // the Route for resetting password
+  Route::post('user/password/reset', 'UserController@resetUser');
+  // Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+  // Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+  // Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 
   Route::get('gpa/create-gpa', 'GradesystemController@create');
   Route::post('create-gpa', 'GradesystemController@store');
@@ -296,9 +312,6 @@ Route::middleware(['auth', 'librarian'])->namespace('Library')->group(function (
 
 //use PDF;
 Route::middleware(['auth','master.admin'])->group(function (){
-
-  //Route::get('edit/user/{id}','UserController@edit');  // edit user
-  Route::post('edit/user','UserController@update'); // update a user
 
   Route::post('upload/file', 'UploadController@upload');
   Route::post('users/import/user-xlsx','UploadController@import');

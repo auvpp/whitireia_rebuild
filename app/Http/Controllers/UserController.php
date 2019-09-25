@@ -69,13 +69,11 @@ class UserController extends Controller
      * @param $school_id
      */
     public function indexTeacher($school_id){
-        $majors = Major::query()->get();
         $programmes = Programme::query()->get();
-        $qualifications = Qualification::query()->get();
         $users = $this->userService->getTeachers($school_id);
-        $current_page = $users->currentPage();
-        $per_page = $users->perPage();
-        return view('list.teacher-list', compact('users', 'current_page', 'per_page', 'programmes', 'qualifications', 'majors'));
+        // $current_page = $users->currentPage();
+        // $per_page = $users->perPage();
+        return view('list.teacher-list', compact('users', 'programmes' /*'current_page', 'per_page',*/ ));
         // return $this->userService->indexView('list.teacher-list',$this->userService->getTeachers($school_id));
     }
 
@@ -88,9 +86,9 @@ class UserController extends Controller
         $programmes = Programme::query()->get();
         $qualifications = Qualification::query()->get();
         $users = $this->userService->getStudents($school_id);
-        $current_page = $users->currentPage();
-        $per_page = $users->perPage();
-        return view('list.student-list', compact('users', 'current_page', 'per_page', 'programmes', 'qualifications', 'majors'));
+        // $current_page = $users->currentPage();
+        // $per_page = $users->perPage();
+        return view('list.student-list', compact('users', 'programmes', 'qualifications', 'majors' /* 'current_page', 'per_page' */));
         // return $this->userService->indexView('list.student-list', $this->userService->getStudents($school_id));
     }
 
@@ -283,11 +281,15 @@ class UserController extends Controller
      *
      * @return UserResource
      */
-    public function show($code)
+    public function show($id)
     {
-        $user = $this->userService->getUserByCode($code);
-
-        return view('profile.user', compact('user'));
+        $user = $this->userService->getUserByCode($id);
+        if ($user == 'no permission'){
+            return back()->with('status', __('You have no permission to access this profile.'));
+        }else{
+            
+            return view('profile.user', compact('user'));
+        }        
     }
 
     /**
@@ -449,6 +451,31 @@ class UserController extends Controller
         $admin->save();
 
         return back()->with('status', __('Saved'));
+    }
+
+    
+    /**
+     * Reset user's password.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function resetUser(Request $request)
+    {
+        //dd($request);
+        $request->validate([
+            'id' => 'required|integer',
+        ]);
+
+        $tb = User::find($request->id);
+        $tb->password = bcrypt('secret');
+        if ($tb->save()) {
+            return back()->with('status', __('Password Reset.'));
+        }
+        else{
+            return __('Update Failded.');
+        }
     }
 
     /**

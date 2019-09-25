@@ -20,15 +20,15 @@ class TeachersExport implements FromQuery,ShouldAutoSize,WithHeadings
         'Address',
     ];
 
-    private $headingsES = [
-        'Nombre', 
-        'Correo',
-        'Genero',
-        'Codigo del Maestro',
-        'Grupo Sanguineo',
-        'Telefono',
-        'Dirección',
-    ];
+    // private $headingsES = [
+    //     'Nombre', 
+    //     'Correo',
+    //     'Genero',
+    //     'Codigo del Maestro',
+    //     'Grupo Sanguineo',
+    //     'Telefono',
+    //     'Dirección',
+    // ];
 
     public function __construct(int $year){
         $this->year = $year;

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @if(count(array($user)) > 0)
-  @section('title', $user->name)
+  @section('title', ucfirst($user->first_name).' '.ucfirst($user->last_name))
 @endif
 
 @section('content')
@@ -11,23 +11,24 @@
             @include('layouts.leftside-menubar')
         </div>
         <div class="col-md-10" id="main-container">
+            <h3>@lang('Profile')</h3>
             <div class="panel panel-default">
-              @if(count(array($user)) > 0)
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
+              <div class="panel-body">
+                  @if (session('status'))
+                      <div class="col-sm-8 alert alert-success">
+                          {{ session('status') }}
+                      </div>
+                  @else
+                    @if(count(array($user)) > 0)
+                      @component('components.user-profile',['user'=>$user])
+                      @endcomponent
+                    @else
+                      <div class="col-sm-8 alert alert-warning">
+                        @lang('No Related Data Found.')
+                      </div>
                     @endif
-
-                    @component('components.user-profile',['user'=>$user])
-                    @endcomponent
-                </div>
-              @else
-                <div class="panel-body">
-                    @lang('No Related Data Found.')
-                </div>
-              @endif
+                  @endif
+              </div>
             </div>
         </div>
     </div>

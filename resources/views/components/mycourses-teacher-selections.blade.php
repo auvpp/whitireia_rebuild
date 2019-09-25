@@ -10,7 +10,6 @@
     <div id="collapse{{$c->code}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$c->code}}">
       <div class="panel-body table-responsive">
         <table class="table table-bordered table-striped table-data-div table-hover table-condensed"> 
-            <thead>
                 <tr class="bg-success text-white">
                     <th scope="col">#</th>
                     <th scope="col">@lang('Code')</th>

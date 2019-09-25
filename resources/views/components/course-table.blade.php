@@ -9,28 +9,30 @@
     </div>
     <div id="collapse{{$major->id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$major->id}}">
       <div class="panel-body table-responsive">
+      <button class="btn btn-xs btn-info" id="btnPrint{{$major->id}}"><i class="material-icons">print</i> @lang('Print Courses')</button>
+      <!--startprint-->
         <table class="table table-bordered table-striped table-data-div table-hover table-condensed"> 
           <thead>
             <tr class="bg-success text-white">
               @if(Auth::user()->role == 'admin')
-              <th scope="col">@lang('Action')</th>
+              <th scope="col" class="noprint">@lang('Action')</th>
               @endif
               <th scope="col">@lang('Course Code')</th>
               <th scope="col">@lang('Course Name')</th>
               <th scope="col">@lang('Course Level')</th>
               <th scope="col">@lang('Course Type')</th>
+              <th scope="col">@lang('Credits')</th>
               <th scope="col">@lang('Current Offered')</th>
               <th scope="col">@lang('Next Offered')</th>
               <th scope="col">@lang('Prerequisites')</th>
               <th scope="col">@lang('Tutor')</th>
-              <th scope="col">@lang('Credits')</th>
             </tr>
           </thead>
           <tbody>
             @foreach ($major->courses as $course)
             <tr>
               @if(Auth::user()->role == 'admin')
-              <td>
+              <td class="noprint">
                 <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#adminCourseModal{{$course->id}}">@lang('Edit')</button>
                 <!-- Modal -->
                 <div class="modal fade" id="adminCourseModal{{$course->id}}" tabindex="-1" role="dialog" aria-labelledby="adminCourseModal{{$course->id}}Label">
@@ -205,26 +207,49 @@
                   });
                 });
               </script>
-
               @endif
-
-              <td><small>{{$course->code}}</small></td>
-              <td><small>{{$course->name}}</small></td>
-              <td><small>{{ucfirst($course->level)}}</small></td>
-              <td><small>{{ucfirst($course->type)}}</small></td>
-              <td class="@if ($course->current_offered == 'Not offered' || $course->current_offered == 'No longer offered') bg-secondary text-white @endif"><small>{{$course->current_offered}}</small></td>
-              <td><small>{{$course->next_offered}}</small></td>
-              <td><small>{{$course->prerequisite}}</small></td>
-              <td><small>{{$course->teacher}}</small></td>
-              <td><small>{{$course->credit}}</small></td>      
-            </tr>
-            @endforeach    
+                <td><small>{{$course->code}}</small></td>
+                <td><small>{{$course->name}}</small></td>
+                <td><small>{{ucfirst($course->level)}}</small></td>
+                <td><small>{{$course->credit}}</small></td>
+                <td><small>{{ucfirst($course->type)}}</small></td>
+                <td class="@if ($course->current_offered == 'Not offered' || $course->current_offered == 'No longer offered') bg-secondary text-white @endif"><small>{{$course->current_offered}}</small></td>
+                <td><small>{{$course->next_offered}}</small></td>
+                <td><small>{{$course->prerequisite}}</small></td>
+                <td><small>{{$course->teacher}}</small></td>
+              </tr>
+              
+            @endforeach
           </tbody>
         </table>
+        <!--endprint-->
       </div>
     </div>
+
+    <script>
+      $("#btnPrint{{$major->id}}").on("click", function () {
+        var printWindow = window.open('', '', 'height=720,width=1280');
+        printWindow.document.write('<html><head>');
+        printWindow.document.write('<link href="{{url('css/app.css')}}" rel="stylesheet">');
+        printWindow.document.write('</head><body>');
+        printWindow.document.write('<div class="container"><div class="col-md-12" id="academic-part"><h2 style="text-align:center;">{{Auth::user()->school->name}}</h2><h4 style="text-align:center;">{{$major->qualification->name.' ('.$major->name.')'}}</h4><table style="text-align:left;border-collapse:collapse;border:1px solid black;"><thead><tr><th style="border: 1px solid black;"><small>@lang('Course Code')</small></th><th style="border: 1px solid black;"><small>@lang('Course Name')</small></th><th style="border: 1px solid black;"><small>@lang('Course Level')</small></th><th style="border: 1px solid black;"><small>@lang('Course Type')</small></th><th style="border: 1px solid black;"><small>@lang('Credits')</small></th><th style="border: 1px solid black;"><small>@lang('Current Offered')</small></th><th style="border: 1px solid black;"><small>@lang('Next Offered')</small></th><th style="border: 1px solid black;"><small>@lang('Prerequisites')</small></th><th style="border: 1px solid black;"><small>@lang('Tutor')</small></th></tr></thead><tbody>@foreach ($major->courses as $course)<tr><td style="border: 1px solid black;"><small>{{$course->code}}</small></td><td style="border: 1px solid black;"><small>{{$course->name}}</small></td><td style="border: 1px solid black;"><small>{{ucfirst($course->level)}}</small></td><td style="border: 1px solid black;"><small>{{$course->credit}}</small></td><td style="border: 1px solid black;"><small>{{ucfirst($course->type)}}</small></td><td  style="border: 1px solid black;" class="@if ($course->current_offered == 'Not offered' || $course->current_offered == 'No longer offered') bg-secondary text-white @endif"><small>{{$course->current_offered}}</small></td><td style="border: 1px solid black;"><small>{{$course->next_offered}}</small></td><td style="border: 1px solid black;"><small>{{$course->prerequisite}}</small></td><td style="border: 1px solid black;"><small>{{$course->teacher}}</small></td></tr>@endforeach</tbody></table></div></div>');
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+      });
+
+      // function doPrint() {   
+      //   bdhtml=window.document.body.innerHTML;   
+      //   sprnstr="<!--startprint-->";   
+      //   eprnstr="<!--endprint-->";   
+      //   prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);   
+      //   prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));   
+      //   window.document.body.innerHTML=prnhtml;  
+      //   window.print();   
+      // }
+    </script>
+
   @endforeach
 </div>
 
 <a href="{{url()->previous()}}" class="btn btn-xs btn-warning"><i class="material-icons">keyboard_return</i> @lang('Go Back')</a>
-

@@ -1,16 +1,6 @@
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-
-            <!-- Collapsed Hamburger -->
-            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse"
-                aria-expanded="false">
-                <span class="sr-only">@lang('Toggle Navigation')</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/home') }}" style="color: #000;">
                 {{ (Auth::check() && (Auth::user()->role == 'student' || Auth::user()->role == 'teacher' ||
@@ -45,9 +35,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle nav-link-align-btn" data-toggle="dropdown" role="button"
                         aria-expanded="false" aria-haspopup="true">
-                        <span class="label label-danger">
-                            {{ ucfirst(\Auth::user()->role) }}
-                        </span>&nbsp;&nbsp;
+                        <span class="label label-danger">{{ ucfirst(\Auth::user()->role) }}</span>&nbsp;&nbsp;
                         @if(!empty(Auth::user()->pic_path))
                         <img src="{{asset('01-progress.gif')}}" data-src="{{url(Auth::user()->pic_path)}}" alt="Profile Picture"
                             style="vertical-align: middle;border-style: none;border-radius: 50%;width: 30px;height: 30px;">
@@ -64,7 +52,7 @@
                     <ul class="dropdown-menu">
                         @if(Auth::user()->role != 'master')
                         <li>
-                            <a href="{{url('user/'.Auth::user()->code)}}">@lang('Profile')</a>
+                            <a href="{{url('user/'.Auth::user()->id)}}">@lang('Profile')</a>
                         </li>
                         @endif
                         <li>
