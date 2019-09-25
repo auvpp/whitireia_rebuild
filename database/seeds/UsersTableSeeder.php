@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         // insert a master into the uses table
         DB::table('users')->insert([
-            'term_name' => "T1",
+            'first_name' => "Master",
             'last_name' => "Whitireia",
             'email'    => 'master@whitireia.ac.nz',
             'password' => bcrypt('secret'),
